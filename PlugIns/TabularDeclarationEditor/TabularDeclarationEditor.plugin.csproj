@@ -1,0 +1,125 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <AssemblyName>TabularDeclarationEditor.plugin</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <UseWindowsForms>True</UseWindowsForms>
+    <TargetFramework>net46</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>Preview</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="_3S\CoDeSys\TabularDeclarationEditor\Resources.MoveDown.ico" />
+    <None Remove="_3S\CoDeSys\TabularDeclarationEditor\Resources.MoveUp.ico" />
+    <None Remove="_3S\CoDeSys\TabularDeclarationEditor\Resources.InsertLine.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\TabularDeclarationEditor\Resources.MoveDown.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\TabularDeclarationEditor\Resources.MoveUp.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\TabularDeclarationEditor\Resources.InsertLine.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="ApplicationObject">
+      <HintPath>..\..\Interface\Interface Binaries\ApplicationObject.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentModel">
+	  <HintPath>..\..\Interface\Interface Binaries\ComponentModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Controls">
+      <HintPath>..\..\Interface\GAC Binaries\Controls\3.1.6.2\Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="ControlsContrib">
+      <HintPath>..\..\Interface\GAC Binaries\ControlsContrib\3.2.0.0\ControlsContrib.dll</HintPath>
+    </Reference>
+    <Reference Include="DeviceObject">
+      <HintPath>..\..\Interface\Interface Binaries\DeviceObject.dll</HintPath>
+    </Reference>
+    <Reference Include="PInvoke">
+      <HintPath>..\..\Interface\GAC Binaries\PInvoke\3.0.37.0\PInvoke.dll</HintPath>
+    </Reference>
+    <Reference Include="SystemInstances">
+      <HintPath>..\..\Interface\Interface Binaries\SystemInstances.dll</HintPath>
+    </Reference>
+    <Reference Include="UndoManager">
+	  <HintPath>..\..\Interface\Interface Binaries\UndoManager.dll</HintPath>
+    </Reference>
+    <Reference Include="Help">
+	  <HintPath>..\..\Interface\Interface Binaries\Help.dll</HintPath>
+    </Reference>
+    <Reference Include="Compiler">
+	  <HintPath>..\..\Interface\Interface Binaries\Compiler.dll</HintPath>
+    </Reference>
+    <Reference Include="Commands">
+	  <HintPath>..\..\Interface\Interface Binaries\Commands.dll</HintPath>
+    </Reference>
+    <Reference Include="OptionStorage">
+	  <HintPath>..\..\Interface\Interface Binaries\OptionStorage.dll</HintPath>
+    </Reference>
+    <Reference Include="InputAssistant">
+	  <HintPath>..\..\Interface\Interface Binaries\InputAssistant.dll</HintPath>
+    </Reference>
+    <Reference Include="ObjectsWin">
+	  <HintPath>..\..\Interface\Interface Binaries\ObjectsWin.dll</HintPath>
+    </Reference>
+    <Reference Include="Objects">
+	  <HintPath>..\..\Interface\Interface Binaries\Objects.dll</HintPath>
+    </Reference>
+    <Reference Include="Refactoring">
+	  <HintPath>..\..\Interface\Interface Binaries\Refactoring.dll</HintPath>
+    </Reference>
+    <Reference Include="Utilities">
+      <HintPath>..\..\Interface\GAC Binaries\Utilities\3.1.6.1\Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="WatchList">
+	  <HintPath>..\..\Interface\Interface Binaries\WatchList.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoDeclare">
+	  <HintPath>..\..\Interface\Interface Binaries\AutoDeclare.dll</HintPath>
+    </Reference>
+    <Reference Include="Bookmarks">
+	  <HintPath>..\..\Interface\Interface Binaries\Bookmarks.dll</HintPath>
+    </Reference>
+    <Reference Include="OptionStorageWin">
+	  <HintPath>..\..\Interface\Interface Binaries\OptionStorageWin.dll</HintPath>
+    </Reference>
+    <Reference Include="IECTextEditor">
+	  <HintPath>..\..\Interface\Interface Binaries\IECTextEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="EngineWin">
+	  <HintPath>..\..\Interface\Interface Binaries\EngineWin.dll</HintPath>
+    </Reference>
+    <Reference Include="MessageService">
+	  <HintPath>..\..\Interface\Interface Binaries\MessageService.dll</HintPath>
+    </Reference>
+    <Reference Include="TabularDeclarationEditor">
+	  <HintPath>..\..\Interface\Interface Binaries\TabularDeclarationEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="Views">
+	  <HintPath>..\..\Interface\Interface Binaries\Views.dll</HintPath>
+    </Reference>
+    <Reference Include="OnlineUI">
+	  <HintPath>..\..\Interface\Interface Binaries\OnlineUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Printing">
+	  <HintPath>..\..\Interface\Interface Binaries\Printing.dll</HintPath>
+    </Reference>
+    <Reference Include="ProjectLocalization">
+	  <HintPath>..\..\Interface\Interface Binaries\ProjectLocalization.dll</HintPath>
+    </Reference>
+    <Reference Include="TextDocument">
+	  <HintPath>..\..\Interface\Interface Binaries\TextDocument.dll</HintPath>
+    </Reference>
+    <Reference Include="MessageStorage">
+	  <HintPath>..\..\Interface\Interface Binaries\MessageStorage.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="&quot;%25CDS_Common%25\IPMCLI.EXE&quot; /i:&quot;$(TargetPath)&quot;" />
+  </Target>
+</Project>

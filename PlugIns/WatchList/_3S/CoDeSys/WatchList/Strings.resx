@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="Expression"><value>Expression</value></data>
+  <data name="SyntaxError"><value>Syntax error.</value></data>
+  <data name="UnforceAllSelectedRestoreValuesCommand_Name"><value>Unforce and restore all selected values </value></data>
+  <data name="AddWatchCommandName"><value>Add to Watchlist</value></data>
+  <data name="AddAllForcesToWatchListCommand_Name"><value>Add all Forces to Watchlist</value></data>
+  <data name="ForceListViewCommand_Name"><value>Watch all Forces</value></data>
+  <data name="Application"><value>Application</value></data>
+  <data name="DynamicInstance"><value>&lt;Dynamic Instance&gt;</value></data>
+  <data name="WatchListFactory_Description"><value>Displays a watchlist view</value></data>
+  <data name="WatchListNodeIsOutdated"><value>This watch list expression seems to be outdated but will be refreshed automatically after logging in.</value></data>
+  <data name="UnforceAllSelectedKeepValuesCommand_Description"><value>Unforces all values that are selected in a force list. The current values will be kept.</value></data>
+  <data name="Monitoring_InvalidExpression"><value>Invalid expression</value></data>
+  <data name="ErrorMonitoringLengthExceeded"><value>The current operation is trying to add too many monitoring expressions to this watch list. To keep your system responsive, this operation has been aborted.</value></data>
+  <data name="ExecutionPointWarningNode_Text"><value>There are active executionpoints.</value></data>
+  <data name="MonitoringNotLoggedIn"><value>Not logged in</value></data>
+  <data name="InvalidTypeSpecification"><value>Invalid type specification: {0}
+Only pointer types are supported.</value></data>
+  <data name="EnumValueRepresentsRawValue"><value>'{0}' represents raw value '{1}'</value></data>
+  <data name="Comment"><value>Comment</value></data>
+  <data name="UnforceAllSelectedRestoreValuesCommand_Description"><value>Unforces all values that are selected in a force list. The values will be restored.</value></data>
+  <data name="Error_MaximumRangeExceeded"><value>Maximum number of {0} array elements exceeded!</value></data>
+  <data name="HiddenInstance"><value>&lt;Hidden Instance&gt;</value></data>
+  <data name="Executionpoint"><value>Execution point</value></data>
+  <data name="ErrorConstant"><value>Constant values cannot be forced or written.</value></data>
+  <data name="AddWatchCommandDescription"><value>Add the currently selected expression to the watch view</value></data>
+  <data name="ExecutionPointWarningNode_ToolTipText"><value>Double click to jump to breakpoints view</value></data>
+  <data name="ErrorProperties"><value>Properties monitored by a variable cannot be forced or written.</value></data>
+  <data name="Value"><value>Value</value></data>
+  <data name="ForceListSmall" mimetype="application/x-microsoft.net.object.binary.base64"><value>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAA+gAAAAKJUE5HDQoaCgAAAA1JSERSAAAAEAAAABAIBgAAAB/z/2EAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwwAADsMBx2+oZAAAAI9JREFUOE+tjFEOwjAMQ/PRg3O0HoA7DRziYjIXTYgneWsS2/FHbsdvWrjjFRVjjKNzj/hQB5mKnwt6mFK2Bc4M+t4W0ESjzipwqYDonrdtQR3WrMINf2ALaODswuqt+KtAQ/rWsC3Ao4Y8ABophpXM5Oc5QBr4tletApDvYrc/geOcM9UL3N4CgzPt9m8iHq0BlGfJudJWAAAAAElFTkSuQmCCCw==</value></data><data name="Address"><value>Address</value></data>
+  <data name="EP_CyclicMonitoring"><value>Cyclic Monitoring</value></data>
+  <data name="MonitoringCodeNotAvailable"><value>Generated code for application not available</value></data>
+  <data name="AddAllForcesToWatchListCommand_Description"><value>Insert all currently forced expressions of the active application into the active watchlist</value></data>
+  <data name="PreparedValue"><value>Prepared value</value></data>
+  <data name="WatchListFactory_Name"><value>Watch</value></data>
+  <data name="PromptMonitoringLengthExceeded"><value>The current operation will add more monitoring expressions than this watch list supports. To keep your system responsive, not all monitoring expressions will be added to the list.
+
+Click 'OK' to add expressions until the maximum of {0} is reached. 
+Click 'Cancel' to abort adding any expressons to this watch list.</value></data>
+  <data name="IncompatibleValue"><value>The value '{0}' is not compatible to type '{1}'.</value></data>
+  <data name="UnforceAllSelectedKeepValuesCommand_Name"><value>Unforce and keep all selected values</value></data>
+  <data name="Error_InvalidValue"><value>Invalid value!</value></data>
+  <data name="SyntaxErrorCast"><value>Syntactically wrong expression {0}</value></data>
+  <data name="ForceListViewCommand_Description"><value>Displays a watch list with all forced expressions when logged into an application</value></data>
+  <data name="EP_NotReached"><value>Execution point not reached</value></data>
+  <data name="MonitoringDisabled"><value>Monitoring disabled</value></data>
+  <data name="MonitoringTooManyExpressions"><value>The current operation is trying to add more monitoring expressions to this watch list than possible. To keep your system responsive, no monitoring expressions will be added to the list.</value></data>
+  <data name="InvalidCastSyntax"><value>Invalid syntax of expression: {0}
+The syntax for casting a pointer to a given type is
+&lt;Expression&gt;:&lt;Type&gt;.</value></data>
+  <data name="EP_FALSECondition"><value>Execution point condition FALSE</value></data>
+  <data name="MonitoringImpossible"><value>Monitoring not possible</value></data>
+  <data name="Type"><value>Type</value></data>
+  </root>
