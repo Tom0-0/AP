@@ -1,0 +1,240 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <AssemblyName>OnlineCommands.plugin</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <UseWindowsForms>True</UseWindowsForms>
+    <TargetFramework>net46</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>Preview</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="_3S\CoDeSys\OnlineCommands\Resources.ApplicationSmall.ico" />
+    <None Remove="_3S\CoDeSys\OnlineCommands\Resources.ResourceSmall.ico" />
+    <None Remove="_3S\CoDeSys\OnlineCommands\Resources.StartSmall.ico" />
+    <None Remove="_3S\CoDeSys\OnlineCommands\Resources.StopSmall.ico" />
+    <None Remove="_3S\CoDeSys\OnlineCommands\Resources.SourceDownload.ico" />
+    <None Remove="_3S\CoDeSys\OnlineCommands\Resources.LoginLarge.ico" />
+    <None Remove="_3S\CoDeSys\OnlineCommands\Resources.LoginSmall.ico" />
+    <None Remove="_3S\CoDeSys\OnlineCommands\Resources.LogoutSmall.ico" />
+    <None Remove="_3S\CoDeSys\OnlineCommands\Resources.OK.ico" />
+    <None Remove="_3S\CoDeSys\OnlineCommands\Resources.Error.ico" />
+    <None Remove="_3S\CoDeSys\OnlineCommands\Resources.Skipped.ico" />
+    <None Remove="_3S\CoDeSys\OnlineCommands\Resources.Checked.ico" />
+    <None Remove="_3S\CoDeSys\OnlineCommands\Resources.Unchecked.ico" />
+    <None Remove="_3S\CoDeSys\OnlineCommands\Resources.LogoffUserSmall.ico" />
+    <None Remove="_3S\CoDeSys\OnlineCommands\Resources.GVLSmall.ico" />
+    <None Remove="_3S\CoDeSys\OnlineCommands\Resources.POUSmall.ico" />
+    <None Remove="_3S\CoDeSys\OnlineCommands\Resources.DUTSmall.ico" />
+    <None Remove="_3S\CoDeSys\OnlineCommands\Resources.LibManObjectSmall.ico" />
+    <None Remove="_3S\CoDeSys\OnlineCommands\Resources.AddOnlineUser.ico" />
+    <None Remove="_3S\CoDeSys\OnlineCommands\Resources.RemoveOnlineUser.ico" />
+    <None Remove="_3S\CoDeSys\OnlineCommands\Resources.ChangePasswordOnlineUser.ico" />
+    <None Remove="_3S\CoDeSys\OnlineCommands\Resources.CmdDebug.ico" />
+    <None Remove="_3S\CoDeSys\OnlineCommands\Resources.CmdOperational.ico" />
+    <None Remove="_3S\CoDeSys\OnlineCommands\Resources.CmdOperationalStatusField.ico" />
+    <None Remove="_3S\CoDeSys\OnlineCommands\Resources.CmdLocked.ico" />
+    <None Remove="_3S\CoDeSys\OnlineCommands\Resources.PropertySmall.ico" />
+    <None Remove="_3S\CoDeSys\OnlineCommands\Resources.VarSmall.ico" />
+    <None Remove="_3S\CoDeSys\OnlineCommands\Resources.OnlineChangeState_Up2date.ico" />
+    <None Remove="_3S\CoDeSys\OnlineCommands\Resources.OnlineChangeState_DL.ico" />
+    <None Remove="_3S\CoDeSys\OnlineCommands\Resources.OnlineChangeState_OLC.ico" />
+    <None Remove="_3S\CoDeSys\OnlineCommands\Resources.OnlineChangeState.ico" />
+    <None Remove="_3S\CoDeSys\OnlineCommands\Resources.Amount.ico" />
+    <None Remove="_3S\CoDeSys\OnlineCommands\Resources.Add.ico" />
+    <None Remove="_3S\CoDeSys\OnlineCommands\Resources.Delete.ico" />
+    <None Remove="_3S\CoDeSys\OnlineCommands\Resources.Textual.ico" />
+    <None Remove="_3S\CoDeSys\OnlineCommands\Resources.InterfaceSmall.ico" />
+    <None Remove="_3S\CoDeSys\OnlineCommands\Resources.STPOUSmall.ico" />
+    <None Remove="_3S\CoDeSys\OnlineCommands\Resources.STMethodSmall.ico" />
+    <None Remove="_3S\CoDeSys\OnlineCommands\Resources.AttentionSmall.ico" />
+    <None Remove="_3S\CoDeSys\OnlineCommands\Resources.Info.ico" />
+    <None Remove="_3S\CoDeSys\OnlineCommands\Resources.MonitoringSmall.ico" />
+    <None Remove="_3S\CoDeSys\OnlineCommands\Resources.FlowControlLarge.ico" />
+    <None Remove="_3S\CoDeSys\OnlineCommands\Resources.FlowControlSmall.ico" />
+    <None Remove="_3S\CoDeSys\OnlineCommands\Resources.CmdWink.ico" />
+    <None Remove="_3S\CoDeSys\OnlineCommands\Resources.CmdWinkIcon.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\OnlineCommands\Resources.ApplicationSmall.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\OnlineCommands\Resources.ResourceSmall.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\OnlineCommands\Resources.StartSmall.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\OnlineCommands\Resources.StopSmall.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\OnlineCommands\Resources.SourceDownload.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\OnlineCommands\Resources.LoginLarge.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\OnlineCommands\Resources.LoginSmall.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\OnlineCommands\Resources.LogoutSmall.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\OnlineCommands\Resources.OK.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\OnlineCommands\Resources.Error.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\OnlineCommands\Resources.Skipped.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\OnlineCommands\Resources.Checked.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\OnlineCommands\Resources.Unchecked.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\OnlineCommands\Resources.LogoffUserSmall.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\OnlineCommands\Resources.GVLSmall.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\OnlineCommands\Resources.POUSmall.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\OnlineCommands\Resources.DUTSmall.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\OnlineCommands\Resources.LibManObjectSmall.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\OnlineCommands\Resources.AddOnlineUser.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\OnlineCommands\Resources.RemoveOnlineUser.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\OnlineCommands\Resources.ChangePasswordOnlineUser.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\OnlineCommands\Resources.CmdDebug.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\OnlineCommands\Resources.CmdOperational.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\OnlineCommands\Resources.CmdOperationalStatusField.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\OnlineCommands\Resources.CmdLocked.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\OnlineCommands\Resources.PropertySmall.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\OnlineCommands\Resources.VarSmall.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\OnlineCommands\Resources.OnlineChangeState_Up2date.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\OnlineCommands\Resources.OnlineChangeState_DL.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\OnlineCommands\Resources.OnlineChangeState_OLC.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\OnlineCommands\Resources.OnlineChangeState.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\OnlineCommands\Resources.Amount.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\OnlineCommands\Resources.Add.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\OnlineCommands\Resources.Delete.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\OnlineCommands\Resources.Textual.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\OnlineCommands\Resources.InterfaceSmall.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\OnlineCommands\Resources.STPOUSmall.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\OnlineCommands\Resources.STMethodSmall.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\OnlineCommands\Resources.AttentionSmall.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\OnlineCommands\Resources.Info.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\OnlineCommands\Resources.MonitoringSmall.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\OnlineCommands\Resources.FlowControlLarge.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\OnlineCommands\Resources.FlowControlSmall.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\OnlineCommands\Resources.CmdWink.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\OnlineCommands\Resources.CmdWinkIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="ApplicationObject">
+      <HintPath>..\..\Interface\Interface Binaries\ApplicationObject.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentModel">
+      <HintPath>..\..\Interface\Interface Binaries\ComponentModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Compiler">
+      <HintPath>..\..\Interface\Interface Binaries\Compiler.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentModelWin">
+      <HintPath>..\..\Interface\Interface Binaries\ComponentModelWin.dll</HintPath>
+    </Reference>
+    <Reference Include="Controls">
+      <HintPath>..\..\Interface\GAC Binaries\Controls\3.1.6.2\Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="ControlsContrib">
+      <HintPath>..\..\Interface\GAC Binaries\ControlsContrib\3.2.0.0\ControlsContrib.dll</HintPath>
+    </Reference>
+    <Reference Include="MessageService">
+      <HintPath>..\..\Interface\Interface Binaries\MessageService.dll</HintPath>
+    </Reference>
+    <Reference Include="OnlineWin">
+      <HintPath>..\..\Interface\Interface Binaries\OnlineWin.dll</HintPath>
+    </Reference>
+    <Reference Include="MessageStorage">
+      <HintPath>..\..\Interface\Interface Binaries\MessageStorage.dll</HintPath>
+    </Reference>
+    <Reference Include="DeviceEditor">
+      <HintPath>..\..\Interface\Interface Binaries\DeviceEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="PInvoke">
+      <HintPath>..\..\Interface\GAC Binaries\PInvoke\3.0.37.0\PInvoke.dll</HintPath>
+    </Reference>
+    <Reference Include="TargetSettings">
+      <HintPath>..\..\Interface\Interface Binaries\TargetSettings.dll</HintPath>
+    </Reference>
+    <Reference Include="ObjectsWin">
+      <HintPath>..\..\Interface\Interface Binaries\ObjectsWin.dll</HintPath>
+    </Reference>
+    <Reference Include="OnlineCommands">
+      <HintPath>..\..\Interface\Interface Binaries\OnlineCommands.dll</HintPath>
+    </Reference>
+    <Reference Include="UserManagement">
+      <HintPath>..\..\Interface\Interface Binaries\UserManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="Breakpoints">
+      <HintPath>..\..\Interface\Interface Binaries\Breakpoints.dll</HintPath>
+    </Reference>
+    <Reference Include="OptionStorageWin">
+      <HintPath>..\..\Interface\Interface Binaries\OptionStorageWin.dll</HintPath>
+    </Reference>
+    <Reference Include="ProjectArchive">
+      <HintPath>..\..\Interface\Interface Binaries\ProjectArchive.dll</HintPath>
+    </Reference>
+    <Reference Include="EngineWin">
+      <HintPath>..\..\Interface\Interface Binaries\EngineWin.dll</HintPath>
+    </Reference>
+    <Reference Include="DeviceObject">
+      <HintPath>..\..\Interface\Interface Binaries\DeviceObject.dll</HintPath>
+    </Reference>
+    <Reference Include="OnlineUI">
+      <HintPath>..\..\Interface\Interface Binaries\OnlineUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Objects">
+      <HintPath>..\..\Interface\Interface Binaries\Objects.dll</HintPath>
+    </Reference>
+    <Reference Include="SecurityWin">
+      <HintPath>..\..\Interface\Interface Binaries\SecurityWin.dll</HintPath>
+    </Reference>
+    <Reference Include="Utilities">
+      <HintPath>..\..\Interface\GAC Binaries\Utilities\3.1.6.1\Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="Views">
+      <HintPath>..\..\Interface\Interface Binaries\Views.dll</HintPath>
+    </Reference>
+    <Reference Include="Online">
+      <HintPath>..\..\Interface\Interface Binaries\Online.dll</HintPath>
+    </Reference>
+    <Reference Include="Help">
+      <HintPath>..\..\Interface\Interface Binaries\Help.dll</HintPath>
+    </Reference>
+    <Reference Include="Engine">
+      <HintPath>..\..\Interface\Interface Binaries\Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="MessageServiceWin">
+      <HintPath>..\..\Interface\Interface Binaries\MessageServiceWin.dll</HintPath>
+    </Reference>
+    <Reference Include="Commands">
+      <HintPath>..\..\Interface\Interface Binaries\Commands.dll</HintPath>
+    </Reference>
+    <Reference Include="NavigatorControl">
+      <HintPath>..\..\Interface\Interface Binaries\NavigatorControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="DeviceIdentification">
+      <HintPath>..\..\Interface\Interface Binaries\DeviceIdentification.dll</HintPath>
+    </Reference>
+    <Reference Include="ProjectInfoObject">
+      <HintPath>..\..\Interface\Interface Binaries\ProjectInfoObject.dll</HintPath>
+    </Reference>
+    <Reference Include="OptionStorage">
+      <HintPath>..\..\Interface\Interface Binaries\OptionStorage.dll</HintPath>
+    </Reference>
+    <Reference Include="LibManObject">
+      <HintPath>..\..\Interface\Interface Binaries\LibManObject.dll</HintPath>
+    </Reference>
+    <Reference Include="PlcLogicObject">
+      <HintPath>..\..\Interface\Interface Binaries\PlcLogicObject.dll</HintPath>
+    </Reference>
+    <Reference Include="Security">
+      <HintPath>..\..\Interface\Interface Binaries\Security.dll</HintPath>
+    </Reference>
+    <Reference Include="VisualObject">
+      <HintPath>..\..\Interface\Interface Binaries\VisualObject.dll</HintPath>
+    </Reference>
+    <Reference Include="WatchList">
+      <HintPath>..\..\Interface\Interface Binaries\WatchList.dll</HintPath>
+    </Reference>
+    <Reference Include="DeviceCommunicationEditor">
+      <HintPath>..\..\Interface\Interface Binaries\DeviceCommunicationEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="PropertyObject">
+      <HintPath>..\..\Interface\Interface Binaries\PropertyObject.dll</HintPath>
+    </Reference>
+    <Reference Include="WorkspaceObject">
+      <HintPath>..\..\Interface\Interface Binaries\WorkspaceObject.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="&quot;%25CDS_Common%25\IPMCLI.EXE&quot; /i:&quot;$(TargetPath)&quot;" />
+  </Target>
+</Project>

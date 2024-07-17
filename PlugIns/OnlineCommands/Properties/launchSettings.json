@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "OnlineCommands.plugin": {
+      "commandName": "Executable",
+      "executablePath": "D:\\CODESYS 3.5.16.50\\CODESYS\\Common\\CODESYS.exe"
+    }
+  }
+}

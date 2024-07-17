@@ -1,0 +1,510 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="LoginSvc_Error_DownloadNotAllowed"><value>Login and full download failed for application '{0}': Only online changes are allowed.</value></data>
+  <data name="ResetOriginFailed"><value>Resetting the device to its original state failed. The following items were not deleted:</value></data>
+  <data name="WriteAllApplicationsCommand_Name"><value>Write Values to All Online Applications</value></data>
+  <data name="WriteSelectedAppCommand_Name"><value>Write All Values of '{0}'</value></data>
+  <data name="SourceDownloadCommand_Name"><value>Source Download to Connected Device</value></data>
+  <data name="CmdModeLocked_Descr"><value>Set the device to locked mode to freeze all current breakpoints, forces, etc.</value></data>
+  <data name="LoginActiveApplicationCommand_ContextlessName"><value>Login [active application]</value></data>
+  <data name="LogoutActiveApplicationCommand_Name"><value>Logout</value></data>
+  <data name="MultipleDownload_GenericErrorMessage"><value>Error while downloading item '{0}':
+{1}
+
+Do you want to continue with the remaining items?</value></data>
+  <data name="UnforceSelectedAppCommand_Description"><value>Unforce all values of the selected application</value></data>
+  <data name="MultipleDownloadCommand_Name"><value>Multiple Download...</value></data>
+  <data name="SourceProgressUpload"><value>Uploading...</value></data>
+  <data name="StopActiveApplicationCommand_Name"><value>Stop</value></data>
+  <data name="SourceUploadCommand_Description"><value>Source upload command</value></data>
+  <data name="QueryCreateApplication"><value>The application '{0}' does not exist on device '{1}'. Do you want to create it and proceed with download?</value></data>
+  <data name="Operation"><value>Operation</value></data>
+  <data name="WriteValuesCommand_Description"><value>Write the prepared values to the controller.</value></data>
+  <data name="RemoveOnlineUserCommand_Dialog_Caption"><value>Remove Device User</value></data>
+  <data name="AffectionInitNewVariables"><value>Initialized new variables</value></data>
+  <data name="SourceDownloadExCommand_Description"><value>Download complete source code of the project to a selectable device.</value></data>
+  <data name="Warning_ApplicationLogin_DifferentDevice"><value>The name of the connected device '{0}' is different from the name '{1}' stored in the project.
+This may indicate that the wrong device is connected!
+
+Are you sure you want to login to '{0}'?</value></data>
+  <data name="ReallyDeleteApplication"><value>Delete application from the device?</value></data>
+  <data name="FlowControlActiveApplicationCommand_ContextlessName"><value>Toggle Flow Control Mode</value></data>
+  <data name="PromptDeviceApplicationDelete"><value>An application with the name '{0}' already exists on the PLC. Do you want to delete this application?
+
+Click 'Cancel' to abort.
+Click 'OK' to proceed with download.</value></data>
+  <data name="QueryCreateDevice"><value>There is no device application on target {0}. Do you want to create it and proceed with download?</value></data>
+  <data name="CmdWinkIcon" mimetype="application/x-microsoft.net.object.binary.base64"><value>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABNTeXN0ZW0uRHJhd2luZy5JY29uAgAAAAhJY29uRGF0YQhJY29uU2l6ZQcEAhNTeXN0ZW0uRHJhd2luZy5TaXplAgAAAAIAAAAJAwAAAAX8////E1N5c3RlbS5EcmF3aW5nLlNpemUCAAAABXdpZHRoBmhlaWdodAAACAgCAAAAAAAAAAAAAAAPAwAAAH4FAAACAAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwHh4AeiEhAHgmJQB5KioAfiwsAIUtLACALi0AhS4tAIwvLwCYODcAmjk4AKQ9PAClPj0Ai0tJALxTUADTVFUAjmFEAKxbTwDKWVgAwltUALVdUgDHW1kAyFtZAJphVQDHW1oAPXUzAMdcWgDKXFkAn2JVAMpcWwDHX1YAx15bAMheWwDIXlwAyV5cAMdfWwDNXl0Ax19cAMhfXADJX1wAvWFaAMlgXQDLYV4AzGFfANVfYwDGY10AzGJfAMpjXwDNY18AnGZmAJxoYwDMaGIAnGtqAKhxXADSa2YAtnBhAM9uZgCKeVoAen1cALp1ZACreGUAy3VrAHiDWQDMdmwAuH9tAB+VWgDNgXIAxIRzAK+LbwDMhnYAzId1AM6JegBHnmMAQJ1xALuVlABtqHsAwZuZAL6dmAAatooAxKOiAMWlnwDKrKwAyK2sAMitrQDJrq4AzLCwAM2xsAB3wpoAzbS1ABnOpABGzqsA18PDAKnSsgDcx8cA28fIAOPU1ADR5dUAUfXoABb//wAX//8AGP//ABv//wAf//8ALf/+ADz//wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaWRBaWlpaWlpaWlpaWlpaWlpZEFpaVtWU2lpaWlpaWlpaWBkQQMICQoBDWlpaWlpaWlpMWRBHisqMAwGXWlpaWlpSjVkZEETJyMpDgRpaWlpaRw2OmRkQRQiJikLMWlpaVFFGA9LZGJOECQjLgBpaWlNPVlnZ2dlY2JOLDAFaWlpUD8dOVlhZmJiYmJZB19paVJGFSIbOVpoZBkRLQJpaWlpPDMfISAoSGRkQS00aWlpaU87Lx8lIRY+ZGRBaWlpaWlpTDc4FRoVEkRJZEFpaWlpaWlVF0NCR0AyaVdkQWlpaWlpaWleVFhpaWlpXGRBaWlpaWlpaWlpaWlpaWlpZJ//AADMfwAAwB8AAOAHAADABwAAwAMAAIADAACAAwAAgAEAAIADAADAAwAAwAcAAOADAADwEQAA/HgAAP/+AAAL</value></data><data name="Err_TSPreserveApp_NoChildApp"><value>This target supports toplevel applications only, but '{0}' is a child application. (Details: Targetsetting 'PreserveApplication' is set).</value></data>
+  <data name="Simulation_Text"><value>SIMULATION</value></data>
+  <data name="MultipleDownload_SkippedDueToForcedVariables"><value>Skipped because one or more variable have been forced.</value></data>
+  <data name="Change_ExternalSignatureFlagChanged"><value>The external signature flag has been changed.</value></data>
+  <data name="PromptError"><value>The item or file '{0}' could not be extracted.
+{1}</value></data>
+  <data name="QuerySafeReferenceContextOffline"><value>Do you want to save the reference context for the boot application?
+(will overwrite the reference of last download)</value></data>
+  <data name="PromptOverwrite"><value>The item or file '{0}' already exists. Do you want to overwrite it?
+
+{1}</value></data>
+  <data name="LogoutActiveApplicationCommand_ContextlessName"><value>Logout [active application]</value></data>
+  <data name="debug_step"><value>DEBUG STEP</value></data>
+  <data name="ProgramNotChangedDownload"><value>The program has not changed. No download was performed.</value></data>
+  <data name="OnlineChangeActiveApplicationCommand_Description"><value>Performs an online change with the difference to the last download/ online change</value></data>
+  <data name="LogoffUser_Name"><value>Logoff Current Device User</value></data>
+  <data name="QueryProgramChangedWithWarning"><value>Warning: An application '{0}' is currently in RUN mode on the PLC. As there is no matching compile information, this existing application needs to be replaced.
+
+Click 'Yes' to download the latest code or 'No' to abort.</value></data>
+  <data name="InteractiveLoginName"><value>Interactive Login</value></data>
+  <data name="OperationAborted_MissingCertificate"><value>Operation aborted, no valid certificate found.</value></data>
+  <data name="ForceValuesCommand_Name"><value>Force Values</value></data>
+  <data name="ShowCompileChangeDetails_Name"><value>Show Details of Offline Code Changes</value></data>
+  <data name="UnforceAllApplicationsCommand_Description"><value>Unforce all forced variables on all online applications, keeping their current value.</value></data>
+  <data name="MultipleDownload_MessageCategory"><value>Multiple Download</value></data>
+  <data name="OnlineCommandCategory_Description"><value>Commands for online handling</value></data>
+  <data name="FilterCreateBootApp"><value>Boot applications (*.app)|*.app</value></data>
+  <data name="LblNumAffectedVars"><value>Number of affected variables</value></data>
+  <data name="MultipleDownload_BuildingTaskName"><value>Building items</value></data>
+  <data name="MultipleDownload_BuildingTaskUnit"><value>items(s)</value></data>
+  <data name="Directory"><value>Directory</value></data>
+  <data name="AddOnlineUserCommand_LogoutMessage"><value>We recommend to logout now because you are not logged in as a special user and login again to authenticate with a specified user.</value></data>
+  <data name="QueryOnlChange2_Login"><value>Login without any change</value></data>
+  <data name="ForceFailedForSomeVariables"><value>The following value(s) could not be forced:
+{0}</value></data>
+  <data name="StopSelectedApplicationCommand_ContextlessName"><value>Stop [selected application]</value></data>
+  <data name="Change_GlobalInitInCycle"><value>The compiler define "global_init_in_cycle" is set.</value></data>
+  <data name="MultipleDownload_ConnectFailed"><value>Unable to connect to the device for item '{0}' due to the following reason:
+{1}</value></data>
+  <data name="CannotRemoveDeviceOrApplicationWhichIsOnlineException"><value>You cannot remove '{0}' because you are currently logged in to '{1}'.</value></data>
+  <data name="CmdOperational" mimetype="application/x-microsoft.net.object.binary.base64"><value>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABNTeXN0ZW0uRHJhd2luZy5JY29uAgAAAAhJY29uRGF0YQhJY29uU2l6ZQcEAhNTeXN0ZW0uRHJhd2luZy5TaXplAgAAAAIAAAAJAwAAAAX8////E1N5c3RlbS5EcmF3aW5nLlNpemUCAAAABXdpZHRoBmhlaWdodAAACAgCAAAAAAAAAAAAAAAPAwAAAH4FAAACAAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACF34UAht+GAIjfiACJ34kAh+CHAIvfiwCK4IoAjOCMAI3gjQCP4I8AmOKYAJjlmACa5poAreStAK7krgCw5LAAr+WvALHmsQC15bUAtOa0ALjmuAC257YAt+e3ALnnuQDB6MEAyejJAM/qzwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsSBwcHBgUHBwcSGxsbGxsbBwQCBBcRBAIEBxsbGxsbGwcCBgAbGwAGAgcbGxsbGxsHAgYMGxsMBgIHGxsbGxsbBwIGDBsbDAYCBxsbGxsbGwcCAwEMCwEDAgcbGxsbGxsTBAgHBwcHCAQTGxsbGxsbGxQNGxsbGw0UGxsbGxsbGxsWDxsbGxsPFhsbGxsbGxsbFQ4bGxsbDhUbGxsbGxsbGxgKGhsbGQoYGxsbGxsbGxsbEAkICAkQGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbG///AAD//wAA4AcAAOAHAADhhwAA4YcAAOGHAADgBwAA4AcAAPPPAADzzwAA888AAPGPAAD4HwAA//8AAP//AAAL</value></data><data name="SourceDownloadCommand_Description"><value>Download complete source code of the project to the connected device.</value></data>
+  <data name="CreateBootAppTitle"><value>Save boot application</value></data>
+  <data name="SourceDownloadNotSupported"><value>The source download is not supported by the selected device.</value></data>
+  <data name="UserOperation_Execute"><value>Execute</value></data>
+  <data name="SourceDownloadOptionEditorDescription"><value>Settings for source download</value></data>
+  <data name="ResetOriginSelectedApplicationCmd_Name"><value>Reset Origin</value></data>
+  <data name="StopSelectedApplicationCommand_Description"><value>Stops all selected applications</value></data>
+  <data name="ResetColdSelectedApplicationCmd_Name"><value>Reset Cold</value></data>
+  <data name="QueryNoOnlChangeWithWarning"><value>Warning: The application '{0}' is currently in RUN mode on the PLC. However, do you want to download the latest code changes?</value></data>
+  <data name="Object"><value>Object</value></data>
+  <data name="InvalidCommunicationSettings"><value>No active path defined. Do you want to set it?
+
+Clicking 'Yes' will start a network scan on the 'Communication Settings' page. If there is a device found with the same name and address you used last time, the active path will be set to it.
+
+Clicking 'No' will just show the 'Communication Settings' page without any action.
+
+Clicking 'Cancel' will return without doing any action.</value></data>
+  <data name="HaltOnExceptionCommand_Name"><value>Stop Execution on Handled Exceptions</value></data>
+  <data name="DownloadMessageCategory"><value>Download</value></data>
+  <data name="single_cycle"><value>SINGLE CYCLE</value></data>
+  <data name="FlowControlActiveApplicationCommand_Description"><value>Enable or disable flow control for the active application</value></data>
+  <data name="Change_BlobInitChanged"><value>The initialization of a blob has been changed.</value></data>
+  <data name="WriteAllApplicationsCommand_ContextlessName"><value>Write Values [all applications]</value></data>
+  <data name="ForceValuesCommand_ContextlessName"><value>Force Values [active application]</value></data>
+  <data name="OnlineChangeSelectedApplicationCommand_Description"><value>Performs an online change on the selected application with the difference to the last download/online change</value></data>
+  <data name="OnlineToOneApplication"><value>Logged in to '{0}'</value></data>
+  <data name="Change_CheckFunction"><value>CheckFunction</value></data>
+  <data name="executionpoints_active"><value>Execution points active</value></data>
+  <data name="OnlineChangeinformation_LocationChanged"><value>One or more variables change their location: the data will be copied from the old location to the new location. 
+Pointers may refer to an invalid location. Total amount of bytes to copy: {0}</value></data>
+  <data name="CmdModeDebug_Descr"><value>Set the device to debug mode to allow breakpoints, forcing, etc.</value></data>
+  <data name="exception"><value>EXCEPTION</value></data>
+  <data name="OnlineChangeinformation_ReInit"><value>One or more variables change their type: the variable will be initialized, the current values will get lost.</value></data>
+  <data name="DisplayModeDecimalCommand_Description"><value>Display monitoring values in decimal format</value></data>
+  <data name="MultipleDownload_BuildFailed"><value>Compile errors occurred while building item '{0}'. </value></data>
+  <data name="Err_SourceDownload_NoSpaceOnTarget"><value>The source download cannot be performed as there is not enough space left on the device.</value></data>
+  <data name="ApplicationContent_Title_PLC"><value>Last downloaded code for application '{0}'.</value></data>
+  <data name="ApplicationContent_Title_IDE"><value>Last generated code for application '{0}'.</value></data>
+  <data name="DownloadActiveApplicationCommand_Name"><value>Download</value></data>
+  <data name="OfflineCodeState_NoCodeGenerated"><value>No reference code generated</value></data>
+  <data name="LblTotalRelinkTests"><value>- total number of tests</value></data>
+  <data name="LogoutCascadingCommand_Name"><value>Logout All Applications</value></data>
+  <data name="RemoveOnlineUserCommand_Description"><value>Remove an existing device user</value></data>
+  <data name="LogoutActiveApplicationCommand_Description"><value>Disconnects from the currently active application and switches it into offline mode</value></data>
+  <data name="LoginActiveApplicationCommand_Description"><value>Connects to the currently active application and switches it into online mode</value></data>
+  <data name="ForceAllApplicationsCommand_Description"><value>Force the prepared values to all online applications</value></data>
+  <data name="OptionEditorDescription_Text"><value>Monitoring</value></data>
+  <data name="MultipleDownloadResult_CancelledByUser"><value>Cancelled by user</value></data>
+  <data name="ResetOriginDeviceCmd_Name"><value>Reset Origin Device [{0}]</value></data>
+  <data name="Change_VariableDeleted"><value>Variable deleted</value></data>
+  <data name="CommandDeleteApplicationFromDevice"><value>Delete application from device</value></data>
+  <data name="force_active"><value>Force active</value></data>
+  <data name="SwitchSimulationModeActiveCommand_Name"><value>Simulation</value></data>
+  <data name="unknown"><value>UNKNOWN</value></data>
+  <data name="MultipleDownloadResult_Created"><value>Created</value></data>
+  <data name="StopActiveApplicationCommand_Description"><value>Stops the active application</value></data>
+  <data name="Change_MemorySettingsChanged"><value>The memory settings have been changed.</value></data>
+  <data name="PromptOutdatedDevdesc"><value>The device version '{0}' in the project is older than the connected device. It is recommended to cancel the operation and manually update the device to version '{1}' in the project.
+
+Click 'Cancel' to abort. 
+Click 'OK' to ignore this warning and continue with the operation.
+</value></data>
+  <data name="CmdWink_Descr"><value>Sends an online service to the device to trigger blinking of an LED for identificational purposes.</value></data>
+  <data name="InteractiveLoginPressKey"><value>Press key...</value></data>
+  <data name="CannotRenameOnlineObject"><value>Unable to rename the object '{0}' because it is used on a device you are currently logged into.</value></data>
+  <data name="QueryOnlChangeWithWarning"><value>Warning: The application '{0}' is currently in RUN mode on the PLC. However, do you want to do an online change to apply the latest code changes?</value></data>
+  <data name="CmdWink_Name"><value>Wink</value></data>
+  <data name="RemoveOnlineUserCommand_LogoutMessage"><value>We recommend to logout now because you have deleted the current device user on the target.</value></data>
+  <data name="OnlineUser_PasswordStrength_Better"><value>Better</value></data>
+  <data name="LoginSvc_Error_InvalidOwner"><value>Login cannot be configured/executed: Invalid owner detected!</value></data>
+  <data name="SourceUploadPrompt_NoUploadFile"><value>No source archive is available on the PLC.</value></data>
+  <data name="MultipleDownload_PromptContinue"><value>Do you want to continue with the items?</value></data>
+  <data name="ForceAllApplicationsCommand_Name"><value>Force Values to All Online Applications</value></data>
+  <data name="UserManagement"><value>User Management</value></data>
+  <data name="StopSelectedApplicationCommand_Name"><value>Stop</value></data>
+  <data name="Change_NameExpressionChanged"><value>The name expression of a variable has changed.</value></data>
+  <data name="Change_VariableChanged"><value>Variable changed</value></data>
+  <data name="QueryProgramChanged"><value>An application '{0}' is currently on the PLC. As there is no matching compile information, this existing application needs to be replaced.
+
+Click 'Yes' to download the latest code or 'No' to abort.</value></data>
+  <data name="ListOfChangedPOUs"><value>List of POUs with changed code:</value></data>
+  <data name="HaltOnExceptionCommand_Description"><value>If checked, the execution stops on exceptions, even if the exceptions are handled by code.</value></data>
+  <data name="UnforceFailedForSomeVariables"><value>The following value(s) could not be unforced:
+{0}</value></data>
+  <data name="OperatingModeLocked"><value>Locked</value></data>
+  <data name="SourceProgressDownload"><value>Downloading...</value></data>
+  <data name="Change_ParentContextChanged"><value>The parent context has been changed.</value></data>
+  <data name="QueryOnlChange"><value>The application changed since the last download. Do you want to perform an online change?</value></data>
+  <data name="UnforceAllApplicationsCommand_Name"><value>Unforce All Values on All Online Applications</value></data>
+  <data name="ListOfInterfaces"><value>List of POUs with changed interface:</value></data>
+  <data name="Change_InhibitOnlineChange"><value>POU changed, that inhibits an online change</value></data>
+  <data name="OnlineToSomeApplications"><value>Logged in to {0} applications...</value></data>
+  <data name="Change_DeviceApplication"><value>"Device Application" environment</value></data>
+  <data name="NoSourceCodeAvailable"><value>Source code is not available for this code position.</value></data>
+  <data name="FlowControlActiveApplicationCommand_Name"><value>Toggle Flow Control Mode</value></data>
+  <data name="OnlineChangeActiveApplicationCommand_Name"><value>Online Change</value></data>
+  <data name="DoNotWarnAgain"><value>Do not warn again for this session</value></data>
+  <data name="ResetOriginDeviceCmd_Description"><value>Reset origin of the selected device</value></data>
+  <data name="ConnectToDeviceName"><value>Connect to [{0}]</value></data>
+  <data name="InterfaceListExceeded"><value>    List exceeds 100 interfaces</value></data>
+  <data name="Col_Pou"><value>POU</value></data>
+  <data name="PromptLogoutAppWithForcedValues"><value>Would you like to unforce all currently forced variables on the current application before logging out?</value></data>
+  <data name="StartSelectedApplicationCommand_Description"><value>Starts all selected applications</value></data>
+  <data name="AffectionLocationChanged"><value>Location Changed, Pointer to the variable may refer to invalid data</value></data>
+  <data name="CmdModeLock_Info"><value>The device is currently in LOCKED mode. 
+
+No interaction with the device is allowed (no new breakpoints, no additional forcing, etc. ). However, any existing breakpoints or forced values may influence the execution of the application. </value></data>
+  <data name="ResetWarmSelectedApplicationCmd_Name"><value>Reset Warm</value></data>
+  <data name="BreakpointsDisablingWarning"><value>The application contains active breakpoints. Breakpoints get disabled during flow control. Do you want to continue?</value></data>
+  <data name="AddOnlineUserCommand_Dialog_Caption"><value>Add Device User</value></data>
+  <data name="POUListExceeded"><value>    List exceeds 100 POUs</value></data>
+  <data name="halt_on_bp"><value>HALT ON BP</value></data>
+  <data name="SourceTransferFailed"><value>Source transfer failed</value></data>
+  <data name="ChangePasswordOnlineUserCommand_Description"><value>Change password of current device user</value></data>
+  <data name="Change_CompileOptionsChanged"><value>The compile options were changed</value></data>
+  <data name="ApplicationList"><value>The following applications are currently on the device:
+{0}</value></data>
+  <data name="LoginSelectedApplicationCommand_ContextlessName"><value>Login [selected application]</value></data>
+  <data name="LogoffUser_Description"><value>Logoff current device user and disconnect from device</value></data>
+  <data name="GenerateCodeFailed"><value>Errors occured during code generation. See message list.</value></data>
+  <data name="SingleCycleActiveApplicationCommand_Description"><value>Performs one single cycle on the active application</value></data>
+  <data name="CmdModeDebug_Info"><value>The device is currently in DEBUG mode. 
+
+All kinds of interaction are allowed (new breakpoints, forcing, start/stop, etc.).</value></data>
+  <data name="LblNumItfTest"><value>Number of Interfaces to test</value></data>
+  <data name="LogoutCascadingCommand_Description"><value>Logout from all applications of the current device.</value></data>
+  <data name="MultipleDownload_ProcessingExtensionFailed"><value>Unable to download '{0}' due to the following reason:
+{1}</value></data>
+  <data name="OnlineUser_PasswordStrength_Medium"><value>Medium</value></data>
+  <data name="QueryLocationChangedFullDownload"><value>The code changes may have unintended consequences:		
+Please check the details before continuation!
+
+Do you want to continue?</value></data>
+  <data name="UnforceValuesCommand_Description"><value>Unforce all currently forced variables, keeping their current value.</value></data>
+  <data name="LogoutSelectedApplicationCommand_ContextlessName"><value>Logout [selected application]</value></data>
+  <data name="ApplyToAll"><value>Apply to all items and files</value></data>
+  <data name="CmdDebug" mimetype="application/x-microsoft.net.object.binary.base64"><value>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABNTeXN0ZW0uRHJhd2luZy5JY29uAgAAAAhJY29uRGF0YQhJY29uU2l6ZQcEAhNTeXN0ZW0uRHJhd2luZy5TaXplAgAAAAIAAAAJAwAAAAX8////E1N5c3RlbS5EcmF3aW5nLlNpemUCAAAABXdpZHRoBmhlaWdodAAACAgCAAAAAAAAAAAAAAAPAwAAAH4FAAACAAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjIyMAJSUlACgoKAArKysALCwsAC0tLQA1NTUAOzs7AEVFRQBHR0cASEhIAE5OTgBPT08AUVFRAFdXVwBYWFgAWlpaAF5eXgBgYGAAY2NjAGRkZABpaWkAbGxsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxADAwMCAwMDAxAXFxcXFxcDAQEBEg8BAQEDFxcXFxcXAwECABcXAAIBAxcXFxcXFwMBAgcXFwcCAQMXFxcXFxcDAQIHFxcHAgEDFxcUERcXAwECAQcHAQIBAxcXDQkXFxABBQMDAwMFARAXFwkXFxcXFxUWFxcXFxcXFxcMCBcXFxcKDBcXFxcXFxcXCwkXFxcXCQsXFxcXFxcXFw4GExcXEQYOFxcXFxcXFxcXCgUEAwUKFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXF///AAD//wAA+AEAAPgBAAD4YQAA+GEAAPhhAACYAQAAmAEAAL5/AACefwAAnn8AAIx/AADA/wAA//8AAP//AAAL</value></data><data name="OnlineChangeActiveApplicationCommand_ContextlessName"><value>Online Change [active application]</value></data>
+  <data name="LogoutSelectedApplicationCommand_Name"><value>Logout</value></data>
+  <data name="WriteFailedForSomeVariables"><value>The following value(s) could not be written to the controller:
+{0}</value></data>
+  <data name="MultipleDownloadCommand_Description"><value>Download (and optionally start) multiple applications at once</value></data>
+  <data name="WriteSelectedAppCommand_ContextlessName"><value>Write All Values [selected application]</value></data>
+  <data name="CmdLocked" mimetype="application/x-microsoft.net.object.binary.base64"><value>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABNTeXN0ZW0uRHJhd2luZy5JY29uAgAAAAhJY29uRGF0YQhJY29uU2l6ZQcEAhNTeXN0ZW0uRHJhd2luZy5TaXplAgAAAAIAAAAJAwAAAAX8////E1N5c3RlbS5EcmF3aW5nLlNpemUCAAAABXdpZHRoBmhlaWdodAAACAgCAAAAAAAAAAAAAAAPAwAAAH4FAAACAAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjIyMAJSUlACgoKAArKysALS0tADAwMAA7OzsAUlJSAFVVVQBYWFgAWlpaAF1dXQBgYGAAampqAHJycgB6enoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAKAwMDAgMDAwMKEBAQEBAQAwEBAQwJAQEBAxAQEBAQEAMBAgAQEAACAQMQEBAQEBADAQIGEBAGAgEDEBAQEBAQAwECBhAQBgIBAxAQEBAQEAMBAgEGBgECAQMQEBAQEBAKAQQDAwMDBAEKEBAQEBAQEAsHEBAQEAcLEBAQEBAQEBALCBAQEBAICxAQEBAQEBAQCwcQEBAQBwsQEBAQEBAQEA0GDxAQDgYNEBAQEBAQEBAQBwUEBAUHEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEP//AAD//wAA4AcAAOAHAADhhwAA4YcAAOGHAADgBwAA4AcAAPPPAADzzwAA888AAPGPAAD4HwAA//8AAP//AAAL</value></data><data name="SourceProgressInitializing"><value>Initializing...</value></data>
+  <data name="CmdModeOperational_Descr"><value>Set the device to operational mode to prevent breakpoints, forcing, etc.</value></data>
+  <data name="Prompt_UserMgmt_DeleteCurrentUser"><value>Are you sure to delete the current device user '{0}'?</value></data>
+  <data name="MultipleDownloadResult_Error"><value>Error</value></data>
+  <data name="VersionMismatch"><value>Version mismatch at: '{0}'   Requested version: {1}   Implemented version: {2}</value></data>
+  <data name="UnresolvedReference"><value>Unresolved reference: '{0}'</value></data>
+  <data name="MultipleDownload_GenericWarningMessage"><value>Warning while downloading application '{0}':
+{1}
+
+Do you want to continue with the remaining applications?</value></data>
+  <data name="StopCascadingCommand_Name"><value>Stop All Applications</value></data>
+  <data name="ApplicationListEmpty"><value>There are currently no applications on the device.</value></data>
+  <data name="SourceProgressTransferringArchiveFile"><value>Transferring archive file</value></data>
+  <data name="SourceDownloadOptionEditorName"><value>Source Download</value></data>
+  <data name="SourceDownloadExCommand_Name"><value>Source Download...</value></data>
+  <data name="OptionEditorName_Text"><value>Monitoring</value></data>
+  <data name="StopActiveApplicationCommand_ContextlessName"><value>Stop [active application]</value></data>
+  <data name="InteractiveLoginEnterID"><value>Enter ID:</value></data>
+  <data name="AddOnlineUserCommand_Name"><value>Add Device User...</value></data>
+  <data name="QueryOnlChange3_LoginDownload"><value>Login with download (Child applications will be removed)</value></data>
+  <data name="ResetWarmCascadingCommand_Name"><value>Reset Warm All Applications</value></data>
+  <data name="QueryOnlChange2"><value>The application changed since last download. What do you want to do?</value></data>
+  <data name="PromptExecuteLogin"><value>Are you sure you want to login to the node '{0}' with address '{1}'?</value></data>
+  <data name="MultipleDownloadResult_Downloaded"><value>Downloaded</value></data>
+  <data name="Error_NoUserInformationFound"><value>Operation aborted, no user information available on the device.</value></data>
+  <data name="QueryFinishCycleReset_Text"><value>The execution is currently halted on breakpoint. If a reset is performed, the current cycle will be finished, before the reset takes place. Do you want to continue?</value></data>
+  <data name="StartCascadingCommand_Description"><value>Start all applications of the selected device</value></data>
+  <data name="CodeUnchanged"><value>Program unchanged</value></data>
+  <data name="DisconnectFromDeviceName"><value>Disconnect from [{0}]</value></data>
+  <data name="AffectionInitialized"><value>Initialized</value></data>
+  <data name="UnforceAllApplicationsCommand_ContextlessName"><value>Unforce Values [all applications]</value></data>
+  <data name="Change_InhibitOnlineChangeOnCodeChanges"><value>POU with SignatureFlag.InhibitOnlineChangeOnCodeChanges has been changed</value></data>
+  <data name="StopCascadingCommand_Description"><value>Stop all applications of the selected device</value></data>
+  <data name="ShowCompileChangeDetails_Description"><value>Shows details about the current state of the edited code in comparison to the last downloaded code</value></data>
+  <data name="FlowControlWarning"><value>Enabling Flow Control will prolong the cycle time of the tasks executing the currently watched code, and may lead to jitter effects or watchdog exceptions. Do you want to continue?</value></data>
+  <data name="InvalidParameters"><value>Invalid parameters</value></data>
+  <data name="UnforceValuesCommand_ContextlessName"><value>Unforce Values [active application]</value></data>
+  <data name="Change_PrecomTypeMayLeaveDeadRefs"><value>PrecomTypeMayLeaveDeadRefs</value></data>
+  <data name="SourceProgressBytes"><value>bytes</value></data>
+  <data name="run"><value>RUN</value></data>
+  <data name="ChangePasswordOnlineUserCommand_Dialog_Caption"><value>Change Password Device User</value></data>
+  <data name="OfflineCodeState_Unchanged"><value>Code unchanged</value></data>
+  <data name="DownloadActiveApplicationCommand_Description"><value>Performs a full download of the currently active application.</value></data>
+  <data name="WriteSelectedAppCommand_Description"><value>Write all values of the selected application</value></data>
+  <data name="ForceAllApplicationsCommand_ContextlessName"><value>Force Values [all applications]</value></data>
+  <data name="ResetWarmCascadingCommand_Description"><value>Perform a reset warm on all application of the selected device.</value></data>
+  <data name="Offline"><value>Offline</value></data>
+  <data name="QueryOnlChangeWithForceVars"><value>The application has been changed since the last download, and there are forced variables on the controller. What do you want to do?</value></data>
+  <data name="DisplayModeBinaryCommand_Name"><value>Binary</value></data>
+  <data name="Prompt_BasicResetOrigin"><value>Do you really want to reset the device to its original state?
+
+Resetting the device will delete all of the selected items below.</value></data>
+  <data name="CreateBootApplicationCommand_Description"><value>Create boot application for active application</value></data>
+  <data name="Change_BaseExpressionChanged"><value>Base expression of function block changed</value></data>
+  <data name="EditObjectOffline_Name"><value>Edit Object (Offline)</value></data>
+  <data name="LblMovedInst"><value>- moved Instances affected</value></data>
+  <data name="ListOfInstancesImplementingInterfaces"><value>List of moved instances implementing interfaces:</value></data>
+  <data name="WriteValuesCommand_ContextlessName"><value>Write Values [active application]</value></data>
+  <data name="Prompt_ActivateUserManagement_new"><value>Currently, the user management is not activated on the device.
+Would you like to activate it now?
+
+Please note: When activating the user management you will be asked to create a new admin user. Then you will be asked to login as this user.</value></data>
+  <data name="Aborting"><value>Aborting...</value></data>
+  <data name="InteractiveLoginTimeout"><value>Progress of the operation (Timeout = {0}seconds):</value></data>
+  <data name="AffectionReInitialized"><value>Type changed incompatible</value></data>
+  <data name="StartSelectedApplicationCommand_Name"><value>Start</value></data>
+  <data name="FileTransferDownload"><value>File download</value></data>
+  <data name="Change_SignatureChangedByChecksumAttribute"><value>Declaration of pou changed, explicitly invalidated</value></data>
+  <data name="CreateBootApplicationCommand_Name"><value>Create Boot Application</value></data>
+  <data name="SingleCycleActiveApplicationCommand_Name"><value>Single Cycle</value></data>
+  <data name="PromptDeletePLCApplications"><value>The following applications exist on the PLC, but not in this project.
+Please select those applications which should be deleted on the PLC.</value></data>
+  <data name="QueryDownloadAlways"><value>The application changed since the last download. Do you want to perform a download?</value></data>
+  <data name="DownloadOnDeviceCommand_Name"><value>Download on Device '{0}'</value></data>
+  <data name="SourceUploadCommand_Name"><value>Source Upload...</value></data>
+  <data name="MultipleDownloadResult_SkippedDueToImpossibleOnlineChange"><value>Skipped due to impossible online change</value></data>
+  <data name="flow_active"><value>Flow active</value></data>
+  <data name="LoginSvc_Error_CompileCodeFailed"><value>Compiling the code for application '{0}' failed.</value></data>
+  <data name="UserOperation_AddRemove"><value>Add/Remove</value></data>
+  <data name="ResetColdCascadingCommand_Description"><value>Perform a reset cold on all applications of the selected device.</value></data>
+  <data name="PromptExecuteOperation"><value>Do you really want to perform the operation '{0}'?</value></data>
+  <data name="DisplayModeBinaryCommand_Description"><value>Display monitoring values in binary format</value></data>
+  <data name="UnresolvedSystemApplication"><value>Unresolved system application: '{0}'</value></data>
+  <data name="QueryDownloadDevice"><value>Data for device {0} has changed. Do you want to perform a download? (Warning: all applications will be removed from device!)</value></data>
+  <data name="QueryOnlChange2_LoginOnlineChange"><value>Login with online change</value></data>
+  <data name="DisconnectFromDeviceDescription"><value>Disconnects from a device</value></data>
+  <data name="WarnUserOfMissingCompileInfo"><value>The source archive to be downloaded does not include the download information files. Therefore a login to this PLC using the uploaded code later on will require a full download of the application. 
+
+Click 'Yes' to add the download information files to the source archive now. 
+Click 'No' to download the source archive without these files.</value></data>
+  <data name="Prompt_ActivateUserManagement"><value>Currently, the user management is not activated on the device.
+Would you like to activate it now?
+
+Please note: When activating the user management you will be asked to login as 'Administrator' using the default password. Then you will be asked to enter a new password.</value></data>
+  <data name="LoginCascadingCommand_Name"><value>Login All Applications</value></data>
+  <data name="CmdOperationalStatusField" mimetype="application/x-microsoft.net.object.binary.base64"><value>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABNTeXN0ZW0uRHJhd2luZy5JY29uAgAAAAhJY29uRGF0YQhJY29uU2l6ZQcEAhNTeXN0ZW0uRHJhd2luZy5TaXplAgAAAAIAAAAJAwAAAAX8////E1N5c3RlbS5EcmF3aW5nLlNpemUCAAAABXdpZHRoBmhlaWdodAAACAgCAAAAAAAAAAAAAAAPAwAAAH4FAAACAAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADD78MA////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAAQEBAQEBAQEAAgICAgICAQEBAQAAAQEBAQICAgICAgEBAQECAgEBAQECAgICAgIBAQEAAgIAAQEBAgICAgICAQEBAAICAAEBAQICAgICAgEBAQEAAAEBAQECAgICAgIAAQEBAQEBAQEAAgICAgICAgEAAgICAgEAAgICAgICAgIBAAICAgIBAAICAgICAgICAQACAgICAQACAgICAgICAgABAAICAAEAAgICAgICAgICAAEBAQEAAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAv//AAD//wAA4AcAAOAHAADhhwAA4YcAAOGHAADgBwAA4AcAAPPPAADzzwAA888AAPGPAAD4HwAA//8AAP//AAAL</value></data><data name="OperatingModeOperational"><value>Operational</value></data>
+  <data name="AffectionVFTableInitialized"><value>Virtual Function Table Initialized</value></data>
+  <data name="Prompt_AdvancedResetOrigin"><value>Do you really want to reset the device to its original state?
+
+Resetting the device will delete all of the selected items below.
+
+Deleting just a subset of items may render other items inoperable. Depending on the configuration of the device, additional items may also get deleted.</value></data>
+  <data name="LoginSvc_Error_GenerateCodeFailed"><value>Generating the code for application '{0}' failed.</value></data>
+  <data name="download"><value>Download</value></data>
+  <data name="ResetOriginSelectedApplicationCmd_Description"><value>Execute a reset origin of the currently active application.</value></data>
+  <data name="ForceSelectedAppCommand_ContextlessName"><value>Force All Values [selected application]</value></data>
+  <data name="CmdActiveApplicationSelector_Name"><value>Choose Active Application</value></data>
+  <data name="ProgramNotChangedOnlChange"><value>The program has not changed. No online change was performed.</value></data>
+  <data name="SourceDownload_SyncProviderName"><value>Source Download Provider</value></data>
+  <data name="CmdModeOperational_Info"><value>The device is currently in OPERATIONAL mode. 
+
+No interaction with the device is allowed. There are no breakpoints and no forces active. In addition, a matching boot application is existing on the device.</value></data>
+  <data name="SwitchSimulationModeSelectionCommand_ContextlessName"><value>Simulation [selected application]</value></data>
+  <data name="Change_NewCheckFunctionInserted"><value>New POUs for implicit checks inserted</value></data>
+  <data name="PromptDeletePLCApplicationsOnlyOneAppAllowed"><value>The  application '{0}' exists on the PLC but not in this project. As the PLC supports only one application, the existing application has to be deleted.
+ 
+Please click 'OK' to delete the application and continue with the download or click 'Cancel' to abort.</value></data>
+  <data name="Change_TaskListChanged"><value>The task list has been changed.</value></data>
+  <data name="EmptyDownloadTime"><value>none</value></data>
+  <data name="Col_PreventsOnlineChange"><value>Prevents Online Change?</value></data>
+  <data name="CannotRemoveOnlineObject"><value>The object '{0}' cannot be moved or removed because it is used on a device you are currently logged into.</value></data>
+  <data name="CannotAddOnlineObject"><value>Cannot add an object because it affects a device you are currently logged into.</value></data>
+  <data name="LogoutSelectedApplicationCommand_Description"><value>Disconnects from all currently selected applications.</value></data>
+  <data name="LblToInit"><value>- to initialize</value></data>
+  <data name="LblToCopy"><value>- to copy</value></data>
+  <data name="OperatingModeDebug"><value>Debug</value></data>
+  <data name="PromptOpenExtractedProject"><value>Do you want to open the project which has been extracted from the project archive?</value></data>
+  <data name="InteractiveLoginConfirmed"><value>Login confirmed by device</value></data>
+  <data name="CannotReadApplicationInfoFromPLC"><value>Unable to read the application information from PLC.</value></data>
+  <data name="OpenLoggerPage_Descr"><value>Opens the online log page for the device of the active application</value></data>
+  <data name="OfflineCodeState_OnlineChangable"><value>Online change possible</value></data>
+  <data name="Err_SourceDownload_ArchiveTooBig"><value>The source download cannot be performed as the archive size exceeds the maximum size of {0} bytes.</value></data>
+  <data name="VariableListExceeded"><value>    List exceeds 100 variables</value></data>
+  <data name="SpecifiedDeviceNotFound"><value>The specified device '{0}' could not be found.</value></data>
+  <data name="OnlineCommandCategory_Name"><value>Online</value></data>
+  <data name="RemoveOnlineUserCommand_Name"><value>Remove Device User...</value></data>
+  <data name="SourceDownload_AllDevices"><value>&lt;All devices in project&gt;</value></data>
+  <data name="DisplayModeDecimalCommand_Name"><value>Decimal</value></data>
+  <data name="WriteValuesCommand_Name"><value>Write Values</value></data>
+  <data name="online_change"><value>Online change</value></data>
+  <data name="QueryCompileErrors"><value>There are compile errors. Do you want to login without download ?</value></data>
+  <data name="MultipleDownload_ConnectingTaskName"><value>Checking connections</value></data>
+  <data name="MultipleDownload_ConnectingTaskUnit"><value>item(s)</value></data>
+  <data name="ResetColdCascadingCommand_Name"><value>Reset Cold All Applications</value></data>
+  <data name="ReleaseForceListActiveApplicationCommand_Description"><value>Releases all forced values of the active application.</value></data>
+  <data name="LblToReinit"><value>- to re-initialize</value></data>
+  <data name="NoDownloadOnBP"><value>The execution of application {0} is currently halted on breakpoint.If a download or online change is performed now, the current cycle will be finished first, and the PLC will switch to STOP mode! Do you want to continue?</value></data>
+  <data name="InvalidValue"><value>Invalid value</value></data>
+  <data name="QueryOnlChange2_LoginDownload"><value>Login with download</value></data>
+  <data name="CurrentState"><value>Current State</value></data>
+  <data name="QueryDownloadAlwaysWithWarning"><value>Warning: The application '{0}' is currently in RUN mode on the PLC. However, do you want to download the latest code?</value></data>
+  <data name="Col_Description"><value>Description</value></data>
+  <data name="LblChangedLoc"><value>- with changed location</value></data>
+  <data name="LblChangedVFT"><value>- with changed VF table</value></data>
+  <data name="OpenLoggerPage_Name"><value>Open Log Page...</value></data>
+  <data name="MultipleDownloadResult_NotChanged"><value>Not changed</value></data>
+  <data name="StartActiveApplicationCommand_ContextlessName"><value>Start [active application]</value></data>
+  <data name="MultipleDownloadResult_OnlineChanged"><value>Online changed</value></data>
+  <data name="QueryOnlChangeWithForceVars_Login"><value>Login without any change and keep the forced variables.</value></data>
+  <data name="SwitchSimulationModeActiveCommand_Description"><value>Switches simulation mode on or off</value></data>
+  <data name="MultipleDownload_ProcessingApplicationsTaskUnit"><value>item(s)</value></data>
+  <data name="MultipleDownload_ProcessingApplicationsTaskName"><value>Downloading items</value></data>
+  <data name="SwitchSimulationModeSelectionCommand_Name"><value>Simulation</value></data>
+  <data name="OnlineUser_PasswordStrength_Good"><value>Good</value></data>
+  <data name="OnlineUser_PasswordStrength_Weak"><value>Weak</value></data>
+  <data name="OnlineChangeinformation_General_OK"><value>The changes are not considered to be harmful.
+		</value></data>
+  <data name="ConnectToDeviceDescription"><value>Connect to selected device</value></data>
+  <data name="SourceProgressFinishing"><value>Finishing...</value></data>
+  <data name="PromptDeletePLCApplicationsCancelDownload"><value>The following applications exist on the PLC, but not in this project.
+Please select those applications which should be deleted on the PLC and click 'OK'. To abort the download, click 'Cancel'.
+</value></data>
+  <data name="Change_ParentContextNull"><value>The parent context is null.</value></data>
+  <data name="SourceDownload_SyncFileDescription"><value>The file containing the source code of the project</value></data>
+  <data name="AffectionCopied"><value>Old value copied</value></data>
+  <data name="FileTransferUpload"><value>File upload</value></data>
+  <data name="TooManyDecimalPlaces"><value>The number of decimal places must not be greater than {0}.</value></data>
+  <data name="Error_ConflictingEncryptionSettings"><value>Operation aborted. Conflicting encryption settings for the application!
+
+Please deactivate dongle encryption in the properties of the application object.</value></data>
+  <data name="QueryOnlChangeWithForceVars_LoginDownload"><value>Login with download and release the forced variables.</value></data>
+  <data name="core_dump_creating"><value>Creating Core Dump</value></data>
+  <data name="QueryDownload"><value>No program exists on the target: Do you want to perform a download?</value></data>
+  <data name="QueryNoOnlChange"><value>No online change possible due to severe changes : Do you want to perform a download?</value></data>
+  <data name="LoginCascadingCommand_Descption"><value>Login to all applications of the current device.</value></data>
+  <data name="StartActiveApplicationCommand_Description"><value>Starts the active application</value></data>
+  <data name="UnforceSelectedAppCommand_ContextlessName"><value>Unforce All Values [selected application]</value></data>
+  <data name="MultipleDownload_ProcessingApplicationFailed"><value>Unable to download or online-change application '{0}' due to the following reason:
+{1}</value></data>
+  <data name="QueryTerminateCycleReset_Text"><value>The execution is currently halted on breakpoint. Do you want to finish the cycle before performing the reset command?
+Yes: Finish the cycle and perform the reset afterwards.
+No: Terminate the task and perform the reset immediately.</value></data>
+  <data name="ListOfInterfaceReferences"><value>List of interface references to test for redirection:</value></data>
+  <data name="WriteAllApplicationsCommand_Description"><value>Write the prepared values to all online applications</value></data>
+  <data name="CodeNeedsOnlineChange"><value>Program modified (Online change)</value></data>
+  <data name="OnlineChangeSelectedApplicationCommand_ContextlessName"><value>Online Change [selected application]</value></data>
+  <data name="OnlineChangeinformation_General_Warning"><value>Depending on the amount of changes, a jitter may occur, that may even lead to a watchdog event.</value></data>
+  <data name="LoginSelectedApplicationCommand_Description"><value>Connects to all currently selected applications.</value></data>
+  <data name="TargetMismatch_Type"><value>Type mismatch: Selected={0}, Online={1}</value></data>
+  <data name="LblNumChangedPOUs"><value>Number of changed POUs</value></data>
+  <data name="Change_InterfacesRemoved"><value>Interface removed from IMPLEMENTS clause</value></data>
+  <data name="LblNumChangedItfs"><value>Number of changed interfaces</value></data>
+  <data name="OnlineUser_PasswordStrength_VeryWeak"><value>Very weak</value></data>
+  <data name="OnlineUser_PasswordStrength_VeryGood"><value>Very good</value></data>
+  <data name="InterfaceReferenceListExceeded"><value>    List exceeds 100 interface references</value></data>
+  <data name="ForceValuesCommand_Description"><value>Force the prepared values to the controller.</value></data>
+  <data name="LoginActiveApplicationCommand_Name"><value>Login</value></data>
+  <data name="StartSelectedApplicationCommand_ContextlessName"><value>Start [selected application]</value></data>
+  <data name="ReleaseForceListActiveApplicationCommand_Name"><value>Release Force List</value></data>
+  <data name="ForceSelectedAppCommand_Description"><value>Force all prepared values of the selected application</value></data>
+  <data name="ListOfVariables"><value>List of affected variables:</value></data>
+  <data name="UnforceSelectedAppCommand_Name"><value>Unforce All Values of '{0}'</value></data>
+  <data name="PasswordRenewal"><value>Password expired, please enter a new one.</value></data>
+  <data name="TargetMismatch_Version"><value>Version mismatch: Selected={0}, Online={1}</value></data>
+  <data name="UnforceValuesCommand_Name"><value>Unforce Values </value></data>
+  <data name="AddOnlineUserCommand_Description"><value>Add a new device user</value></data>
+  <data name="QueryGenerateCode"><value>The application changed since last download: Do you want to generate new code for the boot application?
+Yes: Generate code and use the new code for the boot application
+No: Use the saved code of the last download for the boot application</value></data>
+  <data name="ChangePasswordOnlineUserCommand_Name"><value>Change Password Device User...</value></data>
+  <data name="PromptSaveProjectDuringSourceDownload"><value>Downloading the source requires the project to be saved first. 
+
+Click 'Yes' to save the project and continue with the source download or click 'No' to skip the source download.</value></data>
+  <data name="UserOperation_View"><value>View</value></data>
+  <data name="WriteFailedForSomeForcedVariables"><value>The following value(s) have not be written to the controller, because the variables are already forced:
+{0}</value></data>
+  <data name="TargetMismatch_Id"><value>ID mismatch: Selected={0}, Online={1}</value></data>
+  <data name="OnlineChangeSelectedApplicationCommand_Name"><value>Online Change</value></data>
+  <data name="DisplayModeHexadecimalCommand_Name"><value>Hexadecimal</value></data>
+  <data name="ForceSelectedAppCommand_Name"><value>Force All Values of '{0}'</value></data>
+  <data name="Change_VariableInserted"><value>Variable inserted</value></data>
+  <data name="Change_InterfaceSequenceChanged"><value>Sequence of the implemented interfaces changed</value></data>
+  <data name="core_dump_loaded"><value>Core Dump loaded</value></data>
+  <data name="UserOperation_Modify"><value>Modify</value></data>
+  <data name="SwitchSimulationModeActiveCommand_ContextlessName"><value>Simulation [active application]</value></data>
+  <data name="CodeNeedsFullDownload"><value>Program modified (Full download)</value></data>
+  <data name="StartCascadingCommand_Name"><value>Start All Applications</value></data>
+  <data name="LoginSelectedApplicationCommand_Name"><value>Login</value></data>
+  <data name="SystemApplication"><value>System Application</value></data>
+  <data name="DisplayModeHexadecimalCommand_Description"><value>Display monitoring values in hexadecimal format</value></data>
+  <data name="OfflineCodeState_DownloadNeeded"><value>Code download necessary</value></data>
+  <data name="SwitchSimulationModeSelectionCommand_Description"><value>Switches simulation mode on or off</value></data>
+  <data name="DownloadOnDeviceCommand_Description"><value>Performs a full download of the currently active device.</value></data>
+  <data name="Change_TaskLocalGvl"><value>The changed POU is a task local GVL.</value></data>
+  <data name="LoginSvc_Error_ConflictingFlags"><value>Login aborted: Conflicting flag settings detected ('{0}' and '{1}').</value></data>
+  <data name="QueryOnlChange3_LoginOnlineChange"><value>Login with online change (Child applications will be removed)</value></data>
+  <data name="EditObjectOffline_Description"><value>Edit the selected object with the default editor in offline mode</value></data>
+  <data name="SourceDownloadPrompt_MessageBoxText"><value>Do you want to download the source to the target?
+
+You may deactivate this prompt by changing the timing of the '{0}' in the 'Project Settings'.</value></data>
+  <data name="LoginSvc_Error_LoginFailed"><value>Login failed for application '{0}'.</value></data>
+  <data name="stop"><value>STOP</value></data>
+  <data name="None"><value>&lt;none&gt;</value></data>
+  <data name="PromptDeviceApplicationCreate"><value>There is no device application on the PLC. The following applications will be removed from the PLC, before downloading the device application:
+{0}
+
+Click 'Cancel' to abort the download.
+Click 'OK' to delete the applications and proceed with download.</value></data>
+  <data name="program_loaded"><value>Program loaded</value></data>
+  <data name="store_bootproject"><value>Store boot application</value></data>
+  <data name="QueryOnlChangeWithForceVars_LoginOnlineChange"><value>Login with online change and release the forced variables.</value></data>
+  <data name="SignatureMismatch"><value>Signature mismatch: '{0}'   Requested signature: 0x{1:X}   Implemented signature: 0x{2:X}
+</value></data>
+  <data name="StartActiveApplicationCommand_Name"><value>Start</value></data>
+  </root>
