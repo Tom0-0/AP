@@ -9,7 +9,7 @@ namespace _3S.CoDeSys.OnlineCommands
     {
         private string _findWhat;
 
-        public InstanceTreeTableModel(string[] instancePaths, string stApplication, Guid applicationGuid, string stObjectName, IInstanceFormatter formatter, string filter)
+        public InstanceTreeTableModel(string[] instancePaths, string stApplication, Guid applicationGuid, string stObjectName, IInstanceFormatter formatter)
             : base()
         {
             if (instancePaths == null)
@@ -30,8 +30,8 @@ namespace _3S.CoDeSys.OnlineCommands
                 if (text.StartsWith(stApplication + "."))
                 {
                     string text2 = text.Substring(stApplication.Length + 1);
-                    _findWhat = filter;
-                    if (string.Compare(text2, stObjectName, StringComparison.OrdinalIgnoreCase) != 0 && (filter == string.Empty || text2.IndexOf(filter, StringComparison.OrdinalIgnoreCase) >= 0))
+                    //_findWhat = filter;
+                    if (string.Compare(text2, stObjectName, StringComparison.OrdinalIgnoreCase) != 0)
                     {
                         InstanceTreeTableNode instanceTreeTableNode = new InstanceTreeTableNode(applicationGuid, stApplication, text2, formatter);
                         ((DefaultTreeTableModel)this).AddRootNode((ITreeTableNode)(object)instanceTreeTableNode);

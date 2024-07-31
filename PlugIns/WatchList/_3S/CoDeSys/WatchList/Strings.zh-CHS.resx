@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="Expression"><value>表达式</value></data>
+  <data name="SyntaxError"><value>语法错误.</value></data>
+  <data name="UnforceAllSelectedRestoreValuesCommand_Name"><value>解除和恢复所有所选值</value></data>
+  <data name="AddWatchCommandName"><value>添加查看</value></data>
+  <data name="AddAllForcesToWatchListCommand_Name"><value>将所有的强制添加到监视列表中</value></data>
+  <data name="ForceListViewCommand_Name"><value>监视全部强制</value></data>
+  <data name="Application"><value>应用</value></data>
+  <data name="DynamicInstance"><value>&lt;动态实例&gt;</value></data>
+  <data name="WatchListFactory_Description"><value>显示监视列表窗口</value></data>
+  <data name="WatchListNodeIsOutdated"><value>这个观察列表表达式似乎已经过时, 但会在登录后自动刷新.</value></data>
+  <data name="UnforceAllSelectedKeepValuesCommand_Description"><value>不强制那些在强制列表中所有选择的值. 当前值将被保留.</value></data>
+  <data name="Monitoring_InvalidExpression"><value>无效的表达式</value></data>
+  <data name="ErrorMonitoringLengthExceeded"><value>当前的操作尝试添加太多的监控表达式到查看列表中. 为了保证系统的相应, 这些操作将会被终止.</value></data>
+  <data name="ExecutionPointWarningNode_Text"><value>存在激活的执行点</value></data>
+  <data name="MonitoringNotLoggedIn"><value>未登录</value></data>
+  <data name="InvalidTypeSpecification"><value>无效的类型规范:{0}
+只支持指针类型</value></data>
+  <data name="EnumValueRepresentsRawValue"><value>'{0}'代表'{1}'的原始值</value></data>
+  <data name="Comment"><value>注释</value></data>
+  <data name="UnforceAllSelectedRestoreValuesCommand_Description"><value>不强制那些在强制列表中选择的所有值. 该值将被恢复.</value></data>
+  <data name="Error_MaximumRangeExceeded"><value>超过{0}数组元素的最大数量!</value></data>
+  <data name="HiddenInstance"><value>&lt;隐藏实例&gt;</value></data>
+  <data name="Executionpoint"><value>执行点</value></data>
+  <data name="ErrorConstant"><value>常量变量不能被强制或者写入.</value></data>
+  <data name="AddWatchCommandDescription"><value>添加当前选择的表达式到查看列表中</value></data>
+  <data name="ExecutionPointWarningNode_ToolTipText"><value>双击跳转到断点界面</value></data>
+  <data name="ErrorProperties"><value>被变量监视的属性不能被强制或被写入.</value></data>
+  <data name="Value"><value>值</value></data>
+  <data name="ForceListSmall" mimetype="application/x-microsoft.net.object.binary.base64"><value>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAA+gAAAAKJUE5HDQoaCgAAAA1JSERSAAAAEAAAABAIBgAAAB/z/2EAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwwAADsMBx2+oZAAAAI9JREFUOE+tjFEOwjAMQ/PRg3O0HoA7DRziYjIXTYgneWsS2/FHbsdvWrjjFRVjjKNzj/hQB5mKnwt6mFK2Bc4M+t4W0ESjzipwqYDonrdtQR3WrMINf2ALaODswuqt+KtAQ/rWsC3Ao4Y8ABophpXM5Oc5QBr4tletApDvYrc/geOcM9UL3N4CgzPt9m8iHq0BlGfJudJWAAAAAElFTkSuQmCCCw==</value></data><data name="Address"><value>地址</value></data>
+  <data name="EP_CyclicMonitoring"><value>循环监测</value></data>
+  <data name="MonitoringCodeNotAvailable"><value>应用生成码无法使用</value></data>
+  <data name="AddAllForcesToWatchListCommand_Description"><value>将当前应用的所有强制表达式插入到当前的监视列表中</value></data>
+  <data name="PreparedValue"><value>准备值</value></data>
+  <data name="WatchListFactory_Name"><value>监视</value></data>
+  <data name="PromptMonitoringLengthExceeded"><value>The current operation will add more monitoring expressions than this watch list supports. To keep your system responsive, not all monitoring expressions will be added to the list.
+
+Click 'OK' to add expressions until the maximum of {0} is reached. 
+Click 'Cancel' to abort adding any expressons to this watch list.</value></data>
+  <data name="IncompatibleValue"><value>值 '{0}' 不兼容类型'{1}'.</value></data>
+  <data name="UnforceAllSelectedKeepValuesCommand_Name"><value>不强制和保持所有所选值</value></data>
+  <data name="Error_InvalidValue"><value>无效值!</value></data>
+  <data name="SyntaxErrorCast"><value>Syntactically wrong expression {0}</value></data>
+  <data name="ForceListViewCommand_Description"><value>当登录应用时, 显示带有全部强制表达式的监视列表</value></data>
+  <data name="EP_NotReached"><value>未达到执行点</value></data>
+  <data name="MonitoringDisabled"><value>无法监视</value></data>
+  <data name="MonitoringTooManyExpressions"><value>当前的操作尝试添加太多的监控表达式到查看列表中并超过限度. 为了保证系统的灵活性, 将不会有表达式被添加到列表中.</value></data>
+  <data name="InvalidCastSyntax"><value>表达式的无效语法:{0}
+投射一个指针到给出类型的语法为
+&lt;表达式&gt;:&lt;类型&gt;</value></data>
+  <data name="EP_FALSECondition"><value>执行点条件FALSE</value></data>
+  <data name="MonitoringImpossible"><value>不能监视</value></data>
+  <data name="Type"><value>类型</value></data>
+  </root>

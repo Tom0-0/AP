@@ -1,0 +1,497 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="LoginSvc_Error_DownloadNotAllowed"><value>应用 '{0}'登录和完整下载失败:只允许在线修改.</value></data>
+  <data name="WriteAllApplicationsCommand_Name"><value>对所有在线应用中写入值</value></data>
+  <data name="WriteSelectedAppCommand_Name"><value>写入'{0}'的所有值</value></data>
+  <data name="SourceDownloadCommand_Name"><value>下载源代码到连接设备上</value></data>
+  <data name="CmdModeLocked_Descr"><value>将设备设置为锁定模式以冻结所有当前断点,强制等.</value></data>
+  <data name="LoginActiveApplicationCommand_ContextlessName"><value>登录[激活的应用]</value></data>
+  <data name="LogoutActiveApplicationCommand_Name"><value>退出</value></data>
+  <data name="MultipleDownload_GenericErrorMessage"><value>下载项目 '{0}'时出错:
+{1}
+
+是否要使用现有项目继续?</value></data>
+  <data name="UnforceSelectedAppCommand_Description"><value>释放所选择应用的所有值</value></data>
+  <data name="MultipleDownloadCommand_Name"><value>多重下载...</value></data>
+  <data name="SourceProgressUpload"><value>上传...</value></data>
+  <data name="StopActiveApplicationCommand_Name"><value>停止</value></data>
+  <data name="SourceUploadCommand_Description"><value>上传源代码命令</value></data>
+  <data name="QueryCreateApplication"><value>应用 '{0}' 不存在于设备'{1}'中.是否创建应用并下载?</value></data>
+  <data name="Operation"><value>操作</value></data>
+  <data name="WriteValuesCommand_Description"><value>控制器中写入准备值</value></data>
+  <data name="RemoveOnlineUserCommand_Dialog_Caption"><value>移除设备用户</value></data>
+  <data name="AffectionInitNewVariables"><value>初始化新变量</value></data>
+  <data name="SourceDownloadExCommand_Description"><value>下载全部源码至可选择的设备.</value></data>
+  <data name="Warning_ApplicationLogin_DifferentDevice"><value>连接的设备'{0}'的名称与项目中存储的名称'{1}'不同.
+这可能表示连接了错误的设备!
+
+确定要登录到'{0}'吗?</value></data>
+  <data name="ReallyDeleteApplication"><value>从设备上删除应用程序?</value></data>
+  <data name="FlowControlActiveApplicationCommand_ContextlessName"><value>切换流控制模式</value></data>
+  <data name="PromptDeviceApplicationDelete"><value>PLC上已存在名称为'{0}'的应用程序. 要删除此应用程序吗?
+
+点击'取消'中止操作.
+点击'确定'继续下载.</value></data>
+  <data name="QueryCreateDevice"><value>在目标{0}中没有设备应用.是否创建并下载?</value></data>
+  <data name="CmdWinkIcon" mimetype="application/x-microsoft.net.object.binary.base64"><value>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</value></data><data name="Err_TSPreserveApp_NoChildApp"><value>此目标只支持上级应用,但是 '{0}' 是子应用.(详细信息:目标设置'PreserveApplication'已经设置).</value></data>
+  <data name="Simulation_Text"><value>仿真</value></data>
+  <data name="MultipleDownload_SkippedDueToForcedVariables"><value>跳过,因为一个或多个变量已强制.</value></data>
+  <data name="Change_ExternalSignatureFlagChanged"><value>外部签名标签已经更改</value></data>
+  <data name="PromptError"><value>项目或文件 '{0}' 无法解压.
+{1}</value></data>
+  <data name="QuerySafeReferenceContextOffline"><value>是否为启动工程保存引用内容?
+(将覆盖上一次下载的引用)</value></data>
+  <data name="PromptOverwrite"><value>项目或文件  '{0}' 已经存在。是否覆盖?
+
+{1}</value></data>
+  <data name="LogoutActiveApplicationCommand_ContextlessName"><value>登出[激活的应用]</value></data>
+  <data name="debug_step"><value>调试步骤</value></data>
+  <data name="ProgramNotChangedDownload"><value>程序没有更改.不需执行下载.</value></data>
+  <data name="OnlineChangeActiveApplicationCommand_Description"><value>执行与上一次下载不同的在线修改/在线修改</value></data>
+  <data name="LogoffUser_Name"><value>注销当前在线用户</value></data>
+  <data name="QueryProgramChangedWithWarning"><value>警告:应用程序 '{0}'在当前PLC上处于运行模式.因无匹配的编译信息,现有的应用将被替换.
+
+单击'是'下载最新代码,单击'否'终止操作.</value></data>
+  <data name="InteractiveLoginName"><value>交互式登录</value></data>
+  <data name="OperationAborted_MissingCertificate"><value>操作中止,未找到有效证书.</value></data>
+  <data name="ForceValuesCommand_Name"><value>强制值</value></data>
+  <data name="ShowCompileChangeDetails_Name"><value>显示离线代买更改的细节</value></data>
+  <data name="UnforceAllApplicationsCommand_Description"><value>对所有在线应用中释放全部强制变量,并保持当前值.</value></data>
+  <data name="MultipleDownload_MessageCategory"><value>多重下载</value></data>
+  <data name="OnlineCommandCategory_Description"><value>在线处理命令</value></data>
+  <data name="FilterCreateBootApp"><value>启动应用程序 (*.app)|*.app</value></data>
+  <data name="LblNumAffectedVars"><value>受影响的变量数</value></data>
+  <data name="MultipleDownload_BuildingTaskName"><value>编译项目</value></data>
+  <data name="MultipleDownload_BuildingTaskUnit"><value>项目</value></data>
+  <data name="Directory"><value>目录</value></data>
+  <data name="AddOnlineUserCommand_LogoutMessage"><value>建议现在退出,因为当前没有以特殊用户登录.请使用指定的用户进行身份验证后再次登录.</value></data>
+  <data name="QueryOnlChange2_Login"><value>登录-不做任何修改</value></data>
+  <data name="ForceFailedForSomeVariables"><value>下列值不法强制:
+{0}</value></data>
+  <data name="StopSelectedApplicationCommand_ContextlessName"><value>停止[所选的应用]</value></data>
+  <data name="Change_GlobalInitInCycle"><value>编译器定义"global_init_in_cycle"已经置位</value></data>
+  <data name="MultipleDownload_ConnectFailed"><value>由于以下原因无法为项目 '{0}'连接到设备:
+{1}</value></data>
+  <data name="CannotRemoveDeviceOrApplicationWhichIsOnlineException"><value>由于当前登录到 '{1}'无法移除'{0}'.</value></data>
+  <data name="CmdOperational" mimetype="application/x-microsoft.net.object.binary.base64"><value>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABNTeXN0ZW0uRHJhd2luZy5JY29uAgAAAAhJY29uRGF0YQhJY29uU2l6ZQcEAhNTeXN0ZW0uRHJhd2luZy5TaXplAgAAAAIAAAAJAwAAAAX8////E1N5c3RlbS5EcmF3aW5nLlNpemUCAAAABXdpZHRoBmhlaWdodAAACAgCAAAAAAAAAAAAAAAPAwAAAH4FAAACAAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACF34UAht+GAIjfiACJ34kAh+CHAIvfiwCK4IoAjOCMAI3gjQCP4I8AmOKYAJjlmACa5poAreStAK7krgCw5LAAr+WvALHmsQC15bUAtOa0ALjmuAC257YAt+e3ALnnuQDB6MEAyejJAM/qzwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsSBwcHBgUHBwcSGxsbGxsbBwQCBBcRBAIEBxsbGxsbGwcCBgAbGwAGAgcbGxsbGxsHAgYMGxsMBgIHGxsbGxsbBwIGDBsbDAYCBxsbGxsbGwcCAwEMCwEDAgcbGxsbGxsTBAgHBwcHCAQTGxsbGxsbGxQNGxsbGw0UGxsbGxsbGxsWDxsbGxsPFhsbGxsbGxsbFQ4bGxsbDhUbGxsbGxsbGxgKGhsbGQoYGxsbGxsbGxsbEAkICAkQGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbG///AAD//wAA4AcAAOAHAADhhwAA4YcAAOGHAADgBwAA4AcAAPPPAADzzwAA888AAPGPAAD4HwAA//8AAP//AAAL</value></data><data name="SourceDownloadCommand_Description"><value>下载完整的工程源代码到连接设备.</value></data>
+  <data name="CreateBootAppTitle"><value>保存启动程序</value></data>
+  <data name="SourceDownloadNotSupported"><value>所选设备不支持源代码下载!</value></data>
+  <data name="UserOperation_Execute"><value>执行</value></data>
+  <data name="SourceDownloadOptionEditorDescription"><value>源代码下载设置</value></data>
+  <data name="ResetOriginSelectedApplicationCmd_Name"><value>初始复位</value></data>
+  <data name="StopSelectedApplicationCommand_Description"><value>停止全部所选应用</value></data>
+  <data name="ResetColdSelectedApplicationCmd_Name"><value>冷复位</value></data>
+  <data name="QueryNoOnlChangeWithWarning"><value>警告:应用程序 '{0}'在当前PLC上处于运行模式.是否要下载代码最新更改部分?</value></data>
+  <data name="Object"><value>对象</value></data>
+  <data name="InvalidCommunicationSettings"><value>没有定义活动路径，是否要设置?
+
+点击'是'将在'通讯设置'页面中启动网络扫描.如果发现有与上次使用的相同名称和地址的设备,将设置此为活动路径.
+
+点击'否'将只显示'通讯设置'页面,不做任何操作.
+
+点击'取消'将返回,不做任何操作.</value></data>
+  <data name="HaltOnExceptionCommand_Name"><value>在异常处停止执行</value></data>
+  <data name="DownloadMessageCategory"><value>下载</value></data>
+  <data name="single_cycle"><value>单循环</value></data>
+  <data name="FlowControlActiveApplicationCommand_Description"><value>对激活的应用使用或禁用流控制</value></data>
+  <data name="Change_BlobInitChanged"><value>blob的初始化已经更改</value></data>
+  <data name="WriteAllApplicationsCommand_ContextlessName"><value>写入值[全部应用]</value></data>
+  <data name="ForceValuesCommand_ContextlessName"><value>强制值[激活的应用]</value></data>
+  <data name="OnlineChangeSelectedApplicationCommand_Description"><value>在所选应用上实现与上一次下载/在线更改不同的在线更改</value></data>
+  <data name="OnlineToOneApplication"><value>登录到'{0}'</value></data>
+  <data name="Change_CheckFunction"><value>检查函数</value></data>
+  <data name="executionpoints_active"><value>执行点激活</value></data>
+  <data name="OnlineChangeinformation_LocationChanged"><value>一个或多个变量更改其位置:数据将从旧位置复制到新位置.
+指针可能指的是无效位置.要复制的总字节数:{0}</value></data>
+  <data name="CmdModeDebug_Descr"><value>将设备设置为调试模式,以允许断点,强制等.</value></data>
+  <data name="exception"><value>异常</value></data>
+  <data name="OnlineChangeinformation_ReInit"><value>一个或多个变量改变它们的类型:变量将被初始化,当前值将丢失.</value></data>
+  <data name="DisplayModeDecimalCommand_Description"><value>以十进制格式显示监控值</value></data>
+  <data name="MultipleDownload_BuildFailed"><value>编译'{0}'时发生错误.</value></data>
+  <data name="Err_SourceDownload_NoSpaceOnTarget"><value>无法执行源代码下载,设备无足够存储空间.</value></data>
+  <data name="ApplicationContent_Title_PLC"><value>应用'{0}'的最后下载代码.</value></data>
+  <data name="ApplicationContent_Title_IDE"><value>应用'{0}'的最后生成代码.</value></data>
+  <data name="DownloadActiveApplicationCommand_Name"><value>下载</value></data>
+  <data name="OfflineCodeState_NoCodeGenerated"><value>没有引用代码生成</value></data>
+  <data name="LblTotalRelinkTests"><value>-测试总数</value></data>
+  <data name="LogoutCascadingCommand_Name"><value>登出所有应用程序</value></data>
+  <data name="RemoveOnlineUserCommand_Description"><value>删除现有的设备用户</value></data>
+  <data name="LogoutActiveApplicationCommand_Description"><value>从当前活动应用断开连接,并切换到离线模式.</value></data>
+  <data name="LoginActiveApplicationCommand_Description"><value>连接到当前活动应用程序,并切换到在线模式.</value></data>
+  <data name="ForceAllApplicationsCommand_Description"><value>对全部在线应用强制用预置值</value></data>
+  <data name="OptionEditorDescription_Text"><value>监视</value></data>
+  <data name="MultipleDownloadResult_CancelledByUser"><value>用户取消</value></data>
+  <data name="ResetOriginDeviceCmd_Name"><value>初始复位设备[{0}]</value></data>
+  <data name="Change_VariableDeleted"><value>变量已删除</value></data>
+  <data name="CommandDeleteApplicationFromDevice"><value>从设备上删除应用程序</value></data>
+  <data name="force_active"><value>强制激活</value></data>
+  <data name="SwitchSimulationModeActiveCommand_Name"><value>仿真</value></data>
+  <data name="unknown"><value>未知</value></data>
+  <data name="MultipleDownloadResult_Created"><value>被创建</value></data>
+  <data name="StopActiveApplicationCommand_Description"><value>停止当前活动的应用程序</value></data>
+  <data name="Change_MemorySettingsChanged"><value>内存设置已更改</value></data>
+  <data name="PromptOutdatedDevdesc"><value>工程中的设备版本'{0}'比连接的设备旧. 建议取消操作,并手动将设备更新为工程中的版本'{1}'.
+
+点击'取消'中止操作.
+单击'确定'忽略此警告并继续操作.</value></data>
+  <data name="CmdWink_Descr"><value>向设备发送在线信息触发LED闪烁以进行识别.</value></data>
+  <data name="InteractiveLoginPressKey"><value>按键...</value></data>
+  <data name="CannotRenameOnlineObject"><value>无法重命名对象 '{0}',它已被用于当前登录的设备.</value></data>
+  <data name="QueryOnlChangeWithWarning"><value>警告:应用程序 '{0}'在当前PLC上处于运行模式.是否要执行在线更改下载代码最新更改部分?</value></data>
+  <data name="CmdWink_Name"><value>闪烁</value></data>
+  <data name="RemoveOnlineUserCommand_LogoutMessage"><value>建议退出,因为当前目标的设备用户已删除.</value></data>
+  <data name="OnlineUser_PasswordStrength_Better"><value>更好</value></data>
+  <data name="LoginSvc_Error_InvalidOwner"><value>登录无法配置/执行:检测到无效用户!</value></data>
+  <data name="SourceUploadPrompt_NoUploadFile"><value>PLC中没有可用的源文件存档.</value></data>
+  <data name="MultipleDownload_PromptContinue"><value>是否继续项目?</value></data>
+  <data name="ForceAllApplicationsCommand_Name"><value>对全部在线应用强制值</value></data>
+  <data name="StopSelectedApplicationCommand_Name"><value>停止</value></data>
+  <data name="Change_NameExpressionChanged"><value>变量表达式名称已更改</value></data>
+  <data name="Change_VariableChanged"><value>变量已更改</value></data>
+  <data name="QueryProgramChanged"><value>PLC中存在应用 '{0}'. 因为没有匹配的编译信息,此存在的应用将被替换.
+
+单击 '是' 下载最新代码,单击 '否'终止.</value></data>
+  <data name="ListOfChangedPOUs"><value>更改代码的POU列表:</value></data>
+  <data name="HaltOnExceptionCommand_Description"><value>如果选中,即使代码处理异常,执行也会停止.</value></data>
+  <data name="UnforceFailedForSomeVariables"><value>如下值无法被释放强制:
+{0}</value></data>
+  <data name="OperatingModeLocked"><value>已锁定</value></data>
+  <data name="SourceProgressDownload"><value>下载...</value></data>
+  <data name="Change_ParentContextChanged"><value>父前后关系已更改</value></data>
+  <data name="QueryOnlChange"><value>自上次下载后程序已更改.是否要执行在线更改下载?</value></data>
+  <data name="UnforceAllApplicationsCommand_Name"><value>对所有在线应用中释放全部强制变量</value></data>
+  <data name="ListOfInterfaces"><value>改变接口的POU列表:</value></data>
+  <data name="Change_InhibitOnlineChange"><value>POU更改, 会防止在线变更</value></data>
+  <data name="OnlineToSomeApplications"><value>登录到{0} 应用...</value></data>
+  <data name="Change_DeviceApplication"><value>"设备应用"环境</value></data>
+  <data name="NoSourceCodeAvailable"><value>当前代码位置无可用源代码.</value></data>
+  <data name="FlowControlActiveApplicationCommand_Name"><value>切换流控制模式</value></data>
+  <data name="OnlineChangeActiveApplicationCommand_Name"><value>在线修改</value></data>
+  <data name="DoNotWarnAgain"><value>不再警告此信息</value></data>
+  <data name="ResetOriginDeviceCmd_Description"><value>初始复位选择的设备</value></data>
+  <data name="ConnectToDeviceName"><value>连接到[{0}]</value></data>
+  <data name="InterfaceListExceeded"><value>    列表超过100个接口!</value></data>
+  <data name="Col_Pou"><value>POU</value></data>
+  <data name="PromptLogoutAppWithForcedValues"><value>退出登录前,是否释放当前应用中所有的强制变量?</value></data>
+  <data name="StartSelectedApplicationCommand_Description"><value>启动全部所选应用</value></data>
+  <data name="AffectionLocationChanged"><value>位置更改,变量指针可能指向无效数据</value></data>
+  <data name="CmdModeLock_Info"><value>设备当前处于锁定模式.
+
+不允许与设备进行交互(无新断点，无额外强制等). 但是,任何现有断点或强制值都可能影响应用程序的执行.</value></data>
+  <data name="ResetWarmSelectedApplicationCmd_Name"><value>热复位</value></data>
+  <data name="BreakpointsDisablingWarning"><value>应用程序包含激活的断点.流控制启动将禁用断点,是否继续?</value></data>
+  <data name="AddOnlineUserCommand_Dialog_Caption"><value>添加设备用户</value></data>
+  <data name="POUListExceeded"><value>    列表超过100POUs!</value></data>
+  <data name="halt_on_bp"><value>停止到 BP</value></data>
+  <data name="SourceTransferFailed"><value>源代码转换失败</value></data>
+  <data name="ChangePasswordOnlineUserCommand_Description"><value>改变当前设备用户密码</value></data>
+  <data name="Change_CompileOptionsChanged"><value>编译选项已更改</value></data>
+  <data name="ApplicationList"><value>如下应用目前存在于设备中:
+{0}</value></data>
+  <data name="LoginSelectedApplicationCommand_ContextlessName"><value>登录[所选的应用]</value></data>
+  <data name="LogoffUser_Description"><value>注销当前在线用户并与设备断开连接</value></data>
+  <data name="GenerateCodeFailed"><value>代码生成过程中发生错误.见信息列表.</value></data>
+  <data name="SingleCycleActiveApplicationCommand_Description"><value>在活动应用程序上执行单步循环.</value></data>
+  <data name="CmdModeDebug_Info"><value>设备当前处于调试模式.
+
+允许各种交互(新断点,强制,开始/停止等).</value></data>
+  <data name="LblNumItfTest"><value>要测试的接口数</value></data>
+  <data name="LogoutCascadingCommand_Description"><value>登出当前设备的所有应用程序.</value></data>
+  <data name="MultipleDownload_ProcessingExtensionFailed"><value>由于以下原因无法下载'{0}':
+{1}</value></data>
+  <data name="OnlineUser_PasswordStrength_Medium"><value>中等</value></data>
+  <data name="QueryLocationChangedFullDownload"><value>代码更改可能导致无法预测结果:
+在操作前请仔细检查!
+
+是否继续?</value></data>
+  <data name="UnforceValuesCommand_Description"><value>释放当前所有强制变量,保持它们的当前值.</value></data>
+  <data name="LogoutSelectedApplicationCommand_ContextlessName"><value>登出[所选的应用]</value></data>
+  <data name="ApplyToAll"><value>应用到所有条目和文件</value></data>
+  <data name="CmdDebug" mimetype="application/x-microsoft.net.object.binary.base64"><value>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABNTeXN0ZW0uRHJhd2luZy5JY29uAgAAAAhJY29uRGF0YQhJY29uU2l6ZQcEAhNTeXN0ZW0uRHJhd2luZy5TaXplAgAAAAIAAAAJAwAAAAX8////E1N5c3RlbS5EcmF3aW5nLlNpemUCAAAABXdpZHRoBmhlaWdodAAACAgCAAAAAAAAAAAAAAAPAwAAAH4FAAACAAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjIyMAJSUlACgoKAArKysALCwsAC0tLQA1NTUAOzs7AEVFRQBHR0cASEhIAE5OTgBPT08AUVFRAFdXVwBYWFgAWlpaAF5eXgBgYGAAY2NjAGRkZABpaWkAbGxsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxADAwMCAwMDAxAXFxcXFxcDAQEBEg8BAQEDFxcXFxcXAwECABcXAAIBAxcXFxcXFwMBAgcXFwcCAQMXFxcXFxcDAQIHFxcHAgEDFxcUERcXAwECAQcHAQIBAxcXDQkXFxABBQMDAwMFARAXFwkXFxcXFxUWFxcXFxcXFxcMCBcXFxcKDBcXFxcXFxcXCwkXFxcXCQsXFxcXFxcXFw4GExcXEQYOFxcXFxcXFxcXCgUEAwUKFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXF///AAD//wAA+AEAAPgBAAD4YQAA+GEAAPhhAACYAQAAmAEAAL5/AACefwAAnn8AAIx/AADA/wAA//8AAP//AAAL</value></data><data name="OnlineChangeActiveApplicationCommand_ContextlessName"><value>在线更改[活动应用程序]</value></data>
+  <data name="LogoutSelectedApplicationCommand_Name"><value>退出</value></data>
+  <data name="WriteFailedForSomeVariables"><value>下列值无法写入控制器:
+{0}</value></data>
+  <data name="MultipleDownloadCommand_Description"><value>同时下载(选择启动)多个应用</value></data>
+  <data name="WriteSelectedAppCommand_ContextlessName"><value>写入所有值[选择的应用]</value></data>
+  <data name="CmdLocked" mimetype="application/x-microsoft.net.object.binary.base64"><value>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABNTeXN0ZW0uRHJhd2luZy5JY29uAgAAAAhJY29uRGF0YQhJY29uU2l6ZQcEAhNTeXN0ZW0uRHJhd2luZy5TaXplAgAAAAIAAAAJAwAAAAX8////E1N5c3RlbS5EcmF3aW5nLlNpemUCAAAABXdpZHRoBmhlaWdodAAACAgCAAAAAAAAAAAAAAAPAwAAAH4FAAACAAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjIyMAJSUlACgoKAArKysALS0tADAwMAA7OzsAUlJSAFVVVQBYWFgAWlpaAF1dXQBgYGAAampqAHJycgB6enoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAKAwMDAgMDAwMKEBAQEBAQAwEBAQwJAQEBAxAQEBAQEAMBAgAQEAACAQMQEBAQEBADAQIGEBAGAgEDEBAQEBAQAwECBhAQBgIBAxAQEBAQEAMBAgEGBgECAQMQEBAQEBAKAQQDAwMDBAEKEBAQEBAQEAsHEBAQEAcLEBAQEBAQEBALCBAQEBAICxAQEBAQEBAQCwcQEBAQBwsQEBAQEBAQEA0GDxAQDgYNEBAQEBAQEBAQBwUEBAUHEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEP//AAD//wAA4AcAAOAHAADhhwAA4YcAAOGHAADgBwAA4AcAAPPPAADzzwAA888AAPGPAAD4HwAA//8AAP//AAAL</value></data><data name="SourceProgressInitializing"><value>初始化...</value></data>
+  <data name="CmdModeOperational_Descr"><value>将设备设置为操作模式,以防止断点,强制等.</value></data>
+  <data name="Prompt_UserMgmt_DeleteCurrentUser"><value>是否要删除当前设备的用户'{0}'?</value></data>
+  <data name="MultipleDownloadResult_Error"><value>错误</value></data>
+  <data name="VersionMismatch"><value>版本不匹配: '{0}'  需求版本: {1}   实现版本: {2}</value></data>
+  <data name="UnresolvedReference"><value>未知引用: '{0}'</value></data>
+  <data name="MultipleDownload_GenericWarningMessage"><value>下载应用 '{0}时的警告:
+{1}
+
+是否要使用现有应用继续?</value></data>
+  <data name="StopCascadingCommand_Name"><value>停止所有应用程序</value></data>
+  <data name="ApplicationListEmpty"><value>设备当前没有应用.</value></data>
+  <data name="SourceProgressTransferringArchiveFile"><value>转换存档文件</value></data>
+  <data name="SourceDownloadOptionEditorName"><value>源代码下载</value></data>
+  <data name="SourceDownloadExCommand_Name"><value>源代码下载...</value></data>
+  <data name="OptionEditorName_Text"><value>监视</value></data>
+  <data name="StopActiveApplicationCommand_ContextlessName"><value>停止[激活的应用]</value></data>
+  <data name="InteractiveLoginEnterID"><value>输入ID:</value></data>
+  <data name="AddOnlineUserCommand_Name"><value>添加设备用户...</value></data>
+  <data name="QueryOnlChange3_LoginDownload"><value>登录并下载.(子应用程序将被移除).</value></data>
+  <data name="ResetWarmCascadingCommand_Name"><value>热复位所有应用程序</value></data>
+  <data name="QueryOnlChange2"><value>代码自上次下载发生了改变.将做何种操作?</value></data>
+  <data name="PromptExecuteLogin"><value>是否要登录到地址为'{1}'的节点'{0}'?</value></data>
+  <data name="MultipleDownloadResult_Downloaded"><value>已下载</value></data>
+  <data name="Error_NoUserInformationFound"><value>操作终止,设备上无有效用户信息.</value></data>
+  <data name="QueryFinishCycleReset_Text"><value>应用在断点处暂停执行.如果现在执行复位操作,则首先结束当前的循环再执行复位.是否希望继续?</value></data>
+  <data name="StartCascadingCommand_Description"><value>启动所选设备的所有应用程序</value></data>
+  <data name="CodeUnchanged"><value>程序未改</value></data>
+  <data name="DisconnectFromDeviceName"><value>从[{0}]断开连接</value></data>
+  <data name="AffectionInitialized"><value>初始化</value></data>
+  <data name="UnforceAllApplicationsCommand_ContextlessName"><value>释放值[全部应用]</value></data>
+  <data name="Change_InhibitOnlineChangeOnCodeChanges"><value>带有SignatureFlag.InhibitOnlineChangeOnCodeChanges的POU已更改</value></data>
+  <data name="StopCascadingCommand_Description"><value>停止所选设备的所有应用程序</value></data>
+  <data name="ShowCompileChangeDetails_Description"><value>,显示与上次显示相比有关已编辑代码当前状态的详细信息  显示与上次下载的代码相比较已编辑代码的当前状态的详细信息</value></data>
+  <data name="FlowControlWarning"><value>启用流控制将延长执行目前监视代码的任务周期时间,并可能导致抖动并触发看门狗时间.是否继续?</value></data>
+  <data name="InvalidParameters"><value>无效的参数!</value></data>
+  <data name="UnforceValuesCommand_ContextlessName"><value>释放值[激活的应用]</value></data>
+  <data name="Change_PrecomTypeMayLeaveDeadRefs"><value>PrecomTypeMayLeaveDeadRefs</value></data>
+  <data name="SourceProgressBytes"><value>字节</value></data>
+  <data name="run"><value>运行</value></data>
+  <data name="ChangePasswordOnlineUserCommand_Dialog_Caption"><value>改变设备用户密码</value></data>
+  <data name="OfflineCodeState_Unchanged"><value>代码不变</value></data>
+  <data name="DownloadActiveApplicationCommand_Description"><value>执行当前活动应用的全下载.</value></data>
+  <data name="WriteSelectedAppCommand_Description"><value>写入所选择应用的所有值</value></data>
+  <data name="ForceAllApplicationsCommand_ContextlessName"><value>强制值[全部应用]</value></data>
+  <data name="ResetWarmCascadingCommand_Description"><value>在所选设备的所有应用程序上执行热复位.</value></data>
+  <data name="Offline"><value>离线</value></data>
+  <data name="QueryOnlChangeWithForceVars"><value>应用自上次下载后发生更改,且控制器中有强制变量.进行何种操作?</value></data>
+  <data name="DisplayModeBinaryCommand_Name"><value>二进制</value></data>
+  <data name="CreateBootApplicationCommand_Description"><value>为活动应用创建启动应用</value></data>
+  <data name="Change_BaseExpressionChanged"><value>功能块更改的基础表达式</value></data>
+  <data name="EditObjectOffline_Name"><value>编辑对象(离线)</value></data>
+  <data name="LblMovedInst"><value>-受影响的移动实例</value></data>
+  <data name="ListOfInstancesImplementingInterfaces"><value>实现接口的更改实例列表:</value></data>
+  <data name="WriteValuesCommand_ContextlessName"><value>写入值[激活的应用]</value></data>
+  <data name="Prompt_ActivateUserManagement_new"><value>Currently, the user management is not activated on the device.
+Would you like to activate it now?
+
+Please note: When activating the user management you will be asked to create a new admin user. Then you will be asked to login as this user.</value></data>
+  <data name="Aborting"><value>正在中止...</value></data>
+  <data name="InteractiveLoginTimeout"><value>操作进度 (超时 = {0}秒):</value></data>
+  <data name="AffectionReInitialized"><value>已更改类型不兼容</value></data>
+  <data name="StartSelectedApplicationCommand_Name"><value>启动</value></data>
+  <data name="FileTransferDownload"><value>文件下载</value></data>
+  <data name="Change_SignatureChangedByChecksumAttribute"><value>pou的生命已更改, 显式无效</value></data>
+  <data name="CreateBootApplicationCommand_Name"><value>创建启动应用</value></data>
+  <data name="SingleCycleActiveApplicationCommand_Name"><value>单循环</value></data>
+  <data name="PromptDeletePLCApplications"><value>下列应用已经存在于PLC中,但是不在此工程.
+请选择PLC中需要删除的应用.</value></data>
+  <data name="QueryDownloadAlways"><value>自从上一次下载之后,应用已改变.是否执行下载?</value></data>
+  <data name="DownloadOnDeviceCommand_Name"><value>下载至设备 '{0}'</value></data>
+  <data name="SourceUploadCommand_Name"><value>源代码上传...</value></data>
+  <data name="MultipleDownloadResult_SkippedDueToImpossibleOnlineChange"><value>跳过,无法在线更改</value></data>
+  <data name="flow_active"><value>顺序激活</value></data>
+  <data name="LoginSvc_Error_CompileCodeFailed"><value>编译应用 '{0}代码失败.</value></data>
+  <data name="UserOperation_AddRemove"><value>添加/移除</value></data>
+  <data name="ResetColdCascadingCommand_Description"><value>在所选设备的所有应用程序上执行冷复位.</value></data>
+  <data name="PromptExecuteOperation"><value>是否要执行操作'{0}'?</value></data>
+  <data name="DisplayModeBinaryCommand_Description"><value>以二进制格式显示监控值</value></data>
+  <data name="UnresolvedSystemApplication"><value>未知系统应用: '{0}'</value></data>
+  <data name="QueryDownloadDevice"><value>设备 {0} 的数据已更改.是否执行下载?(警告:设备中所有应用将被清除!)</value></data>
+  <data name="QueryOnlChange2_LoginOnlineChange"><value>登录-在线修改</value></data>
+  <data name="DisconnectFromDeviceDescription"><value>从设备断开连接</value></data>
+  <data name="WarnUserOfMissingCompileInfo"><value>要下载的源文件不包含文件下载信息.之后使用上传代码登录到该PLC将要求应用程序进行完整下载.
+
+单击'是'添加下载信息文件到源存档.
+单击'否'只下载源存档</value></data>
+  <data name="Prompt_ActivateUserManagement"><value>设备当前没有启用用户管理功能.
+是否要激活功能?
+
+请注意: 当激活用户管理功能,将被提示使用'管理员'用户及密码登录.接下来将会提示输入新密码.</value></data>
+  <data name="LoginCascadingCommand_Name"><value>登录所有应用程序</value></data>
+  <data name="CmdOperationalStatusField" mimetype="application/x-microsoft.net.object.binary.base64"><value>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABNTeXN0ZW0uRHJhd2luZy5JY29uAgAAAAhJY29uRGF0YQhJY29uU2l6ZQcEAhNTeXN0ZW0uRHJhd2luZy5TaXplAgAAAAIAAAAJAwAAAAX8////E1N5c3RlbS5EcmF3aW5nLlNpemUCAAAABXdpZHRoBmhlaWdodAAACAgCAAAAAAAAAAAAAAAPAwAAAH4FAAACAAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADD78MA////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAAQEBAQEBAQEAAgICAgICAQEBAQAAAQEBAQICAgICAgEBAQECAgEBAQECAgICAgIBAQEAAgIAAQEBAgICAgICAQEBAAICAAEBAQICAgICAgEBAQEAAAEBAQECAgICAgIAAQEBAQEBAQEAAgICAgICAgEAAgICAgEAAgICAgICAgIBAAICAgIBAAICAgICAgICAQACAgICAQACAgICAgICAgABAAICAAEAAgICAgICAgICAAEBAQEAAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAv//AAD//wAA4AcAAOAHAADhhwAA4YcAAOGHAADgBwAA4AcAAPPPAADzzwAA888AAPGPAAD4HwAA//8AAP//AAAL</value></data><data name="OperatingModeOperational"><value>可操作</value></data>
+  <data name="AffectionVFTableInitialized"><value>初始化虚函数表</value></data>
+  <data name="LoginSvc_Error_GenerateCodeFailed"><value>应用'{0}'代码生成失败.</value></data>
+  <data name="download"><value>下载</value></data>
+  <data name="ResetOriginSelectedApplicationCmd_Description"><value>执行当前活动应用的初始复位.</value></data>
+  <data name="ForceSelectedAppCommand_ContextlessName"><value>强制所有值[选择的应用]</value></data>
+  <data name="CmdActiveApplicationSelector_Name"><value>Choose Active Application</value></data>
+  <data name="ProgramNotChangedOnlChange"><value>程序没有更改.不需执行在线修改.</value></data>
+  <data name="SourceDownload_SyncProviderName"><value>源代码下载提供者</value></data>
+  <data name="CmdModeOperational_Info"><value>设备当前处于可操作模式.
+
+不允许与设备进行任何交互.无断点和无强制激活.此外，设备上存在匹配的启动应用.</value></data>
+  <data name="SwitchSimulationModeSelectionCommand_ContextlessName"><value>仿真[所选的应用]</value></data>
+  <data name="Change_NewCheckFunctionInserted"><value>隐性检查插入的新POU</value></data>
+  <data name="PromptDeletePLCApplicationsOnlyOneAppAllowed"><value>应用程序 '{0}'存在于PLC上,但不在此工程中. 由于PLC仅支持一个应用程序,必须删除现有应用程序.
+ 
+请点击'确定'删除应用程序并继续下载或单击'取消'中止操作.</value></data>
+  <data name="Change_TaskListChanged"><value>任务列表已更改</value></data>
+  <data name="EmptyDownloadTime"><value>无</value></data>
+  <data name="Col_PreventsOnlineChange"><value>防止在线更改?</value></data>
+  <data name="CannotRemoveOnlineObject"><value>无法移除对象'{0}' ,因为该对象已经用于当前登录的设备.</value></data>
+  <data name="CannotAddOnlineObject"><value>无法添加对象,因为会影响您当前登录的设备.</value></data>
+  <data name="LogoutSelectedApplicationCommand_Description"><value>从当前所选应用断开连接.</value></data>
+  <data name="LblToInit"><value>-初始化</value></data>
+  <data name="LblToCopy"><value>-复制</value></data>
+  <data name="OperatingModeDebug"><value>调试</value></data>
+  <data name="PromptOpenExtractedProject"><value>希望打开从工程存档中解压的工程吗?</value></data>
+  <data name="InteractiveLoginConfirmed"><value>登录已由设备确认.</value></data>
+  <data name="CannotReadApplicationInfoFromPLC"><value>无法从PLC中读取应用信息.</value></data>
+  <data name="OpenLoggerPage_Descr"><value>打开设备活动应用的在线日志页面</value></data>
+  <data name="OfflineCodeState_OnlineChangable"><value>可以在线更改</value></data>
+  <data name="Err_SourceDownload_ArchiveTooBig"><value>无法执行源代码下载因为工程文档大小超过了最大数量{0}bytes.</value></data>
+  <data name="VariableListExceeded"><value>    列表超过100个变量!</value></data>
+  <data name="SpecifiedDeviceNotFound"><value>无法找到指定的设备 '{0}'</value></data>
+  <data name="OnlineCommandCategory_Name"><value>在线</value></data>
+  <data name="RemoveOnlineUserCommand_Name"><value>删除设备用户...</value></data>
+  <data name="SourceDownload_AllDevices"><value>&lt;工程中的全部设备&gt;</value></data>
+  <data name="DisplayModeDecimalCommand_Name"><value>十进制</value></data>
+  <data name="WriteValuesCommand_Name"><value>写入值</value></data>
+  <data name="online_change"><value>在线修改</value></data>
+  <data name="QueryCompileErrors"><value>出现编译错误.是否要非下载登录?</value></data>
+  <data name="MultipleDownload_ConnectingTaskName"><value>检查连接</value></data>
+  <data name="MultipleDownload_ConnectingTaskUnit"><value>项目</value></data>
+  <data name="ResetColdCascadingCommand_Name"><value>冷复位所有应用程序</value></data>
+  <data name="ReleaseForceListActiveApplicationCommand_Description"><value>释放活动应用的全部强制值.</value></data>
+  <data name="LblToReinit"><value>-重新初始化</value></data>
+  <data name="NoDownloadOnBP"><value>应用 {0} 在断点处暂停执行.如果现在执行下载或在线修改,则首先结束当前的循环,PLC将切换到停止模式,是否希望继续?</value></data>
+  <data name="InvalidValue"><value>无效值</value></data>
+  <data name="QueryOnlChange2_LoginDownload"><value>登录并下载</value></data>
+  <data name="CurrentState"><value>当前状态</value></data>
+  <data name="QueryDownloadAlwaysWithWarning"><value>警告:应用程序 '{0}'在当前PLC上处于运行模式.是否下载最新代码?</value></data>
+  <data name="Col_Description"><value>描述</value></data>
+  <data name="LblChangedLoc"><value>-更改的位置</value></data>
+  <data name="LblChangedVFT"><value>-更改的VF-表</value></data>
+  <data name="OpenLoggerPage_Name"><value>打开日志页面...</value></data>
+  <data name="MultipleDownloadResult_NotChanged"><value>未变化</value></data>
+  <data name="StartActiveApplicationCommand_ContextlessName"><value>启动[激活的应用]</value></data>
+  <data name="MultipleDownloadResult_OnlineChanged"><value>在线修改</value></data>
+  <data name="QueryOnlChangeWithForceVars_Login"><value>不做任何更改登录,保持强制变量.</value></data>
+  <data name="SwitchSimulationModeActiveCommand_Description"><value>切换仿真模式或关闭</value></data>
+  <data name="MultipleDownload_ProcessingApplicationsTaskUnit"><value>项目</value></data>
+  <data name="MultipleDownload_ProcessingApplicationsTaskName"><value>下载项目</value></data>
+  <data name="SwitchSimulationModeSelectionCommand_Name"><value>仿真</value></data>
+  <data name="OnlineUser_PasswordStrength_Good"><value>好</value></data>
+  <data name="OnlineUser_PasswordStrength_Weak"><value>弱</value></data>
+  <data name="OnlineChangeinformation_General_OK"><value>变化不被认为是危险的.</value></data>
+  <data name="ConnectToDeviceDescription"><value>连接所选设备.</value></data>
+  <data name="SourceProgressFinishing"><value>完成...</value></data>
+  <data name="PromptDeletePLCApplicationsCancelDownload"><value>下列应用已经存在于PLC中,但是不在此工程.
+请选择PLC中需要删除的应用并单击'确定'.终止下载请单击'取消'</value></data>
+  <data name="Change_ParentContextNull"><value>父前后关系为null</value></data>
+  <data name="SourceDownload_SyncFileDescription"><value>文件包含工程的源代码</value></data>
+  <data name="AffectionCopied"><value>旧值复制</value></data>
+  <data name="FileTransferUpload"><value>文件上传</value></data>
+  <data name="TooManyDecimalPlaces"><value>十进制位置的数量必须比{0}大</value></data>
+  <data name="Error_ConflictingEncryptionSettings"><value>操作中止.应用程序加密设置冲突!
+
+请在应用程序对象的属性中禁用密狗加密.</value></data>
+  <data name="QueryOnlChangeWithForceVars_LoginDownload"><value>下载登录,释放强制变量.</value></data>
+  <data name="core_dump_creating"><value>创建核心转储</value></data>
+  <data name="QueryDownload"><value>目标中没有程序:是否希望执行下载?</value></data>
+  <data name="QueryNoOnlChange"><value>由于服务改变无法执行在线修改:希望执行下载吗?</value></data>
+  <data name="LoginCascadingCommand_Descption"><value>登录当前设备的所有应用程序.</value></data>
+  <data name="StartActiveApplicationCommand_Description"><value>启动活动应用</value></data>
+  <data name="UnforceSelectedAppCommand_ContextlessName"><value>释放所有值[选择的应用]</value></data>
+  <data name="MultipleDownload_ProcessingApplicationFailed"><value>由于以下原因无法下载或在线修改应用 '{0}':
+{1}</value></data>
+  <data name="QueryTerminateCycleReset_Text"><value>引用在断点处暂停执行.复位之前是否要完成当前循环?
+是: 结束循环,然后执行复位.
+否：终止任务,立即执行复位.</value></data>
+  <data name="ListOfInterfaceReferences"><value>测试重定向参考列表:</value></data>
+  <data name="WriteAllApplicationsCommand_Description"><value>对全部在线应用中写入预置值</value></data>
+  <data name="CodeNeedsOnlineChange"><value>程序修改(在线下载)</value></data>
+  <data name="OnlineChangeSelectedApplicationCommand_ContextlessName"><value>在线更改 [所选应用]</value></data>
+  <data name="OnlineChangeinformation_General_Warning"><value>根据更改的数量,可能会发生抖动,可能导致看门口事件触发.</value></data>
+  <data name="LoginSelectedApplicationCommand_Description"><value>连接全部当前所选应用.</value></data>
+  <data name="TargetMismatch_Type"><value>类型不匹配:需求={0}, 在线={1}</value></data>
+  <data name="LblNumChangedPOUs"><value>更改的POU数</value></data>
+  <data name="Change_InterfacesRemoved"><value>接口从IMPLEMENTS从句移除</value></data>
+  <data name="LblNumChangedItfs"><value>更改的接口数</value></data>
+  <data name="OnlineUser_PasswordStrength_VeryWeak"><value>非常弱</value></data>
+  <data name="OnlineUser_PasswordStrength_VeryGood"><value>非常好</value></data>
+  <data name="InterfaceReferenceListExceeded"><value>    列表超过100个接口引用!</value></data>
+  <data name="ForceValuesCommand_Description"><value>将准备值强制写入至控制器</value></data>
+  <data name="LoginActiveApplicationCommand_Name"><value>登录到</value></data>
+  <data name="StartSelectedApplicationCommand_ContextlessName"><value>启动[所选的应用]</value></data>
+  <data name="ReleaseForceListActiveApplicationCommand_Name"><value>释放强制列表</value></data>
+  <data name="ForceSelectedAppCommand_Description"><value>强制所选应用的所有预设值</value></data>
+  <data name="ListOfVariables"><value>受影响的变量列表:</value></data>
+  <data name="UnforceSelectedAppCommand_Name"><value>释放'{0}'的所有值</value></data>
+  <data name="PasswordRenewal"><value>密码失效,请重新输入!</value></data>
+  <data name="TargetMismatch_Version"><value>版本不匹配:需求={0}, 在线={1}</value></data>
+  <data name="UnforceValuesCommand_Name"><value>释放值</value></data>
+  <data name="AddOnlineUserCommand_Description"><value>添加一个新的设备用户</value></data>
+  <data name="QueryGenerateCode"><value>代码自上次下载发生了改变:是否为启动工程生成新代码?
+是: 为启动工程生成代码并使用新代码
+否: 为启动工程使用上次下载保存的代码</value></data>
+  <data name="ChangePasswordOnlineUserCommand_Name"><value>改变设备用户密码...</value></data>
+  <data name="PromptSaveProjectDuringSourceDownload"><value>下载源代码需要先保存工程.
+
+单击'是'保存工程并继续进行源代码下载,单击'否'跳过源代码下载.</value></data>
+  <data name="UserOperation_View"><value>视图</value></data>
+  <data name="WriteFailedForSomeForcedVariables"><value>下列值没有写入到控制器,
+因为变量已经被强制:
+{0}</value></data>
+  <data name="TargetMismatch_Id"><value>ID不匹配:需求={0}, 在线={1}</value></data>
+  <data name="OnlineChangeSelectedApplicationCommand_Name"><value>在线修改</value></data>
+  <data name="DisplayModeHexadecimalCommand_Name"><value>十六进制</value></data>
+  <data name="ForceSelectedAppCommand_Name"><value>强制'{0}'所有值</value></data>
+  <data name="Change_VariableInserted"><value>变量已插入</value></data>
+  <data name="Change_InterfaceSequenceChanged"><value>实施的结构顺序已更改</value></data>
+  <data name="core_dump_loaded"><value>核心转储已装载</value></data>
+  <data name="UserOperation_Modify"><value>修改</value></data>
+  <data name="SwitchSimulationModeActiveCommand_ContextlessName"><value>仿真[激活的应用]</value></data>
+  <data name="CodeNeedsFullDownload"><value>程序修改(完全下载)</value></data>
+  <data name="StartCascadingCommand_Name"><value>启动所有应用程序</value></data>
+  <data name="LoginSelectedApplicationCommand_Name"><value>登录到</value></data>
+  <data name="SystemApplication"><value>系统应用</value></data>
+  <data name="DisplayModeHexadecimalCommand_Description"><value>以十六进制格式显示监控值</value></data>
+  <data name="OfflineCodeState_DownloadNeeded"><value>必须下载代码</value></data>
+  <data name="SwitchSimulationModeSelectionCommand_Description"><value>切换仿真模式或关闭</value></data>
+  <data name="DownloadOnDeviceCommand_Description"><value>执行当前活动设备的完全下载.</value></data>
+  <data name="Change_TaskLocalGvl"><value>更改的POU是一个任务本地GVL</value></data>
+  <data name="LoginSvc_Error_ConflictingFlags"><value>登录终止:检测到冲突标识设置 ('{0}' 和 '{1}').</value></data>
+  <data name="QueryOnlChange3_LoginOnlineChange"><value>登录-在线修改.(子程序将被移除).</value></data>
+  <data name="EditObjectOffline_Description"><value>在离线模式下,使用默认编辑器编辑被选对象</value></data>
+  <data name="SourceDownloadPrompt_MessageBoxText"><value>是否下载源码至目标设备?
+
+可在'工程设置'选项中更改'{0}'禁用此操作.</value></data>
+  <data name="LoginSvc_Error_LoginFailed"><value>应用'{0}'登录失败.</value></data>
+  <data name="stop"><value>停止</value></data>
+  <data name="None"><value>&lt;无&gt;</value></data>
+  <data name="PromptDeviceApplicationCreate"><value>PLC上没有设备应用程序.下载设备应用之前如下应用将从PLC移除:
+{0}
+
+点击'取消'中止下载.
+单击'确定'删除应用程序并继续下载.</value></data>
+  <data name="program_loaded"><value>程序下载</value></data>
+  <data name="store_bootproject"><value>存储启动工程</value></data>
+  <data name="QueryOnlChangeWithForceVars_LoginOnlineChange"><value>在线下载登录,释放强制变量.</value></data>
+  <data name="SignatureMismatch"><value>签名不匹配: '{0}'   需求的签名: 0x{1:X}   实现的签名: 0x{2:X}</value></data>
+  <data name="StartActiveApplicationCommand_Name"><value>启动</value></data>
+  </root>

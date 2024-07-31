@@ -118,3 +118,10 @@ E:\Work\code\AP\PlugIns\WatchList\obj\Release\net46\WatchList.plugin.csproj.Core
 E:\Work\code\AP\PlugIns\WatchList\obj\Release\net46\WatchList.plugin.csproj.CopyComplete
 E:\Work\code\AP\PlugIns\WatchList\obj\Release\net46\WatchList.plugin.dll
 E:\Work\code\AP\PlugIns\WatchList\obj\Release\net46\WatchList.plugin.pdb
+E:\Work\code\AP\PlugIns\WatchList\bin\Release\net46\zh-CHS\WatchList.plugin.resources.dll
+E:\Work\code\AP\PlugIns\WatchList\obj\Release\net46\_3S.CoDeSys.WatchList.ForceListView.zh-CHS.resources
+E:\Work\code\AP\PlugIns\WatchList\obj\Release\net46\_3S.CoDeSys.WatchList.MonitoringRangeForm.zh-CHS.resources
+E:\Work\code\AP\PlugIns\WatchList\obj\Release\net46\_3S.CoDeSys.WatchList.Strings.zh-CHS.resources
+E:\Work\code\AP\PlugIns\WatchList\obj\Release\net46\_3S.CoDeSys.WatchList.TextValueDataDialog.zh-CHS.resources
+E:\Work\code\AP\PlugIns\WatchList\obj\Release\net46\_3S.CoDeSys.WatchList.WatchListView.zh-CHS.resources
+E:\Work\code\AP\PlugIns\WatchList\obj\Release\net46\zh-CHS\WatchList.plugin.resources.dll

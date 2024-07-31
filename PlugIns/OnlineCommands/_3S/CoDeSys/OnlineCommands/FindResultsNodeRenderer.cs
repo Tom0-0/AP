@@ -2,6 +2,7 @@ using _3S.CoDeSys.Controls.Controls;
 using System;
 using System.Drawing;
 using System.Drawing.Text;
+using System.Text;
 using System.Windows.Forms;
 
 namespace _3S.CoDeSys.OnlineCommands
@@ -89,7 +90,11 @@ namespace _3S.CoDeSys.OnlineCommands
                     int num2 = 0;
                     using (Font font = new Font(((Control)(object)node.View).Font, findResultsNodeData.FontStyle))
                     {
-                        num2 = (int)g.MeasureString(findResultsNodeData.Text, font, -1, LEFT_FORMAT).Width;
+                        num2 = (int)g.MeasureString(findResultsNodeData.Text, font).Width;
+                        if (num2 <= 0)
+                        {
+                            num2 = Encoding.Default.GetBytes(findResultsNodeData.Text).Length*8; // 一个字符占像素长度为8
+                        }
                     }
                     num += num2 + 12;
                 }
