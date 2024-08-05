@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="Print_Parameter_Version"><value>Version:</value></data>
+  <data name="IoFilterShowAll"><value>Show all</value></data>
+  <data name="ComPageMode_Classic"><value>Classic mode</value></data>
+  <data name="ChannelName"><value>channel</value></data>
+  <data name="PageNameConnectorIECObjects"><value>{0} IEC Objects</value></data>
+  <data name="Print_Parameter_Vendor"><value>Vendor:</value></data>
+  <data name="StatusBusError"><value>A bus error has occurred.</value></data>
+  <data name="Print_Parameter_Module"><value>Module ID:</value></data>
+  <data name="StatusNotRunning"><value>Not running</value></data>
+  <data name="InformationVendor"><value>Vendor:</value></data>
+  <data name="TaskUpdateNoTask"><value>Not updated in any task</value></data>
+  <data name="ChoiceEmptyVariable"><value>Empty variable</value></data>
+  <data name="ColumnNameDefault"><value>Default Value</value></data>
+  <data name="Print_IEC_objectType"><value>Type:</value></data>
+  <data name="IECVariable"><value>variable</value></data>
+  <data name="Busycle" mimetype="application/x-microsoft.net.object.binary.base64"><value>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAxQAAAAKJUE5HDQoaCgAAAA1JSERSAAAAEAAAABAIBgAAAB/z/2EAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwwAADsMBx2+oZAAAAFpJREFUOE/NjjsOwCAMQ3On3P9s0MFFJjQOYkB9kpf4o9h/cW+NhXNNLEYh9o0KKm9QBjJ4nQV7IrsvIzhPSF+aD+xnmfS9WH4Fe5+yqNaVt8DhKERqjouXMeufm6AtYAYp+AAAAABJRU5ErkJgggs=</value></data><data name="WarningDevdescNotInstalled"><value>The required device description is not installed. Changing of parameters is limited and some parameters might not be stored.</value></data>
+  <data name="ItemNoIoApplication"><value>&lt;None&gt;</value></data>
+  <data name="Print_Parameter_Ordernumber"><value>Order number: </value></data>
+  <data name="InformationDescription"><value>Description:</value></data>
+  <data name="OptionEditor_Name"><value>Device editor</value></data>
+  <data name="ColumnNameMapping"><value>Mapping</value></data>
+  <data name="ErrorStructuresNotMappable"><value>Structures are not mappable. Only base types are allowed.</value></data>
+  <data name="PageNameInformation"><value>Information</value></data>
+  <data name="Print_Parameter_DeviceType"><value>Type:</value></data>
+  <data name="PageNameMapping"><value>I/O Mapping</value></data>
+  <data name="NoMatchingDeviceFound"><value>&lt;No matching device&gt;</value></data>
+  <data name="ColumnNameUnit"><value>Unit</value></data>
+  <data name="ColumnNameType"><value>Type</value></data>
+  <data name="TaskUpdateNbrTask"><value>Updated in {0} task(s)</value></data>
+  <data name="InformationVersion"><value>Version:</value></data>
+  <data name="BusCycleTaskFromParent"><value>Use parent bus cycle setting</value></data>
+  <data name="PageNameConnectorMapping"><value>{0} I/O Mapping</value></data>
+  <data name="Print_Parameter_Name"><value>Name:</value></data>
+  <data name="ColumnNamePreparedValue"><value>Prepared Value</value></data>
+  <data name="Print_Parameter_TypeTab"><value>Type:</value></data>
+  <data name="InformationID"><value>ID:</value></data>
+  <data name="StatusNotEnabled"><value>The device is deactivated.</value></data>
+  <data name="GoToDefinitionSmall" mimetype="application/x-microsoft.net.object.binary.base64"><value>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAsQAAAAKJUE5HDQoaCgAAAA1JSERSAAAAEAAAABAIBgAAAB/z/2EAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwwAADsMBx2+oZAAAAEZJREFUOE9joDowNp75H8oEgwULlvzHh6HKEABkALoheAFMAzYMksdmKzIGG4IMkDWTBdA1Y7MVGUOV0RGMumDUBZiAgQEAb1eNX7l8K6YAAAAASUVORK5CYIIL</value></data><data name="ChoiceDefaultVariable"><value>Default variable</value></data>
+  <data name="Unknown" mimetype="application/x-microsoft.net.object.binary.base64"><value>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</value></data><data name="Print_IEC_objectVariable"><value>Variable:</value></data>
+  <data name="ColumnNameDescription"><value>Description</value></data>
+  <data name="SelectApplication"><value>&lt;Select an application ...&gt;</value></data>
+  <data name="PageNameStatus"><value>Status</value></data>
+  <data name="StatusModuleError"><value>A module reports an error</value></data>
+  <data name="ErrorReadCommmandNotSupported"><value>The PLC does not support the ReadOnlineParameter command.</value></data>
+  <data name="TaskUpdatePageName"><value>Task Deployment</value></data>
+  <data name="IECAddress"><value>address</value></data>
+  <data name="TaskUpdateIOChannelsColumn"><value>I/O channels</value></data>
+  <data name="Print_Input_Parameters"><value>Input Parameters:</value></data>
+  <data name="Print_Parameter_Address"><value>Address:</value></data>
+  <data name="EditCut" mimetype="application/x-microsoft.net.object.binary.base64"><value>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAwgAAAAKJUE5HDQoaCgAAAA1JSERSAAAAEAAAABAIBgAAAB/z/2EAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwwAADsMBx2+oZAAAAFdJREFUOE/NjQEKACAIA/1T7/CBvbaYNJAIxCLqIJzmplxBVduQxtyH/BFAk9cpfIANsvDydgA4MpdS7TrqGOWgEZXPPiJmgzeGIavl9wEAOjST1PI5Ih238lIVhHuK6wAAAABJRU5ErkJgggs=</value></data><data name="ErrorWriteCommmandNotSupported"><value>The PLC does not support the WriteOnlineParameter command.</value></data>
+  <data name="StatusCleared"><value>The error has been cleared.</value></data>
+  <data name="ErrorValueNotCompatible"><value>The value '{0}' is not compatible with type '{1}'.</value></data>
+  <data name="PropertyEditorName"><value>Options</value></data>
+  <data name="Print_Parameter_UnitTab"><value>Unit:</value></data>
+  <data name="TaskUpdateCompileNecessary"><value>Data only visible if project is compiled and code generation is done</value></data>
+  <data name="MasterConnectorIconSmall" mimetype="application/x-microsoft.net.object.binary.base64"><value>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABNTeXN0ZW0uRHJhd2luZy5JY29uAgAAAAhJY29uRGF0YQhJY29uU2l6ZQcEAhNTeXN0ZW0uRHJhd2luZy5TaXplAgAAAAIAAAAJAwAAAAX8////E1N5c3RlbS5EcmF3aW5nLlNpemUCAAAABXdpZHRoBmhlaWdodAAACAgCAAAAAAAAAAAAAAAPAwAAAD4BAAACAAABAAEAEBAQAAAABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAABAAAAAAAAAAAACAAACAAAAAgIAAgAAAAIAAgACAgAAAgICAAMDAwAAAAP8AAP8AAAD//wD/AAAA/wD/APBvYAD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAh4eAAAAAAAAAAAAAAAAAAIiIcAAAAAAAg3dwAAAAAAAAcAAAAAAAAAAAAAAAAAAADsQAAAAAAAAOxAAAAAAA7MxAAAAAAA7ERAAAAAAA7EAAAAAAAADsQAAAAAAAAOxAAAAAAAAAAAAAAAAAD//wAA//8AAP4PAAD8BwAA/AcAAPwHAAD+DwAA/x8AAP8fAAD/HwAA+D8AAPB/AADj/wAA4/8AAOP/AAD//wAACw==</value></data><data name="Print_Parameter_DescriptionTab"><value>Description:</value></data>
+  <data name="Add" mimetype="application/x-microsoft.net.object.binary.base64"><value>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAtQAAAAKJUE5HDQoaCgAAAA1JSERSAAAAEAAAABAIBgAAAB/z/2EAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwwAADsMBx2+oZAAAAEpJREFUOE/VjcEKACAIQz34z35+YRiNQdklsAfvMtyUuqhqQyO+x0tmNvxkwI9YHGCjtvBwFjLfDbBYYKO2x4+OHzNqDKARl0OkA73vg/Xwhz0rAAAAAElFTkSuQmCCCw==</value></data><data name="IoFilterShowOnlyMapped"><value>Show only mapped variables</value></data>
+  <data name="ErrorMappingNotAllowed"><value>Multiple mapping to an output is not allowed. Either the subelement or the parent already contains a mapping.</value></data>
+  <data name="StatusNoDriver"><value>No driver found</value></data>
+  <data name="StatusNoConfig"><value>There is a configuration error.</value></data>
+  <data name="InformationModuleID"><value>Module ID:</value></data>
+  <data name="IoFilterShowOnlyInputs"><value>Show only inputs</value></data>
+  <data name="StatusNoModule"><value>The module was not found.</value></data>
+  <data name="ColumnNameCurrentValue"><value>Current Value</value></data>
+  <data name="Print_Parameter_DefaultValueTab"><value>Default Value:</value></data>
+  <data name="Print_Parameters"><value>Parameters:</value></data>
+  <data name="NoPrintImplemented"><value>No printing implemented yet</value></data>
+  <data name="ColumnNameVariable"><value>Variable</value></data>
+  <data name="ErrorInvalidIdentifier"><value>The identifier is invalid.</value></data>
+  <data name="ErrorParameterNotAvailable"><value>&lt;The parameter is not available&gt;</value></data>
+  <data name="InformationModelNumber"><value>Order number: </value></data>
+  <data name="StatusNoLicense"><value>The license is missing or invalid. The PLC  runs in demo mode.</value></data>
+  <data name="Print_Parameter_ValueTab"><value>Value:</value></data>
+  <data name="InformationName"><value>Name:</value></data>
+  <data name="InformationType"><value>Type:</value></data>
+  <data name="ErrorBitfieldNotMappable"><value>Only bits of the bit field are mappable.</value></data>
+  <data name="IoFilterShowOnlyUnmapped"><value>Show only unmapped variables</value></data>
+  <data name="IoFilterShowOnlyOutputs"><value>Show only outputs</value></data>
+  <data name="OptionEditor_Description"><value>Configures settings for the Device editor</value></data>
+  <data name="IoFilterShowOnlyNew"><value>Show only mapping to new variables</value></data>
+  <data name="IoFilterShowOnlyExisting"><value>Show only mapping to existing variables</value></data>
+  <data name="EditDelete" mimetype="application/x-microsoft.net.object.binary.base64"><value>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAwAAAAAKJUE5HDQoaCgAAAA1JSERSAAAAEAAAABAIBgAAAB/z/2EAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwwAADsMBx2+oZAAAAFVJREFUOE/NjckJADAIBG3Q/stJECIIWS/iIwN+XHekP2DmJSOclQu81SUMDWFuBejI218gSalosRKdlkAYK7clqFSWoLKSSqKy8iwQUokbTjL4iGgDfwC4S16qJNoAAAAASUVORK5CYIIL</value></data><data name="EditUndo" mimetype="application/x-microsoft.net.object.binary.base64"><value>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAugAAAAKJUE5HDQoaCgAAAA1JSERSAAAAEAAAABAIBgAAAB/z/2EAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwwAADsMBx2+oZAAAAE9JREFUOE9jGAV0AMbGM/8j4wULlvyHSqECkCSUCQYwDVAuHOA0BFkDNo3IAKs8zABCmkGAoAGEDCHKAKyKgAAkjjMgCQGQRlwGj1zAwAAAKoJDVVy1iu0AAAAASUVORK5CYIIL</value></data><data name="EditRedo" mimetype="application/x-microsoft.net.object.binary.base64"><value>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAtwAAAAKJUE5HDQoaCgAAAA1JSERSAAAAEAAAABAIBgAAAB/z/2EAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwwAADsMBx2+oZAAAAExJREFUOE9jGAVUBgsWLPlvbDwTBUOlCAOYZigXDrAZhNVgQrbB5LEZCAaEDAABmGayDEDWjFUtrjAAAXTNuNSBFYIMgnJHAVGAgQEAExpDVUK4w7YAAAAASUVORK5CYIIL</value></data><data name="EditCopy" mimetype="application/x-microsoft.net.object.binary.base64"><value>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAA2AAAAAKJUE5HDQoaCgAAAA1JSERSAAAAEAAAABAIBgAAAB/z/2EAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwwAADsMBx2+oZAAAAG1JREFUOE/FjgEKwDAIA/1T3+ED99oNwTCbKbZssIPQ0sZDeY2qnln8u8fKzJakEuD0Wk0sx/sYRxofu8EQY2UmlfAGSCXA6eP9BhAa9hYzCVBEIKh4CBgIWIz+JMiyvEHF8gYVn2zQxau/InIBjRqgAtmgn7wAAAAASUVORK5CYIIL</value></data><data name="StatusRunning"><value>Running</value></data>
+  <data name="ErrorSaveNotSuccessfull"><value>Unable to save: All changes have been reverted.</value></data>
+  <data name="ColumnNameChannel"><value>Channel</value></data>
+  <data name="ExportableOption_DeviceEditor"><value>Device Editor</value></data>
+  <data name="Print_Output_Parameters"><value>Output Parameters:</value></data>
+  <data name="Print_Parameter_Channel"><value>Channel:</value></data>
+  <data name="StatusRedundancyPassive"><value>The redundancy mode is passive.</value></data>
+  <data name="Print_Parameter_Mapping"><value>Mapping: </value></data>
+  <data name="Print_Parameter_ID"><value>ID:</value></data>
+  <data name="ColumnNameValue"><value>Value</value></data>
+  <data name="Prompt_EnableSymbolicVarAccessInSync"><value>For this setting to come into effect, you will have to manually download all applications and boot projects to the device.
+
+Are you sure you want to change this setting?</value></data>
+  <data name="Print_IEC_objects"><value>IEC objects:</value></data>
+  <data name="ComPageMode_Simple"><value>Simple mode</value></data>
+  <data name="InformationGroups"><value>Categories:</value></data>
+  <data name="StatusDiagnosisAvailable"><value>A diagnostic message is pending.</value></data>
+  <data name="ColumnNameParameter"><value>Parameter</value></data>
+  <data name="ColumnNameAddress"><value>Address</value></data>
+  <data name="EditPaste" mimetype="application/x-microsoft.net.object.binary.base64"><value>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAA/AAAAAKJUE5HDQoaCgAAAA1JSERSAAAAEAAAABAIBgAAAB/z/2EAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwwAADsMBx2+oZAAAAJFJREFUOE+1T8kNwCAMYyfmYEB+fXQnxqFyiWkE4WilWrICSWyM+wUhhKwp7TFaAZizv2nNRFaARow+H8d5V9y1kGfOUXEXeTFAk4OUkklt0hlo5xn1QyJ/EuhvrGpnYC15H4fcSoBFCzQR+TyBBfarySoBKtnewdcJNKrBbgJNzuo3WnJphmpggS+tKOtf4dwF4i7i+NsuuEMAAAAASUVORK5CYIIL</value></data><data name="PageNameConfiguration"><value>Parameters</value></data>
+  <data name="InformationConfigVersion"><value>Configuration version:</value></data>
+  <data name="PageNameConnectorConfiguration"><value>{0} Parameters</value></data>
+  <data name="PromptClearMapping"><value>Delete all mapping variables?</value></data>
+  <data name="Edit" mimetype="application/x-microsoft.net.object.binary.base64"><value>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAUgEAAAKJUE5HDQoaCgAAAA1JSERSAAAAEAAAABAIBgAAAB/z/2EAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwwAADsMBx2+oZAAAAOdJREFUOE/Fkr0NgzAQhV0wA4t4FlbwCmxAnfa6FGlSpGECqlSus0ZGuNx7tiWDDPlpctKTwOb7zB24XyvGqEi+/bzmeVYJgbldT98JCqwiGrMkb70vwDhxWRaNkmDxXh0Wt8EDrXXbsL6DTtNEGGsU2M5uno87hQWO4rXv+wSjjgQJ9na5hsWEhFFHgvP5wpNqmP3XAr5eA8awIMAzAAjzTWQ9/T0BBjWOow7DoF3XEUytQGDTLwV7DaJv+9CEIGGLGU4CfMKGAGCBmQqq0xRw2tzcxobXSFgJ8i+Z4psBsE3G/17OvQDzYNmXasu+ogAAAABJRU5ErkJgggs=</value></data></root>
