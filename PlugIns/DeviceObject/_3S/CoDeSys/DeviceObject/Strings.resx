@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="ErrorFileMissing"><value>The file {0} is missing. It is not possible to download it.</value></data>
+  <data name="DiffTreetableColumnName"><value>Name</value></data>
+  <data name="DiffTreetableColumnType"><value>Type</value></data>
+  <data name="InfoDeviceUpdated"><value>Device {0} updated</value></data>
+  <data name="SelectPastePositionInsert"><value>Insert before {0}</value></data>
+  <data name="ExportMappingCSV_Name"><value>Export mappings to CSV...</value></data>
+  <data name="ErrorInvalidCreateVariable"><value>The identifier is invalid. Only plain identifiers (no application prefix, "." etc) are allowed when they are mapped on a new variable.</value></data>
+  <data name="ErrorCreateTaskFailure"><value>Unable to create task '{0}': {1}</value></data>
+  <data name="EnableCmdName"><value>Enable Device</value></data>
+  <data name="DisableLogicalIoSynchronization_Name"><value>Disable LogicalIO Synchronization</value></data>
+  <data name="AddDeviceCmd_Description"><value>Add a child device below the selected object.</value></data>
+  <data name="ErrorNoTaskconfig"><value>The required tasks cannot be created: There is no task configuration in application '{0}'.</value></data>
+  <data name="WarningChangToUnSigned"><value>Implicit conversion from signed Type $'{0}$' to unsigned Type $'{1}$' : Possible change of sign</value></data>
+  <data name="ImportMappingCSV_Description"><value>Import all I/O mappings from a CSV file</value></data>
+  <data name="UpdateToVersion"><value>Update to {0}</value></data>
+  <data name="InformationVendor"><value>Vendor:</value></data>
+  <data name="InsertDeviceCmd_Description"><value>Insert a new device before the selected object.</value></data>
+  <data name="EmptySlotNameWithNumber"><value>&lt;Empty{0}&gt;</value></data>
+  <data name="ErrorImportParameter"><value>The parameter {0} was not found. The import was not successful.</value></data>
+  <data name="InfoTaskCreated"><value>Created task '{0}'.</value></data>
+  <data name="VersionSelection_NoDevicesFound"><value>No devices available for updating.</value></data>
+  <data name="Device"><value>Device</value></data>
+  <data name="Refactoring_DependendOperationReason"><value>Variable renamed due to renaming of device '{0}'.</value></data>
+  <data name="PlugDeviceCmdName"><value>Plug Device...</value></data>
+  <data name="ExportErrorFileEncryped"><value>Could not read {0}. Perhaps file is encrypted</value></data>
+  <data name="DeviceForInterfaceNotFound"><value>Device for interface "{0}" not found.</value></data>
+  <data name="AlwaysMappingModeParameterName"><value>Always mapping mode</value></data>
+  <data name="OnlineConfigModeWarning"><value>Application configuration mode. All applications on PLC will be erased! Do you want to continue?</value></data>
+  <data name="ErrorCorruptDeviceStructure"><value>Attention: There is an error in the device structure. At least one device is linked twice.</value></data>
+  <data name="WarningNoIoApplication"><value>No application defined for I/O handling. Please select an application here.</value></data>
+  <data name="InformationDescription"><value>Description:</value></data>
+  <data name="AddDeviceFormEx_ReplaceDevice"><value>Update and try to preserve most information of</value></data>
+  <data name="OnlineConfigMode_Name"><value>Online Config Mode...</value></data>
+  <data name="DiffTreetableColumnValue"><value>Value</value></data>
+  <data name="HiddenChanges"><value>There are hidden changes</value></data>
+  <data name="ErrorIncompatibleNumOfApps"><value>The update cannot be done due to a target setting in the device description:
+The new device does not support the number of applications currently attached to the existing device. </value></data>
+  <data name="InvalidPastePosition"><value>The device {0} ({1}) cannot be pasted here.</value></data>
+  <data name="InformationVersion"><value>Version:</value></data>
+  <data name="IoConfigParReadingParameter"><value>Reading parameters for device: '{0}'</value></data>
+  <data name="Error_Constraint_Reached"><value>The maximum number of devices was reached. The device was not added or inserted.</value></data>
+  <data name="VersionSelectionControlDescription"><value>If there is a newer device installed for any of the devices in this project, it will be listed above. You may choose to update these devices by double-clicking in the column '{0}'.</value></data>
+  <data name="ColumnConfigVersion"><value>New configuration version</value></data>
+  <data name="AttributeIgnoreInvalid"><value>Invalid pragma value {0}!</value></data>
+  <data name="PlugDeviceCmdToolTip"><value>Plug device into slot</value></data>
+  <data name="Position"><value>Line {0}</value></data>
+  <data name="LoginConfigModeError"><value>Unable to log in: The configmode is active. You need to deactivate this mode first</value></data>
+  <data name="ErrorImportHostWrong"><value>The device {0} cannot be found below PLC.</value></data>
+  <data name="ErrorMissingTaskName"><value>The device requires an implicit task, but no task name is provided.</value></data>
+  <data name="FeatureLogicalDeviceDescription"><value>Enable access to logical devices</value></data>
+  <data name="ObjectNotSupported"><value>The object '{0}' is not supported by the device.</value></data>
+  <data name="DeviceObjectSelectionVerificationHook"><value>Device objects have complex dependencies, so they can only be committed together.</value></data>
+  <data name="WarningLossOfData"><value>Implicit conversion from Type $'{0}$' to Type $'{1}$' : Possible loss of data</value></data>
+  <data name="ErrorWrongHostPath"><value>The attribute connectorID is equal to the host path. This will cause an overflow.</value></data>
+  <data name="ErrorImportDevice"><value>The device {0} was not found. The Import was not successful.</value></data>
+  <data name="AddDeviceFormEx_Toplevel"><value>Add selected device to the project (top-level)</value></data>
+  <data name="AddDeviceFormEx_PlugDevice"><value>Plug selected device into the slot</value></data>
+  <data name="ErrorImportDeviceNotPossible"><value>The PLCopenXML import is not possible because {0}.</value></data>
+  <data name="ErrorAddressAlreadyUsed"><value>The address {0} is already used.</value></data>
+  <data name="ErrorChannelAlreadyExistingVariable"><value>The output is mapped to the existing variable {{0}}. {0} could not be used anymore.</value></data>
+  <data name="ErrorInvalidIdenfier"><value>The identifier '{0}' is not a valid IEC identifier. Please change the device description.</value></data>
+  <data name="BusCycleParameterName"><value>Bus cycle task</value></data>
+  <data name="ImportMappingCSV_Name"><value>Import mappings from CSV...</value></data>
+  <data name="UpdateAction"><value>Action</value></data>
+  <data name="ExportDevDescDescription"><value>Export the actual device as an device description file</value></data>
+  <data name="IoConfigParWarningFile"><value>The file Ioconfig.par could not be found on the target. Either StoreChangedParameters  is not set or no parameters are written to the PLC.</value></data>
+  <data name="DoNotUpdate"><value>Do not update</value></data>
+  <data name="ErrorMapExistingNoDeRef"><value>Dereferencing is not allowed.</value></data>
+  <data name="AlwaysMappingMode2"><value>Enabled 2 (always in bus cycle task)</value></data>
+  <data name="AlwaysMappingMode1"><value>Enabled 1 (use bus cycle task if not used in any task)</value></data>
+  <data name="IoConfigParCmdName"><value>Read PLC parameter file to configuration</value></data>
+  <data name="PlugDeviceCmdDescription"><value>Plug a device into a slot and replace an existing device</value></data>
+  <data name="DeviceObjectName"><value>Device</value></data>
+  <data name="ErrorOnlyEventTasks"><value>There are only event tasks defined: The I/Os are not updated and the task is never started.</value></data>
+  <data name="VersionMismatch"><value>Version mismatch at: '{0}'   Requested version: {1}   Implemented version: {2}</value></data>
+  <data name="UnresolvedReference"><value>Unresolved reference: '{0}'</value></data>
+  <data name="DiffTreetableColumnDescription"><value>Description</value></data>
+  <data name="InsertDeviceCmd_Name"><value>Insert Device...</value></data>
+  <data name="ExportMappingCSV_Description"><value>Export all I/O mappings as a CSV file</value></data>
+  <data name="WarningChangToSigned"><value>Implicit conversion from unsigned Type $'{0}$' to signed Type $'{1}$' : Possible change of sign</value></data>
+  <data name="InformationParameterType"><value>Parameter {0}: automatically changed std:BOOL to std:BIT</value></data>
+  <data name="InformationNothingSelected"><value>Please select a device from the list above.</value></data>
+  <data name="ErrorMapExistingExpression"><value>The variable identifier is invalid.</value></data>
+  <data name="DeviceIdentificationString"><value>Type: {0}, ID: {1}, Version: {2}</value></data>
+  <data name="ExportDevDescTooltip"><value>Export device description</value></data>
+  <data name="AddDeviceCmd_Name"><value>Add Device...</value></data>
+  <data name="ErrorNoLib"><value>Failed to insert library {0} : {1}</value></data>
+  <data name="ErrorDoesNotSupportDeviceApplicationStructure"><value>The device does not support DeviceApplication structure.</value></data>
+  <data name="DeviceNotFound"><value>Device not found.</value></data>
+  <data name="ErrorUpdateDevice"><value>There is an error while updating the devices. Some devices are not ready yet.</value></data>
+  <data name="Error_Device_Insert"><value>The device cannot be added or inserted here.</value></data>
+  <data name="ErrorAddressWrong"><value>The address {0} is wrong. Perhaps the address is not used.</value></data>
+  <data name="WizardPageNameNotUnique"><value>An object with the specified name already exists. Please choose another name.</value></data>
+  <data name="WarningWriteAccess"><value>Write access to variable $'{0}$'! Value will be overwritten as variable is mapped to an input channel.</value></data>
+  <data name="WizardPageErrorNoDevice"><value>Please select the type of device you want to insert.</value></data>
+  <data name="ErrorChannelAlreadyUsed"><value>The channel {0} is already used in another task. The signal may be overwritten.</value></data>
+  <data name="ErrorNoValidAssignment"><value>$'{0}$' is no valid assignment target.</value></data>
+  <data name="OnlineConfigMode_Description"><value>Changes to online configuration mode</value></data>
+  <data name="AddDeviceFormEx_InsertDevice"><value>Insert selected device as sibling before</value></data>
+  <data name="WizardPageNameInvalid"><value>Please provide a valid IEC identifier for the device.</value></data>
+  <data name="IoConfigParCmdDescription"><value>Reads the parameters on the PLC from ioconfig.par file back to configuration</value></data>
+  <data name="ErrorMissingIoApplication"><value>There is no (or an invalid) application defined for I/O handling. The I/O's will not work.</value></data>
+  <data name="DeviceObjectDescription"><value>A device object configures a hardware device.</value></data>
+  <data name="ReplaceDeviceCmdName"><value>Update Device...</value></data>
+  <data name="DisableCmdDescription"><value>Enable or disable a device</value></data>
+  <data name="AddDeviceFormEx_AppendDevice"><value>Append selected device as last child of</value></data>
+  <data name="CurrentVersion"><value>Current</value></data>
+  <data name="InconsistentPastePosition"><value>Some devices must be inserted at different positions. Please try copying the devices separately.</value></data>
+  <data name="InformationModelNumber"><value>Order Number:</value></data>
+  <data name="ErrorMapExistingIndexNoLiteral"><value>Only literals are allowed in indexed expressions.</value></data>
+  <data name="DiagnosisAcknowledge_Name"><value>Acknowledge Diagnosis</value></data>
+  <data name="InformationName"><value>Name:</value></data>
+  <data name="ErrorParamMode"><value>The mode is not possible: The configuration in the project is different to the PLC configuration.</value></data>
+  <data name="ErrorTypeMismatch"><value>The types of channel and the mapped variable {0} do not match.</value></data>
+  <data name="ErrorNoTask"><value>There is no task defined in the application. An I/O update is not possible.</value></data>
+  <data name="ReplaceDeviceCmdDescription"><value>Replace an existing device with another device, reusing most of the configuration.</value></data>
+  <data name="DiffTreetableColumnAddress"><value>Address</value></data>
+  <data name="ErrorIncompatibleAppName"><value>The update cannot be done due to a target setting in the device description:
+The application name '{0}' is not permitted for the new device. Change the application name to '{1}' and retry the device update.</value></data>
+  <data name="DiagnosisAcknowledgeSubTree_Description"><value>Acknowledges the diagnosis of the complete subtree</value></data>
+  <data name="ErrorAddingModules"><value>The module from one device description is not allowed in another device description.</value></data>
+  <data name="AllDevicesAreUpToDate"><value>All devices are up to date.</value></data>
+  <data name="UnplugSlotAction"><value>Remove device from slot</value></data>
+  <data name="InfoTaskExists"><value>A task with the name '{0}' already exists. No task created.</value></data>
+  <data name="DiffTreetableColumnVariable"><value>Variable</value></data>
+  <data name="ErrorOutputMapped"><value>The output {0} is mapped to a logical device.The output signal will be overwritten.</value></data>
+  <data name="DisableLogicalIoSynchronization_Description"><value>Disabled the synchronization between physical and logical devices</value></data>
+  <data name="ExportDevDescName"><value>Export device...</value></data>
+  <data name="ErrorPlaceholderMismatch"><value>The devices are providing different placeholder in name or vendor ({0} and {1}).  Such a configuration might not work.</value></data>
+  <data name="WizardPageNameEmpty"><value>Please provide a name for the device.</value></data>
+  <data name="VersionSelectionProviderName"><value>Device versions</value></data>
+  <data name="DiagnosisAcknowledge_Description"><value>Triggers the acknowledge command. Also possible with multi select</value></data>
+  <data name="ImportCSVSkippingMultipleOutputs"><value>Multiple mappings on outputs are not possible. The mapping '{0}' has been skipped.</value></data>
+  <data name="WarningIoConfigLateInit"><value>'__IoConfigLateInit' is active. This setting must be used only to debug IoDrivers. Remove the compiler define "__IoConfigLateInit" to enable default behavior.</value></data>
+  <data name="IECObjectParameterName"><value>IEC Object</value></data>
+  <data name="FeatureLogicalDeviceName"><value>Enable logical device support</value></data>
+  <data name="DisableCmdName"><value>Disable Device</value></data>
+  <data name="ErrorAddressNotValid"><value>The address {0} is not valid.</value></data>
+  <data name="PlugSlotAction"><value>Plug device into slot.</value></data>
+  <data name="RecommendedVersion"><value>Recommended</value></data>
+  <data name="InformationGroups"><value>Categories:</value></data>
+  <data name="SelectPastePositionAppend"><value>Append below {0}</value></data>
+  <data name="AttributeIgnoreDescription"><value>Pragma to remove warning for writes from multiple tasks</value></data>
+  <data name="WarningMultipleInputMapping"><value>Existing variable {0} is mapped multiple inputs.</value></data>
+  <data name="EmptySlotName"><value>&lt;Empty&gt;</value></data>
+  <data name="InfoDeviceUpdateFailed"><value>Device {0} not updated, device description possibly not available</value></data>
+  <data name="DiagnosisAcknowledgeSubTree_Name"><value>Acknowledge Diagnosis Subtree</value></data>
+  <data name="ErrorAddressOutsideConfig"><value>The address {0} is not defined in any device. Perhaps the address is not used.</value></data>
+  <data name="SignatureMismatch"><value>Signature mismatch: '{0}'   Requested signature: 0x{1:X}   Implemented signature: 0x{2:X}</value></data>
+  </root>

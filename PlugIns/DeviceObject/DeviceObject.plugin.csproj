@@ -1,0 +1,204 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <AssemblyName>DeviceObject.plugin</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <UseWindowsForms>True</UseWindowsForms>
+    <TargetFramework>net46</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>Preview</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="_3S\CoDeSys\DeviceObject\Resources.DefaultDeviceBitmap.bmp" />
+    <None Remove="_3S\CoDeSys\DeviceObject\Resources.DeviceIconLarge.ico" />
+    <None Remove="_3S\CoDeSys\DeviceObject\Resources.DeviceIconSmall.ico" />
+    <None Remove="_3S\CoDeSys\DeviceObject\Resources.EmptySlot.ico" />
+    <None Remove="_3S\CoDeSys\DeviceObject\Resources.MasterConnectorIconSmall.ico" />
+    <None Remove="_3S\CoDeSys\DeviceObject\Resources.UsedSlot.ico" />
+    <None Remove="_3S\CoDeSys\DeviceObject\Resources.Info.ico" />
+    <None Remove="_3S\CoDeSys\DeviceObject\Resources.OnlineConfigModeOffSmall.ico" />
+    <None Remove="_3S\CoDeSys\DeviceObject\Resources.OnlineConfigModeOnSmall.ico" />
+    <None Remove="_3S\CoDeSys\DeviceObject\Resources.GVLSmall.ico" />
+    <None Remove="_3S\CoDeSys\DeviceObject\Resources.LogicalIconSmall.ico" />
+    <None Remove="_3S\CoDeSys\DeviceObject\Resources.InputChannelSmall.ico" />
+    <None Remove="_3S\CoDeSys\DeviceObject\Resources.OutputChannelSmall.ico" />
+    <None Remove="_3S\CoDeSys\DeviceObject\Resources.ParameterSmall.ico" />
+    <None Remove="_3S\CoDeSys\DeviceObject\Resources.SectionSmall.ico" />
+    <None Remove="_3S\CoDeSys\DeviceObject\Resources.StructuredParameterSmall.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\DeviceObject\Resources.DefaultDeviceBitmap.bmp" />
+    <EmbeddedResource Include="_3S\CoDeSys\DeviceObject\Resources.DeviceIconLarge.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\DeviceObject\Resources.DeviceIconSmall.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\DeviceObject\Resources.EmptySlot.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\DeviceObject\Resources.MasterConnectorIconSmall.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\DeviceObject\Resources.UsedSlot.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\DeviceObject\Resources.Info.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\DeviceObject\Resources.OnlineConfigModeOffSmall.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\DeviceObject\Resources.OnlineConfigModeOnSmall.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\DeviceObject\Resources.GVLSmall.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\DeviceObject\Resources.LogicalIconSmall.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\DeviceObject\Resources.InputChannelSmall.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\DeviceObject\Resources.OutputChannelSmall.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\DeviceObject\Resources.ParameterSmall.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\DeviceObject\Resources.SectionSmall.ico" />
+    <EmbeddedResource Include="_3S\CoDeSys\DeviceObject\Resources.StructuredParameterSmall.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.5.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="ApplicationObject">
+      <HintPath>..\..\Interface\Interface Binaries\ApplicationObject.dll</HintPath>
+    </Reference>
+    <Reference Include="Commands">
+      <HintPath>..\..\Interface\Interface Binaries\Commands.dll</HintPath>
+    </Reference>
+    <Reference Include="Compiler">
+      <HintPath>..\..\Interface\Interface Binaries\Compiler.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentModel">
+      <HintPath>..\..\Interface\Interface Binaries\ComponentModel.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentModelWin">
+      <HintPath>..\..\Interface\Interface Binaries\ComponentModelWin.dll</HintPath>
+    </Reference>
+    <Reference Include="Compression">
+      <HintPath>..\..\Interface\GAC Binaries\Compression\3.1.0.0\Compression.dll</HintPath>
+    </Reference>
+    <Reference Include="Controls">
+      <HintPath>..\..\Interface\GAC Binaries\Controls\3.1.6.3\Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="DeviceCommunicationEditor">
+      <HintPath>..\..\Interface\Interface Binaries\DeviceCommunicationEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="DeviceIdentification">
+      <HintPath>..\..\Interface\Interface Binaries\DeviceIdentification.dll</HintPath>
+    </Reference>
+    <Reference Include="DeviceObject">
+      <HintPath>..\..\Interface\Interface Binaries\DeviceObject.dll</HintPath>
+    </Reference>
+    <Reference Include="Engine">
+      <HintPath>..\..\Interface\Interface Binaries\Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="EngineWin">
+      <HintPath>..\..\Interface\Interface Binaries\EngineWin.dll</HintPath>
+    </Reference>
+    <Reference Include="ExternalFileObject">
+      <HintPath>..\..\Interface\Interface Binaries\ExternalFileObject.dll</HintPath>
+    </Reference>
+    <Reference Include="FdtIntegration">
+      <HintPath>..\..\Interface\Interface Binaries\FdtIntegration.dll</HintPath>
+    </Reference>
+    <Reference Include="Help">
+      <HintPath>..\..\Interface\Interface Binaries\Help.dll</HintPath>
+    </Reference>
+    <Reference Include="IECTextEditor">
+      <HintPath>..\..\Interface\Interface Binaries\IECTextEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="ImplementationObject">
+      <HintPath>..\..\Interface\Interface Binaries\ImplementationObject.dll</HintPath>
+    </Reference>
+    <Reference Include="LanguageModelUtilities">
+      <HintPath>..\..\Interface\Interface Binaries\LanguageModelUtilities.dll</HintPath>
+    </Reference>
+    <Reference Include="LibManObject">
+      <HintPath>..\..\Interface\Interface Binaries\LibManObject.dll</HintPath>
+    </Reference>
+    <Reference Include="MessageService">
+      <HintPath>..\..\Interface\Interface Binaries\MessageService.dll</HintPath>
+    </Reference>
+    <Reference Include="MessageStorage">
+      <HintPath>..\..\Interface\Interface Binaries\MessageStorage.dll</HintPath>
+    </Reference>
+    <Reference Include="NavigatorControl">
+      <HintPath>..\..\Interface\Interface Binaries\NavigatorControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Objects">
+      <HintPath>..\..\Interface\Interface Binaries\Objects.dll</HintPath>
+    </Reference>
+    <Reference Include="ObjectsWin">
+      <HintPath>..\..\Interface\Interface Binaries\ObjectsWin.dll</HintPath>
+    </Reference>
+    <Reference Include="Online">
+      <HintPath>..\..\Interface\Interface Binaries\Online.dll</HintPath>
+    </Reference>
+    <Reference Include="OnlineCommands">
+      <HintPath>..\..\Interface\Interface Binaries\OnlineCommands.dll</HintPath>
+    </Reference>
+    <Reference Include="OnlineUI">
+      <HintPath>..\..\Interface\Interface Binaries\OnlineUI.dll</HintPath>
+    </Reference>
+    <Reference Include="OnlineWin">
+      <HintPath>..\..\Interface\Interface Binaries\OnlineWin.dll</HintPath>
+    </Reference>
+    <Reference Include="OptionStorage">
+      <HintPath>..\..\Interface\Interface Binaries\OptionStorage.dll</HintPath>
+    </Reference>
+    <Reference Include="OptionStorageWin">
+      <HintPath>..\..\Interface\Interface Binaries\OptionStorageWin.dll</HintPath>
+    </Reference>
+    <Reference Include="PlcLogicObject">
+      <HintPath>..\..\Interface\Interface Binaries\PlcLogicObject.dll</HintPath>
+    </Reference>
+    <Reference Include="PLCopenXML2">
+      <HintPath>..\..\Interface\Interface Binaries\PLCopenXML2.dll</HintPath>
+    </Reference>
+    <Reference Include="POUObject">
+      <HintPath>..\..\Interface\Interface Binaries\POUObject.dll</HintPath>
+    </Reference>
+    <Reference Include="ProjectCompare">
+      <HintPath>..\..\Interface\Interface Binaries\ProjectCompare.dll</HintPath>
+    </Reference>
+    <Reference Include="ProjectLocalization">
+      <HintPath>..\..\Interface\Interface Binaries\ProjectLocalization.dll</HintPath>
+    </Reference>
+    <Reference Include="Refactoring">
+      <HintPath>..\..\Interface\Interface Binaries\Refactoring.dll</HintPath>
+    </Reference>
+    <Reference Include="RevisionControlSystemHooks">
+      <HintPath>..\..\Interface\Interface Binaries\RevisionControlSystemHooks.dll</HintPath>
+    </Reference>
+    <Reference Include="Simulation">
+      <HintPath>..\..\Interface\Interface Binaries\Simulation.dll</HintPath>
+    </Reference>
+    <Reference Include="STObject">
+      <HintPath>..\..\Interface\Interface Binaries\STObject.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="TargetSettings">
+      <HintPath>..\..\Interface\Interface Binaries\TargetSettings.dll</HintPath>
+    </Reference>
+    <Reference Include="TaskConfig">
+      <HintPath>..\..\Interface\Interface Binaries\TaskConfig.dll</HintPath>
+    </Reference>
+    <Reference Include="TextDocument">
+      <HintPath>..\..\Interface\Interface Binaries\TextDocument.dll</HintPath>
+    </Reference>
+    <Reference Include="TraceConfigInterface">
+      <HintPath>..\..\Interface\Interface Binaries\TraceConfigInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="UndoManager">
+      <HintPath>..\..\Interface\Interface Binaries\UndoManager.dll</HintPath>
+    </Reference>
+    <Reference Include="Utilities">
+      <HintPath>..\..\Interface\GAC Binaries\Utilities\3.1.6.2\Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="VarDeclObject">
+      <HintPath>..\..\Interface\Interface Binaries\VarDeclObject.dll</HintPath>
+    </Reference>
+    <Reference Include="VersionCompatibilityManager">
+      <HintPath>..\..\Interface\Interface Binaries\VersionCompatibilityManager.dll</HintPath>
+    </Reference>
+    <Reference Include="Views">
+      <HintPath>..\..\Interface\Interface Binaries\Views.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="&quot;%25CDS_Common%25\IPMCLI.EXE&quot; /i:&quot;$(TargetPath)&quot;" />
+  </Target>
+</Project>
