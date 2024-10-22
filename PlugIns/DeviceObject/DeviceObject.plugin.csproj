@@ -170,6 +170,9 @@
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
+    <Reference Include="SystemInstances">
+      <HintPath>..\..\Interface\Interface Binaries\SystemInstances.dll</HintPath>
+    </Reference>
     <Reference Include="TargetSettings">
       <HintPath>..\..\Interface\Interface Binaries\TargetSettings.dll</HintPath>
     </Reference>

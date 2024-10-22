@@ -13,15 +13,14 @@ namespace _3S.CoDeSys.DeviceObject
 
         [DefaultSerialization("ModuleType")]
         [StorageVersion("3.3.2.0")]
-        [DefaultDuplication(/*Could not decode attribute arguments.*/)]
+        [DefaultDuplication(DuplicationMethod.Deep)]
         protected int _nModuleType;
 
         public static Guid Guid => My_Guid;
 
-        int ModuleType => _nModuleType;
+        int IExplicitConProperty.ModuleType => _nModuleType;
 
         public ModuleType()
-            : this()
         {
         }
 

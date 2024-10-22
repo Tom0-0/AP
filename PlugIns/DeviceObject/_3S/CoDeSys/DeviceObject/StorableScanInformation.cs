@@ -8,37 +8,37 @@ namespace _3S.CoDeSys.DeviceObject
 	[StorageVersion("3.5.4.0")]
 	internal class StorableScanInformation : GenericObject2, IScanInformation
 	{
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		[DefaultSerialization("ScanInformationDeviceName")]
 		[StorageVersion("3.5.4.0")]
 		private string _stDeviceName = string.Empty;
 
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		[DefaultSerialization("ScanInformationIPAddressAndPort")]
 		[StorageVersion("3.5.4.0")]
 		private string _stIPAddressAndPort = string.Empty;
 
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		[DefaultSerialization("ScanInformationTargetID")]
 		[StorageVersion("3.5.4.0")]
 		private string _stTargetID = string.Empty;
 
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		[DefaultSerialization("ScanInformationTargetName")]
 		[StorageVersion("3.5.4.0")]
 		private string _stTargetName = string.Empty;
 
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		[DefaultSerialization("ScanInformationTargetType")]
 		[StorageVersion("3.5.4.0")]
 		private string _stTargetType = string.Empty;
 
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		[DefaultSerialization("ScanInformationTargetVendor")]
 		[StorageVersion("3.5.4.0")]
 		private string _stTargetVendor = string.Empty;
 
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		[DefaultSerialization("ScanInformationTargetVersion")]
 		[StorageVersion("3.5.4.0")]
 		private string _stTargetVersion = string.Empty;
@@ -128,7 +128,6 @@ namespace _3S.CoDeSys.DeviceObject
 		}
 
 		public StorableScanInformation()
-			: this()
 		{
 		}
 	}

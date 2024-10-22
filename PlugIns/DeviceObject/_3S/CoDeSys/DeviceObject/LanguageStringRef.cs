@@ -14,7 +14,7 @@ namespace _3S.CoDeSys.DeviceObject
 
         public string Language => _stLanguage;
 
-        [DefaultDuplication(/*Could not decode attribute arguments.*/)]
+        [DefaultDuplication(DuplicationMethod.Shallow)]
         protected string LanguageSerialization
         {
             get

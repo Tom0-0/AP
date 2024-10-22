@@ -12,7 +12,7 @@ namespace _3S.CoDeSys.DeviceObject
 	{
 		[DefaultSerialization("Adapters")]
 		[StorageVersion("3.3.0.0")]
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		private ArrayList _alAdapters = new ArrayList();
 
 		public IAdapter this[int nIndex] => (IAdapter)_alAdapters[nIndex];
@@ -24,7 +24,7 @@ namespace _3S.CoDeSys.DeviceObject
 		public object SyncRoot => _alAdapters.SyncRoot;
 
 		public AdapterList()
-			: this()
+			: base()
 		{
 		}
 

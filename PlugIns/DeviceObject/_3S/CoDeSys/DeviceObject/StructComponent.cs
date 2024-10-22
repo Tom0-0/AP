@@ -11,56 +11,55 @@ namespace _3S.CoDeSys.DeviceObject
 	{
 		[DefaultSerialization("Type")]
 		[StorageVersion("3.5.6.0")]
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		[StorageDefaultValue(null)]
 		private string _stType;
 
 		[DefaultSerialization("Identifier")]
 		[StorageVersion("3.5.6.0")]
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		[StorageDefaultValue(null)]
 		private string _stIdentifier;
 
 		[DefaultSerialization("Default")]
 		[StorageVersion("3.5.6.0")]
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		[StorageDefaultValue(null)]
 		private ValueElement _default;
 
 		[DefaultSerialization("VisibleName")]
 		[StorageVersion("3.5.6.0")]
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
-		[StorageDefaultValue(null)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		private IStringRef _visibleName;
 
 		[DefaultSerialization("Description")]
 		[StorageVersion("3.5.6.0")]
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		[StorageDefaultValue(null)]
 		private IStringRef _description;
 
 		[DefaultSerialization("Unit")]
 		[StorageVersion("3.5.6.0")]
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		[StorageDefaultValue(null)]
 		private IStringRef _unit;
 
 		[DefaultSerialization("CustomItems")]
 		[StorageVersion("3.5.6.0")]
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		[StorageDefaultValue(null)]
 		private CustomItemList _customItems;
 
 		[DefaultSerialization("AccessRightOffline")]
 		[StorageVersion("3.5.6.0")]
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
-		[StorageDefaultValue(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
+		[StorageDefaultValue(AccessRight.ReadWrite)]
 		private AccessRight _accessRightOffline = (AccessRight)3;
 
 		[DefaultSerialization("AccessRightOnline")]
 		[StorageVersion("3.5.6.0")]
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
-		[StorageDefaultValue(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
+		[StorageDefaultValue(AccessRight.ReadWrite)]
 		private AccessRight _accessRightOnline = (AccessRight)3;
 
 		public string Identifier
@@ -156,7 +155,7 @@ namespace _3S.CoDeSys.DeviceObject
 			}
 		}
 
-		IStringRef VisibleName
+		IStringRef ITypeComponent.VisibleName
 		{
 			get
 			{
@@ -168,7 +167,7 @@ namespace _3S.CoDeSys.DeviceObject
 			}
 		}
 
-		IStringRef Description
+		IStringRef ITypeComponent.Description
 		{
 			get
 			{
@@ -180,7 +179,7 @@ namespace _3S.CoDeSys.DeviceObject
 			}
 		}
 
-		IStringRef Unit
+		IStringRef ITypeComponent.Unit
 		{
 			get
 			{
@@ -193,7 +192,7 @@ namespace _3S.CoDeSys.DeviceObject
 		}
 
 		public StructComponent()
-			: this()
+			: base()
 		{
 		}//IL_0002: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0009: Unknown result type (might be due to invalid IL or missing references)

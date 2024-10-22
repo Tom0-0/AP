@@ -12,7 +12,7 @@ namespace _3S.CoDeSys.DeviceObject
     {
         [DefaultSerialization("Attributes")]
         [StorageVersion("3.3.0.0")]
-        [DefaultDuplication(/*Could not decode attribute arguments.*/)]
+        [DefaultDuplication(DuplicationMethod.Deep)]
         private Hashtable _htAttributes = new Hashtable();
 
         public string this[string stAttributeName]
@@ -41,7 +41,7 @@ namespace _3S.CoDeSys.DeviceObject
         public object SyncRoot => _htAttributes;
 
         public DeviceAttributes()
-            : this()
+            : base()
         {
         }
 

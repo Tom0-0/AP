@@ -25,7 +25,7 @@ namespace _3S.CoDeSys.DeviceObject
 			_var = var;
 			_cref = cref;
 			bool flag = default(bool);
-			_dataloc = comcon.LocateAddress(ref flag, var);
+			_dataloc = comcon.LocateAddress(out flag, var);
 			if (!flag)
 			{
 				_directbitlocation = new BitDataLocation(_dataloc);

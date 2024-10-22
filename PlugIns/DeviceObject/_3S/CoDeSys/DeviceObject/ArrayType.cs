@@ -12,31 +12,31 @@ namespace _3S.CoDeSys.DeviceObject
 	{
 		[DefaultSerialization("FirstDimension")]
 		[StorageVersion("3.5.6.0")]
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		[StorageDefaultValue(null)]
 		private ArrayTypeBorder _firstDimension;
 
 		[DefaultSerialization("SecondDimension")]
 		[StorageVersion("3.5.6.0")]
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		[StorageDefaultValue(null)]
 		private ArrayTypeBorder _secondDimension;
 
 		[DefaultSerialization("ThirdDimension")]
 		[StorageVersion("3.5.6.0")]
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		[StorageDefaultValue(null)]
 		private ArrayTypeBorder _thirdDimension;
 
 		[DefaultSerialization("Dimensions")]
 		[StorageVersion("3.5.6.0")]
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		[StorageDefaultValue(0)]
 		private int _iDimensions;
 
 		[DefaultSerialization("BaseType")]
 		[StorageVersion("3.5.6.0")]
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		[StorageDefaultValue(null)]
 		private string _stBaseType;
 

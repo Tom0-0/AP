@@ -8,7 +8,7 @@ namespace _3S.CoDeSys.DeviceObject
 	[StorageVersion("3.3.0.0")]
 	public class UnknownRequiredTask : RequiredTask
 	{
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Shallow)]
 		private string _stTypeOfTask;
 
 		internal override string TypeOfTask => _stTypeOfTask;

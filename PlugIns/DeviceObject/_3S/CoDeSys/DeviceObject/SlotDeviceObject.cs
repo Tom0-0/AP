@@ -833,14 +833,14 @@ namespace _3S.CoDeSys.DeviceObject
 
 		public override void AfterClone()
 		{
-			((GenericObject)this).AfterClone();
+			base.AfterClone();
 			_slotDeviceInfo.DeviceObject = (IDeviceObject2)(object)_device;
 			((Connector)(object)_connectors[0]).Device = this;
 		}
 
 		public override void AfterDeserialize()
 		{
-			((GenericObject)this).AfterDeserialize();
+			base.AfterDeserialize();
 			_slotDeviceInfo.DeviceObject = (IDeviceObject2)(object)_device;
 			((Connector)(object)_connectors[0]).Device = this;
 		}

@@ -9,12 +9,12 @@ namespace _3S.CoDeSys.DeviceObject
 	[StorageVersion("3.3.0.0")]
 	public class CustomItem : GenericObject2, ICustomItem
 	{
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Shallow)]
 		[DefaultSerialization("Name")]
 		[StorageVersion("3.3.0.0")]
 		private string _stName = "";
 
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Shallow)]
 		[DefaultSerialization("Data")]
 		[StorageVersion("3.3.0.0")]
 		private string _stData = "";
@@ -24,7 +24,7 @@ namespace _3S.CoDeSys.DeviceObject
 		public string Name => _stName;
 
 		public CustomItem()
-			: this()
+			: base()
 		{
 		}
 

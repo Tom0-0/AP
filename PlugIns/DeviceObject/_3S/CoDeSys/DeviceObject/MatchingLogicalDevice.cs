@@ -12,7 +12,7 @@ namespace _3S.CoDeSys.DeviceObject
 	[StorageVersion("3.4.1.0")]
 	public class MatchingLogicalDevice : GenericObject2
 	{
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		[DefaultSerialization("DeviceIdentification")]
 		[StorageVersion("3.4.1.0")]
 		private IDeviceIdentification _devId;
@@ -20,7 +20,6 @@ namespace _3S.CoDeSys.DeviceObject
 		public IDeviceIdentification DeviceIdentification => _devId;
 
 		public MatchingLogicalDevice()
-			: this()
 		{
 		}
 

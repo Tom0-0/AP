@@ -6,7 +6,6 @@ namespace _3S.CoDeSys.DeviceObject
     internal class LocalUniqueIdGenerator : DefaultUniqueIdGenerator, IUniqueIdGenerator
     {
         public LocalUniqueIdGenerator()
-            : this()
         {
         }
 

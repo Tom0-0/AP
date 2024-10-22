@@ -946,7 +946,7 @@ namespace _3S.CoDeSys.DeviceObject
 					}
 				}
 			}
-			((GenericObject)this).AfterClone();
+			base.AfterClone();
 		}
 
 		internal void Import(XmlNode node, TypeList types, IDeviceIdentification deviceId, bool bUpdate, bool bCreateBitChannels)
@@ -1246,7 +1246,7 @@ namespace _3S.CoDeSys.DeviceObject
 
 		public override void AfterDeserialize()
 		{
-			((GenericObject)this).AfterDeserialize();
+			base.AfterDeserialize();
 			_driverInfo.SetIoProvider((IIoProvider)(object)this);
 			if (_hostParameterSet == null)
 			{
@@ -1258,7 +1258,7 @@ namespace _3S.CoDeSys.DeviceObject
 
 		public override void AfterClone()
 		{
-			((GenericObject)this).AfterClone();
+			base.AfterClone();
 			_driverInfo.SetIoProvider((IIoProvider)(object)this);
 			if (_hostParameterSet != null)
 			{

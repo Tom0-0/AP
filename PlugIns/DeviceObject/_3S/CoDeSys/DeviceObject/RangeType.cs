@@ -11,25 +11,25 @@ namespace _3S.CoDeSys.DeviceObject
 	{
 		[DefaultSerialization("BaseType")]
 		[StorageVersion("3.5.6.0")]
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		[StorageDefaultValue(null)]
 		private string _stBaseType;
 
 		[DefaultSerialization("Min")]
 		[StorageVersion("3.5.6.0")]
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		[StorageDefaultValue("0")]
 		private string _stMin = "0";
 
 		[DefaultSerialization("Max")]
 		[StorageVersion("3.5.6.0")]
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		[StorageDefaultValue("0")]
 		private string _stMax = "0";
 
 		[DefaultSerialization("Default")]
 		[StorageVersion("3.5.6.0")]
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		[StorageDefaultValue("0")]
 		private string _stDefault = "0";
 

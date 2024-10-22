@@ -12,13 +12,13 @@ namespace _3S.CoDeSys.DeviceObject
 	{
 		public const string TYPE_OF_TASK = "ExternalEvent";
 
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Shallow)]
 		[DefaultSerialization("Event")]
 		[StorageVersion("3.3.0.0")]
 		[StorageDefaultValue(null)]
 		protected string _stEvent;
 
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Shallow)]
 		[DefaultSerialization("CycleTime")]
 		[StorageVersion("3.5.6.0")]
 		[StorageDefaultValue(null)]

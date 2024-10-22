@@ -10,7 +10,7 @@ namespace _3S.CoDeSys.DeviceObject
         internal bool IsLeftModel => _bIsLeftModel;
 
         internal DeviceObjectDiffViewModel(bool bIsLeftModel)
-            : this()
+            : base()
         {
             _bIsLeftModel = bIsLeftModel;
             ((DefaultTreeTableModel)this).AddColumn(Strings.DiffTreetableColumnName, HorizontalAlignment.Left, (ITreeTableViewRenderer)(object)DeviceObjectDiffViewNodeRenderer.NoIndent, (ITreeTableViewEditor)(object)NoopTreeTableViewEditor.Singleton, false);

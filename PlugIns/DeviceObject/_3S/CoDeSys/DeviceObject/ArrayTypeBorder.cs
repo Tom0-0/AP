@@ -11,13 +11,13 @@ namespace _3S.CoDeSys.DeviceObject
 	{
 		[DefaultSerialization("LowerBorder")]
 		[StorageVersion("3.5.6.0")]
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		[StorageDefaultValue(null)]
 		private string _stLowerBorder;
 
 		[DefaultSerialization("UpperBorder")]
 		[StorageVersion("3.5.6.0")]
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		[StorageDefaultValue(null)]
 		private string _stUpperBorder;
 
@@ -46,7 +46,7 @@ namespace _3S.CoDeSys.DeviceObject
 		}
 
 		public ArrayTypeBorder()
-			: this()
+			: base()
 		{
 		}
 

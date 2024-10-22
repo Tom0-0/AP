@@ -12,55 +12,55 @@ namespace _3S.CoDeSys.DeviceObject
 	{
 		[DefaultSerialization("LibName")]
 		[StorageVersion("3.3.0.0")]
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		private string _stLibName = "";
 
 		[DefaultSerialization("Vendor")]
 		[StorageVersion("3.3.0.0")]
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		private string _stVendor = "";
 
 		[DefaultSerialization("Version")]
 		[StorageVersion("3.3.0.0")]
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		private string _stVersion = "";
 
 		[DefaultSerialization("Identifier")]
 		[StorageVersion("3.3.0.0")]
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		private string _stIdentifier = "";
 
 		[DefaultSerialization("FbInstances")]
 		[StorageVersion("3.3.0.0")]
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		private ArrayList _alFbInstances = new ArrayList();
 
 		[DefaultSerialization("PlaceHolderLib")]
 		[StorageVersion("3.3.0.0")]
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		private string _stPlaceHolderLib = "";
 
 		[DefaultSerialization("loadAsSystemLibrary")]
 		[StorageVersion("3.3.2.0")]
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		[StorageDefaultValue(true)]
 		private bool _bLoadAsSystemLibrary = true;
 
 		[DefaultSerialization("IsDiagnosisLib")]
 		[StorageVersion("3.5.0.0")]
 		[StorageDefaultValue(false)]
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		private bool _bIsDiagnosisLib;
 
 		[DefaultSerialization("AddedByAP")]
 		[StorageVersion("3.5.13.0")]
 		[StorageDefaultValue(false)]
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		private bool _bAddedByAP;
 
 		[DefaultSerialization("Client")]
 		[StorageVersion("3.3.0.0")]
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		private string _stClient = "";
 
 		internal bool IsDiagnosisLib
@@ -170,7 +170,6 @@ namespace _3S.CoDeSys.DeviceObject
 		public string Client => _stClient;
 
 		public RequiredLib()
-			: this()
 		{
 		}
 

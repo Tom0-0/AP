@@ -67,7 +67,7 @@ namespace _3S.CoDeSys.DeviceObject
 		}
 
 		internal VarAdapter(XmlReader reader, IDeviceIdentification masterDeviceId)
-			: this()
+			: base()
 		{
 			try
 			{
@@ -114,7 +114,7 @@ namespace _3S.CoDeSys.DeviceObject
 		}
 
 		private VarAdapter(VarAdapter original)
-			: this()
+			: base()
 		{
 			_alModuleGuids = new ArrayList(original._alModuleGuids.Count);
 			foreach (object alModuleGuid in original._alModuleGuids)
@@ -154,7 +154,7 @@ namespace _3S.CoDeSys.DeviceObject
 
 		public override void AfterDeserialize()
 		{
-			((GenericObject)this).AfterDeserialize();
+			base.AfterDeserialize();
 			ArrayList obj = (ArrayList)_alModuleGuids.Clone();
 			_alModuleGuids.Clear();
 			foreach (Guid item in obj)

@@ -14,7 +14,7 @@ namespace _3S.CoDeSys.DeviceObject
 
 		[DefaultSerialization("DeviceIdentification")]
 		[StorageVersion("3.3.2.0")]
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		private IDeviceIdentification _devId;
 
 		public static Guid Guid => My_Guid;
@@ -22,7 +22,7 @@ namespace _3S.CoDeSys.DeviceObject
 		public IDeviceIdentification DeviceIdentification => _devId;
 
 		public DeviceProperty()
-			: this()
+			: base()
 		{
 		}
 

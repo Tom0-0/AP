@@ -9,17 +9,17 @@ namespace _3S.CoDeSys.DeviceObject
 	[StorageVersion("3.3.0.0")]
 	public class DeviceConstraint : GenericObject2, IDeviceConstraint
 	{
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		[DefaultSerialization("devIdent")]
 		[StorageVersion("3.3.0.0")]
 		private DeviceIdentification _devIdent;
 
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		[DefaultSerialization("MaxNumber")]
 		[StorageVersion("3.3.0.0")]
 		private uint _uiMaxNumber;
 
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		[DefaultSerialization("CheckRecursive")]
 		[StorageVersion("3.3.0.0")]
 		private bool _bCheckRecursive;
@@ -63,7 +63,7 @@ namespace _3S.CoDeSys.DeviceObject
 		}
 
 		public DeviceConstraint()
-			: this()
+			: base()
 		{
 		}
 

@@ -44,7 +44,7 @@ namespace _3S.CoDeSys.DeviceObject
 			{
 				long result = default(long);
 				short num = default(short);
-				PositionHelper.SplitPosition(_nPosition, ref result, ref num);
+				PositionHelper.SplitPosition(_nPosition, out result, out num);
 				return result;
 			}
 		}
@@ -55,7 +55,7 @@ namespace _3S.CoDeSys.DeviceObject
 			{
 				long num = default(long);
 				short result = default(short);
-				PositionHelper.SplitPosition(_nPosition, ref num, ref result);
+				PositionHelper.SplitPosition(_nPosition, out num, out result);
 				return result;
 			}
 		}

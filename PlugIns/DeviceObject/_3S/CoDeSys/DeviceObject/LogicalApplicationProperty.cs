@@ -13,7 +13,7 @@ namespace _3S.CoDeSys.DeviceObject
 
 		[DefaultSerialization("DeviceIdentification")]
 		[StorageVersion("3.4.2.0")]
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		private Guid _applicationGuid = Guid.Empty;
 
 		public Guid LogicalApplication => _applicationGuid;
@@ -25,7 +25,7 @@ namespace _3S.CoDeSys.DeviceObject
 		}
 
 		public LogicalApplicationProperty()
-			: this()
+			: base()
 		{
 		}
 	}

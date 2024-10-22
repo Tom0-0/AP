@@ -394,7 +394,7 @@ namespace _3S.CoDeSys.DeviceObject
 				try
 				{
 					IMetaObject objectToRead = ((IObjectManager)APEnvironment.ObjectMgr).GetObjectToRead(handle, item);
-					_003F val = APEnvironment.LanguageModelMgr;
+					ILanguageModelManager val = APEnvironment.LanguageModelMgr;
 					IObject @object = objectToRead.Object;
 					((ILanguageModelManager)val).PutLanguageModel((ILanguageModelProvider)(object)((@object is ILanguageModelProvider) ? @object : null), false);
 				}
@@ -433,27 +433,6 @@ namespace _3S.CoDeSys.DeviceObject
 
 		private void ProjectChanged(object sender, PSChangedEventArgs e)
 		{
-			//IL_0028: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0030: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0036: Invalid comparison between Unknown and I4
-			//IL_00cc: Unknown result type (might be due to invalid IL or missing references)
-			//IL_00d1: Unknown result type (might be due to invalid IL or missing references)
-			//IL_00e8: Unknown result type (might be due to invalid IL or missing references)
-			//IL_00ee: Invalid comparison between Unknown and I4
-			//IL_00f9: Unknown result type (might be due to invalid IL or missing references)
-			//IL_00ff: Invalid comparison between Unknown and I4
-			//IL_0105: Unknown result type (might be due to invalid IL or missing references)
-			//IL_010a: Unknown result type (might be due to invalid IL or missing references)
-			//IL_011e: Unknown result type (might be due to invalid IL or missing references)
-			//IL_01b1: Unknown result type (might be due to invalid IL or missing references)
-			//IL_01bd: Expected O, but got Unknown
-			//IL_01ee: Unknown result type (might be due to invalid IL or missing references)
-			//IL_01f4: Invalid comparison between Unknown and I4
-			//IL_0338: Unknown result type (might be due to invalid IL or missing references)
-			//IL_033e: Invalid comparison between Unknown and I4
-			//IL_0342: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0348: Invalid comparison between Unknown and I4
-			//IL_034c: Unknown result type (might be due to invalid IL or missing references)
 			if (_bProjectRecursion)
 			{
 				return;
@@ -467,49 +446,30 @@ namespace _3S.CoDeSys.DeviceObject
 				{
 					if (((int)val2.Action == 0 || (int)val2.Action == 4) && (typeof(IDeviceObjectBase).IsAssignableFrom(val2.AffectedNode.ObjectType) || typeof(ExplicitConnector).IsAssignableFrom(val2.AffectedNode.ObjectType)) && (s_undoMgr == null || (s_undoMgr != null && !((IUndoManager)s_undoMgr).InRedo && !((IUndoManager)s_undoMgr).InUndo)) && !val.ContainsKey(val2.AffectedNode.ObjectGuid))
 					{
-						val.set_Item(val2.AffectedNode.ObjectGuid, val2);
+						val[val2.AffectedNode.ObjectGuid]= val2;
 					}
 				}
-				Enumerator<Guid, IPSChange> enumerator = val.GetEnumerator();
-				try
+				foreach (KeyValuePair<Guid, IPSChange> keyValuePair in val)
 				{
-					while (enumerator.MoveNext())
+					bool bAutoInsert = keyValuePair.Value.Action == PSChangeAction.Add;
+					if (keyValuePair.Value.Action == PSChangeAction.Modify)
 					{
-						KeyValuePair<Guid, IPSChange> current = enumerator.Current;
-						bool bAutoInsert = (int)current.Value.Action == 0;
-						if ((int)current.Value.Action == 4)
+						foreach (KeyValuePair<Guid, IPSChange> keyValuePair2 in val)
 						{
-							Enumerator<Guid, IPSChange> enumerator2 = val.GetEnumerator();
-							try
+							if (keyValuePair2.Value.Action == PSChangeAction.Add && keyValuePair.Value.AffectedNode.ParentNode != null)
 							{
-								while (enumerator2.MoveNext())
+								for (IPSNode parentNode = keyValuePair.Value.AffectedNode.ParentNode; parentNode != null; parentNode = parentNode.ParentNode)
 								{
-									KeyValuePair<Guid, IPSChange> current2 = enumerator2.Current;
-									if ((int)current2.Value.Action != 0 || current.Value.AffectedNode.ParentNode == null)
+									if (parentNode.ObjectGuid == keyValuePair2.Value.AffectedNode.ObjectGuid)
 									{
-										continue;
-									}
-									for (IPSNode parentNode = current.Value.AffectedNode.ParentNode; parentNode != null; parentNode = parentNode.ParentNode)
-									{
-										if (parentNode.ObjectGuid == current2.Value.AffectedNode.ObjectGuid)
-										{
-											bAutoInsert = true;
-											break;
-										}
+										bAutoInsert = true;
+										break;
 									}
 								}
 							}
-							finally
-							{
-								((IDisposable)enumerator2).Dispose();
-							}
 						}
-						AutoInsertLogicalDevice((ObjectEventArgs)new ObjectAddedEventArgs(current.Value.AffectedNode.ProjectHandle, current.Key, 0, (IPastedObject)null), bAutoInsert);
 					}
-				}
-				finally
-				{
-					((IDisposable)enumerator).Dispose();
+					DeviceObjectHelper.AutoInsertLogicalDevice(new ObjectAddedEventArgs(keyValuePair.Value.AffectedNode.ProjectHandle, keyValuePair.Key, 0, null), bAutoInsert);
 				}
 				changes = e.Changes;
 				foreach (IPSChange val3 in changes)
@@ -870,35 +830,24 @@ namespace _3S.CoDeSys.DeviceObject
 				if (_dictObjectToUpdate.Count > 0)
 				{
 					LList<ILanguageModelProvider> val = new LList<ILanguageModelProvider>();
-					Enumerator<Guid, int> enumerator = _dictObjectToUpdate.GetEnumerator();
-					try
+					foreach (KeyValuePair<Guid, int> keyValuePair in DeviceObjectHelper._dictObjectToUpdate)
 					{
-						while (enumerator.MoveNext())
+						if (APEnvironment.ObjectMgr.ExistsObject(keyValuePair.Value, keyValuePair.Key))
 						{
-							KeyValuePair<Guid, int> current = enumerator.Current;
-							if (!((IObjectManager)APEnvironment.ObjectMgr).ExistsObject(current.Value, current.Key))
-							{
-								continue;
-							}
-							IMetaObject objectToRead = ((IObjectManager)APEnvironment.ObjectMgr).GetObjectToRead(current.Value, current.Key);
-							IObject @object = objectToRead.Object;
-							ILanguageModelProvider val2 = (ILanguageModelProvider)(object)((@object is ILanguageModelProvider) ? @object : null);
-							if (val2 != null)
+							IMetaObject objectToRead = APEnvironment.ObjectMgr.GetObjectToRead(keyValuePair.Value, keyValuePair.Key);
+							ILanguageModelProvider languageModelProvider = objectToRead.Object as ILanguageModelProvider;
+							if (languageModelProvider != null)
 							{
 								if (objectToRead.ParentObjectGuid == Guid.Empty)
 								{
-									val.Add(val2);
+									val.Add(languageModelProvider);
 								}
 								else
 								{
-									val.Insert(0, val2);
+									val.Insert(0, languageModelProvider);
 								}
 							}
 						}
-					}
-					finally
-					{
-						((IDisposable)enumerator).Dispose();
 					}
 					foreach (ILanguageModelProvider item in val)
 					{
@@ -967,25 +916,25 @@ namespace _3S.CoDeSys.DeviceObject
 
 		internal static bool IsLogicalDevice(int nProjectHandle, Guid objectGuid)
 		{
-			IMetaObject objectToRead = ((IObjectManager)APEnvironment.ObjectMgr).GetObjectToRead(nProjectHandle, objectGuid);
-			if (objectToRead.Object is ILogicalDevice && ((ILogicalDevice)/*isinst with value type is only supported in some contexts*/).IsLogical)
+			IMetaObject objectToRead = APEnvironment.ObjectMgr.GetObjectToRead(nProjectHandle, objectGuid);
+			if (objectToRead.Object is ILogicalDevice && (objectToRead.Object as ILogicalDevice).IsLogical)
 			{
-				LList<Guid> val = default(LList<Guid>);
-				if (_dictLogicalNames.TryGetValue(objectToRead.Name, ref val))
+				LList<Guid> llist;
+				if (DeviceObjectHelper._dictLogicalNames.TryGetValue(objectToRead.Name, out llist))
 				{
-					if (!val.Contains(objectGuid))
+					if (!llist.Contains(objectGuid))
 					{
-						val.Add(objectGuid);
+						llist.Add(objectGuid);
 					}
 				}
 				else
 				{
-					val = new LList<Guid>();
-					val.Add(objectGuid);
-					_dictLogicalNames.set_Item(objectToRead.Name, val);
+					llist = new LList<Guid>();
+					llist.Add(objectGuid);
+					DeviceObjectHelper._dictLogicalNames[objectToRead.Name] = llist;
 				}
-				IMetaObjectStub hostStub = GetHostStub(nProjectHandle, objectToRead.ParentObjectGuid);
-				_dictHosts.set_Item(objectToRead.ObjectGuid, hostStub.ObjectGuid);
+				IMetaObjectStub hostStub = DeviceObjectHelper.GetHostStub(nProjectHandle, objectToRead.ParentObjectGuid);
+				DeviceObjectHelper._dictHosts[objectToRead.ObjectGuid] = hostStub.ObjectGuid;
 				return true;
 			}
 			return false;
@@ -1020,7 +969,7 @@ namespace _3S.CoDeSys.DeviceObject
 							continue;
 						}
 						val2.Add(mappedDevice);
-						if (_dictMappedDevices.TryGetValue(mappedDevice, ref val3))
+						if (_dictMappedDevices.TryGetValue(mappedDevice, out val3))
 						{
 							if (!val3.Contains(objectGuid))
 							{
@@ -1034,21 +983,12 @@ namespace _3S.CoDeSys.DeviceObject
 							_dictMappedDevices[mappedDevice]= val3;
 						}
 					}
-					Enumerator<string, LList<Guid>> enumerator2 = _dictMappedDevices.GetEnumerator();
-					try
+					foreach (KeyValuePair<string, LList<Guid>> keyValuePair in DeviceObjectHelper._dictMappedDevices)
 					{
-						while (enumerator2.MoveNext())
+						if (!val2.Contains(keyValuePair.Key) && keyValuePair.Value.Contains(objectGuid))
 						{
-							KeyValuePair<string, LList<Guid>> current = enumerator2.Current;
-							if (!val2.Contains(current.Key) && current.Value.Contains(objectGuid))
-							{
-								current.Value.Remove(objectGuid);
-							}
+							keyValuePair.Value.Remove(objectGuid);
 						}
-					}
-					finally
-					{
-						((IDisposable)enumerator2).Dispose();
 					}
 					return true;
 				}
@@ -1102,31 +1042,20 @@ namespace _3S.CoDeSys.DeviceObject
 			}
 			List<Guid> list = new List<Guid>();
 			int handle = ((IEngine)APEnvironment.Engine).Projects.PrimaryProject.Handle;
-			Enumerator<Guid, IAddressAssignmentStrategy> enumerator = _liStrategies.Keys.GetEnumerator();
-			try
+			foreach (Guid guid in DeviceObjectHelper._liStrategies.Keys)
 			{
-				while (enumerator.MoveNext())
+				if (APEnvironment.ObjectMgr.ExistsObject(handle, guid))
 				{
-					Guid current = enumerator.Current;
-					if (!((IObjectManager)APEnvironment.ObjectMgr).ExistsObject(handle, current))
-					{
-						continue;
-					}
-					IMetaObject objectToRead = ((IObjectManager)APEnvironment.ObjectMgr).GetObjectToRead(handle, current);
+					IMetaObject objectToRead = APEnvironment.ObjectMgr.GetObjectToRead(handle, guid);
 					if (objectToRead.Object is IDeviceObject)
 					{
-						IObject @object = objectToRead.Object;
-						IDeviceObject5 val = (IDeviceObject5)(object)((@object is IDeviceObject5) ? @object : null);
-						if (val != null && ((object)val.DeviceIdentificationNoSimulation).Equals((object)e.DeviceIdentification))
+						IDeviceObject5 deviceObject = objectToRead.Object as IDeviceObject5;
+						if (deviceObject != null && deviceObject.DeviceIdentificationNoSimulation.Equals(e.DeviceIdentification))
 						{
-							list.Add(current);
+							list.Add(guid);
 						}
 					}
 				}
-			}
-			finally
-			{
-				((IDisposable)enumerator).Dispose();
 			}
 			if (list.Count > 0)
 			{
@@ -1329,9 +1258,6 @@ namespace _3S.CoDeSys.DeviceObject
 
 		public static string BuildIecIdentifier(string stBase)
 		{
-			//IL_00e6: Unknown result type (might be due to invalid IL or missing references)
-			//IL_00ed: Unknown result type (might be due to invalid IL or missing references)
-			//IL_00f4: Invalid comparison between Unknown and I4
 			bool flag = false;
 			if (string.IsNullOrEmpty(stBase))
 			{
@@ -1343,9 +1269,10 @@ namespace _3S.CoDeSys.DeviceObject
 				stringBuilder.Append('_');
 				flag = true;
 			}
+			bool supportUnicodeIdentifiers = ProjectOptionsHelper.SupportUnicodeIdentifiers;
 			foreach (char c in stBase)
 			{
-				if ((c >= '0' && c <= '9') || (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+				if (char.IsDigit(c) || char.IsLower(c) || char.IsUpper(c) || (supportUnicodeIdentifiers && c >= '\u0080'))
 				{
 					stringBuilder.Append(c);
 					flag = false;
@@ -1356,10 +1283,10 @@ namespace _3S.CoDeSys.DeviceObject
 					flag = true;
 				}
 			}
-			string text = ((!APEnvironment.CompilerVersionMgr.CompilerVersionGreaterEq((ushort)3, (ushort)5, (ushort)15, (ushort)0) || APEnvironment.CompilerVersionMgr.CompilerVersionGreaterEq((ushort)3, (ushort)5, (ushort)16, (ushort)0)) ? stringBuilder.ToString() : stringBuilder.ToString().TrimEnd('_'));
-			IToken val = default(IToken);
-			((ILanguageModelManager)APEnvironment.LanguageModelMgr).CreateScanner(text, false, false, false, false).GetNext(ref val);
-			if ((int)val.Type != 13)
+			string text = stringBuilder.ToString();
+			IToken token;
+			APEnvironment.LanguageModelMgr.CreateScanner(text, false, false, false, false).GetNext(out token);
+			if (token.Type != (TokenType)13)
 			{
 				return text + "_";
 			}
@@ -1464,7 +1391,7 @@ namespace _3S.CoDeSys.DeviceObject
 			IScanner obj = ((ILanguageModelManager)APEnvironment.LanguageModelMgr).CreateScanner(stIdentifier, false, false, false, false);
 			obj.AllowMultipleUnderlines=(true);
 			IToken val2 = default(IToken);
-			obj.GetNext(ref val2);
+			obj.GetNext(out val2);
 			if ((int)val2.Type != 13)
 			{
 				return false;
@@ -1913,7 +1840,7 @@ namespace _3S.CoDeSys.DeviceObject
 			{
 				APEnvironment.FrameForm.Cursor=(Cursors.WaitCursor);
 				string text = param.ResolveFileParameter(param.Value.Replace("'", ""));
-				((IEngine)APEnvironment.Engine).Projects.PrimaryProject;
+				_=((IEngine)APEnvironment.Engine).Projects.PrimaryProject;
 				if (AuthFile.Exists(text))
 				{
 					Stream stream = (Stream)new AuthFileStream(text, FileMode.Open, FileAccess.Read);
@@ -1938,8 +1865,8 @@ namespace _3S.CoDeSys.DeviceObject
 						DownloadProgress val3 = default(DownloadProgress);
 						while (!asyncResult.AsyncWaitHandle.WaitOne(10, exitContext: false))
 						{
-							val2.GetProgress(asyncResult, ref val3, ref num, ref num2);
-							switch (val3 - 1)
+							val2.GetProgress(asyncResult, out val3, out num, out num2);
+							switch ((int)val3 - 1)
 							{
 							case 0:
 								val.TaskProgress("Initialize", 0);
@@ -2088,7 +2015,7 @@ namespace _3S.CoDeSys.DeviceObject
 				ObjectAddingEventArgs3 val = (ObjectAddingEventArgs3)(object)((e is ObjectAddingEventArgs3) ? e : null);
 				if (((ObjectAddingEventArgs2)val).PastedObject != null)
 				{
-					if (((ObjectAddingEventArgs2)val).PastedObject.Object is IDeviceObject5 && ((IDeviceObject5)/*isinst with value type is only supported in some contexts*/).DeviceIdentificationNoSimulation is IModuleIdentification)
+					if (((ObjectAddingEventArgs2)val).PastedObject.Object is IDeviceObject5 && (val.PastedObject.Object as IDeviceObject5).DeviceIdentificationNoSimulation is IModuleIdentification)
 					{
 						IMetaObject objectToRead = ((IObjectManager)APEnvironment.ObjectMgr).GetObjectToRead(e.ProjectHandle, e.ParentObjectGuid);
 						if (objectToRead != null && objectToRead.Object is IDeviceObject5)
@@ -2692,7 +2619,7 @@ namespace _3S.CoDeSys.DeviceObject
 								{
 									text2 = text2 + "_L" + num;
 								}
-								text2 = ((IObjectManager)APEnvironment.ObjectMgr).GetUniqueName(e.ProjectHandle, guid, DeviceObject.GUID_DEVICENAMESPACE, text2, ref guid3);
+								text2 = ((IObjectManager)APEnvironment.ObjectMgr).GetUniqueName(e.ProjectHandle, guid, DeviceObject.GUID_DEVICENAMESPACE, text2, out guid3);
 								Guid guid4 = Guid.Empty;
 								if (item4.IsMapped && e is ObjectAddedEventArgs)
 								{
@@ -2725,8 +2652,8 @@ namespace _3S.CoDeSys.DeviceObject
 								{
 									if (bAutoInsert)
 									{
-										((IObjectManager)APEnvironment.ObjectMgr).ExportObject(e.ProjectHandle, guid4, ref array, ref array2);
-										((IObjectManager)APEnvironment.ObjectMgr).ImportObject(array, array2, ref guid6, ref guid7, ref val9, ref text3, ref array3);
+										((IObjectManager)APEnvironment.ObjectMgr).ExportObject(e.ProjectHandle, guid4, out array, out array2);
+										((IObjectManager)APEnvironment.ObjectMgr).ImportObject(array, array2, out guid6, out guid7, out val9, out text3, out array3);
 										((IObjectManager)APEnvironment.ObjectMgr).AddObject(e.ProjectHandle, guid, Guid.NewGuid(), val9, text2, -1);
 										item4.MappedDevice = string.Empty;
 										MapLogicalDevice(val3, text2, num);
@@ -2863,181 +2790,147 @@ namespace _3S.CoDeSys.DeviceObject
 
 		internal static void DeleteUnusedTasks(PSChangeAction action)
 		{
-			//IL_0024: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0029: Unknown result type (might be due to invalid IL or missing references)
-			//IL_00a7: Unknown result type (might be due to invalid IL or missing references)
-			//IL_00a9: Invalid comparison between Unknown and I4
-			//IL_01b7: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0286: Unknown result type (might be due to invalid IL or missing references)
-			//IL_028d: Expected O, but got Unknown
-			//IL_036b: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0370: Unknown result type (might be due to invalid IL or missing references)
-			if (_bInDeleteUnusedTasks)
+			if (DeviceObjectHelper._bInDeleteUnusedTasks)
 			{
 				return;
 			}
 			try
 			{
-				_bInDeleteUnusedTasks = true;
-				if (RemovedTasks.Count <= 0)
+				DeviceObjectHelper._bInDeleteUnusedTasks = true;
+				if (DeviceObjectHelper.RemovedTasks.Count > 0)
 				{
-					return;
-				}
-				Enumerator<RequiredTask, RemoveTaskData> enumerator = _dictRemovedTasks.GetEnumerator();
-				try
-				{
-					while (enumerator.MoveNext())
+					foreach (KeyValuePair<RequiredTask, DeviceObjectHelper.RemoveTaskData> keyValuePair in DeviceObjectHelper._dictRemovedTasks)
 					{
-						KeyValuePair<RequiredTask, RemoveTaskData> current = enumerator.Current;
-						Guid appGuid = current.Value.appGuid;
-						int num = -1;
-						if (((IEngine)APEnvironment.Engine).Projects.PrimaryProject == null)
+						Guid appGuid = keyValuePair.Value.appGuid;
+						int nProjectHandle = -1;
+						if (APEnvironment.Engine.Projects.PrimaryProject == null)
 						{
 							break;
 						}
-						num = ((IEngine)APEnvironment.Engine).Projects.PrimaryProject.Handle;
-						if (!((IObjectManager)APEnvironment.ObjectMgr).ExistsObject(num, appGuid))
+						nProjectHandle = APEnvironment.Engine.Projects.PrimaryProject.Handle;
+						if (APEnvironment.ObjectMgr.ExistsObject(nProjectHandle, appGuid))
 						{
-							continue;
-						}
-						IMetaObject objectToRead = ((IObjectManager)APEnvironment.ObjectMgr).GetObjectToRead(num, appGuid);
-						if (objectToRead == null)
-						{
-							continue;
-						}
-						IMetaObject taskConfig = GetTaskConfig(objectToRead);
-						if (taskConfig == null || ((int)action == 2 && ((IObjectManager)APEnvironment.ObjectMgr).ExistsObject(num, current.Value.ObjectGuid) && GetHostStub(num, current.Value.ObjectGuid).ObjectGuid == current.Value.HostGuid))
-						{
-							continue;
-						}
-						RequiredTask key = current.Key;
-						string text = key.TaskName;
-						if (text.Contains("$(DeviceName)"))
-						{
-							text = text.Replace("$(DeviceName)", current.Value.stMetaObjectName);
-						}
-						IMetaObject val = GetTask(taskConfig, text);
-						if (val == null)
-						{
-							continue;
-						}
-						IObject @object = val.Object;
-						ITaskObject val2 = (ITaskObject)(object)((@object is ITaskObject) ? @object : null);
-						LList<string> val3 = new LList<string>();
-						for (int i = 0; i < key.TaskPou.Count; i++)
-						{
-							string text2 = (string)key.TaskPou[i];
-							if (text2.Contains("$(DeviceName)"))
+							IMetaObject objectToRead = APEnvironment.ObjectMgr.GetObjectToRead(nProjectHandle, appGuid);
+							if (objectToRead != null)
 							{
-								text2 = text2.Replace("$(DeviceName)", current.Value.stMetaObjectName);
-							}
-							if (val2.POUs == null)
-							{
-								continue;
-							}
-							foreach (IPouObject item in (IEnumerable)val2.POUs)
-							{
-								if (string.Compare(item.Name, text2, StringComparison.InvariantCultureIgnoreCase) == 0)
+								IMetaObject taskConfig = DeviceObjectHelper.GetTaskConfig(objectToRead);
+								if (taskConfig != null && (action != PSChangeAction.Move || !APEnvironment.ObjectMgr.ExistsObject(nProjectHandle, keyValuePair.Value.ObjectGuid) || !(DeviceObjectHelper.GetHostStub(nProjectHandle, keyValuePair.Value.ObjectGuid).ObjectGuid == keyValuePair.Value.HostGuid)))
 								{
-									val3.Add(text2);
-								}
-							}
-						}
-						if (((val2 != null) ? val2.POUs : null) == null)
-						{
-							continue;
-						}
-						if (((ICollection)val2.POUs).Count > val3.Count)
-						{
-							try
-							{
-								val = ((IObjectManager)APEnvironment.ObjectMgr).GetObjectToModify(val);
-								if (val == null)
-								{
-									continue;
-								}
-								IObject object2 = val.Object;
-								val2 = (ITaskObject)(object)((object2 is ITaskObject) ? object2 : null);
-								foreach (string item2 in val3)
-								{
-									foreach (IPouObject item3 in (IEnumerable)val2.POUs)
+									RequiredTask key = keyValuePair.Key;
+									string text = key.TaskName;
+									if (text.Contains("$(DeviceName)"))
 									{
-										IPouObject val4 = item3;
-										if (string.Compare(val4.Name, item2, StringComparison.InvariantCultureIgnoreCase) == 0)
+										text = text.Replace("$(DeviceName)", keyValuePair.Value.stMetaObjectName);
+									}
+									IMetaObject metaObject = DeviceObjectHelper.GetTask(taskConfig, text);
+									if (metaObject != null)
+									{
+										ITaskObject taskObject = metaObject.Object as ITaskObject;
+										LList<string> llist = new LList<string>();
+										for (int i = 0; i < key.TaskPou.Count; i++)
 										{
-											val2.POUs.Remove(val4);
-											break;
+											string text2 = (string)key.TaskPou[i];
+											if (text2.Contains("$(DeviceName)"))
+											{
+												text2 = text2.Replace("$(DeviceName)", keyValuePair.Value.stMetaObjectName);
+											}
+											if (taskObject.POUs != null)
+											{
+												IEnumerator enumerator2 = taskObject.POUs.GetEnumerator();
+												{
+													while (enumerator2.MoveNext())
+													{
+														if (string.Compare(((IPouObject)enumerator2.Current).Name, text2, StringComparison.InvariantCultureIgnoreCase) == 0)
+														{
+															llist.Add(text2);
+														}
+													}
+												}
+											}
+										}
+										if (((taskObject != null) ? taskObject.POUs : null) != null)
+										{
+											if (taskObject.POUs.Count > llist.Count)
+											{
+												try
+												{
+													metaObject = APEnvironment.ObjectMgr.GetObjectToModify(metaObject);
+													if (metaObject != null)
+													{
+														taskObject = (metaObject.Object as ITaskObject);
+														foreach (string strB in llist)
+														{
+															foreach (object obj in taskObject.POUs)
+															{
+																IPouObject pouObject = (IPouObject)obj;
+																if (string.Compare(pouObject.Name, strB, StringComparison.InvariantCultureIgnoreCase) == 0)
+																{
+																	taskObject.POUs.Remove(pouObject);
+																	break;
+																}
+															}
+														}
+													}
+													continue;
+												}
+												catch
+												{
+													continue;
+												}
+												finally
+												{
+													if (metaObject != null && metaObject.IsToModify)
+													{
+														APEnvironment.ObjectMgr.SetObject(metaObject, true, null);
+													}
+												}
+											}
+											bool flag = false;
+											if (APEnvironment.ObjectMgr.ExistsObject(nProjectHandle, keyValuePair.Value.HostGuid))
+											{
+												IMetaObject objectToRead2 = APEnvironment.ObjectMgr.GetObjectToRead(nProjectHandle, keyValuePair.Value.HostGuid);
+												IIoProvider ioProvider = ((objectToRead2 != null) ? objectToRead2.Object : null) as IIoProvider;
+												if (ioProvider != null)
+												{
+													LDictionary<RequiredTask, string> ldictionary = new LDictionary<RequiredTask, string>();
+													DeviceObjectHelper.CollectRequiredTasks(ioProvider, ldictionary);
+													foreach (KeyValuePair<RequiredTask, string> keyValuePair2 in ldictionary)
+													{
+														string text3 = keyValuePair2.Key.TaskName;
+														if (text3.Contains("$(DeviceName)"))
+														{
+															text3 = text3.Replace("$(DeviceName)", keyValuePair2.Value);
+														}
+														if (string.Compare(text, text3, StringComparison.InvariantCultureIgnoreCase) == 0)
+														{
+															flag = true;
+															break;
+														}
+													}
+												}
+											}
+											if (!flag)
+											{
+												try
+												{
+													APEnvironment.ObjectMgr.RemoveObjectWithoutParentCheck(metaObject.ProjectHandle, metaObject.ObjectGuid);
+												}
+												catch
+												{
+												}
+											}
 										}
 									}
 								}
-							}
-							catch
-							{
-							}
-							finally
-							{
-								if (val != null && val.IsToModify)
-								{
-									((IObjectManager)APEnvironment.ObjectMgr).SetObject(val, true, (object)null);
-								}
-							}
-							continue;
-						}
-						bool flag = false;
-						if (((IObjectManager)APEnvironment.ObjectMgr).ExistsObject(num, current.Value.HostGuid))
-						{
-							IMetaObject objectToRead2 = ((IObjectManager)APEnvironment.ObjectMgr).GetObjectToRead(num, current.Value.HostGuid);
-							IObject obj2 = ((objectToRead2 != null) ? objectToRead2.Object : null);
-							IIoProvider val5 = (IIoProvider)(object)((obj2 is IIoProvider) ? obj2 : null);
-							if (val5 != null)
-							{
-								LDictionary<RequiredTask, string> val6 = new LDictionary<RequiredTask, string>();
-								CollectRequiredTasks(val5, val6);
-								Enumerator<RequiredTask, string> enumerator4 = val6.GetEnumerator();
-								try
-								{
-									while (enumerator4.MoveNext())
-									{
-										KeyValuePair<RequiredTask, string> current3 = enumerator4.Current;
-										string text3 = current3.Key.TaskName;
-										if (text3.Contains("$(DeviceName)"))
-										{
-											text3 = text3.Replace("$(DeviceName)", current3.Value);
-										}
-										if (string.Compare(text, text3, StringComparison.InvariantCultureIgnoreCase) == 0)
-										{
-											flag = true;
-											break;
-										}
-									}
-								}
-								finally
-								{
-									((IDisposable)enumerator4).Dispose();
-								}
-							}
-						}
-						if (!flag)
-						{
-							try
-							{
-								((IObjectManager2)APEnvironment.ObjectMgr).RemoveObjectWithoutParentCheck(val.ProjectHandle, val.ObjectGuid);
-							}
-							catch
-							{
 							}
 						}
 					}
+					DeviceObjectHelper.RemovedTasks.Clear();
 				}
-				finally
-				{
-					((IDisposable)enumerator).Dispose();
-				}
-				RemovedTasks.Clear();
 			}
 			finally
 			{
-				_bInDeleteUnusedTasks = false;
+				DeviceObjectHelper._bInDeleteUnusedTasks = false;
 			}
 		}
 
@@ -3113,7 +3006,7 @@ namespace _3S.CoDeSys.DeviceObject
 				}
 			}
 			LList<Guid> val = default(LList<Guid>);
-			if (_dictLogicalNames.TryGetValue(e.MetaObject.Name, ref val))
+			if (_dictLogicalNames.TryGetValue(e.MetaObject.Name, out val))
 			{
 				val.Remove(e.MetaObject.ObjectGuid);
 				if (val.Count == 0)
@@ -3125,7 +3018,7 @@ namespace _3S.CoDeSys.DeviceObject
 			{
 				_dictHosts.Remove(e.MetaObject.ObjectGuid);
 			}
-			if (e.MetaObject.Object is ILogicalDevice && _dictMappedDevices.TryGetValue(e.MetaObject.Name, ref val))
+			if (e.MetaObject.Object is ILogicalDevice && _dictMappedDevices.TryGetValue(e.MetaObject.Name, out val))
 			{
 				val.Remove(e.MetaObject.ObjectGuid);
 			}
@@ -3246,35 +3139,17 @@ namespace _3S.CoDeSys.DeviceObject
 					DeviceObject deviceObject3 = deviceObject2.GetHostDeviceObject() as DeviceObject;
 					if (deviceObject3 != null && deviceObject3.GlobalDataTypes.Count > 0)
 					{
-						Enumerator<string, LDictionary<IDataElement, Guid>> enumerator3 = deviceObject3.GlobalDataTypes.GetEnumerator();
-						try
+						foreach (KeyValuePair<string, LDictionary<IDataElement, Guid>> keyValuePair in deviceObject3.GlobalDataTypes)
 						{
-							while (enumerator3.MoveNext())
+							foreach (KeyValuePair<IDataElement, Guid> keyValuePair2 in keyValuePair.Value)
 							{
-								KeyValuePair<string, LDictionary<IDataElement, Guid>> current = enumerator3.Current;
-								Enumerator<IDataElement, Guid> enumerator4 = current.Value.GetEnumerator();
-								try
+								if (keyValuePair2.Value == e.MetaObject.ObjectGuid)
 								{
-									while (enumerator4.MoveNext())
-									{
-										KeyValuePair<IDataElement, Guid> current2 = enumerator4.Current;
-										if (current2.Value == e.MetaObject.ObjectGuid)
-										{
-											ClearGlobalDataTypes(e.MetaObject.ProjectHandle, current2.Key);
-											current.Value.Remove(current2.Key);
-											break;
-										}
-									}
-								}
-								finally
-								{
-									((IDisposable)enumerator4).Dispose();
+									DeviceObjectHelper.ClearGlobalDataTypes(e.MetaObject.ProjectHandle, keyValuePair2.Key);
+									keyValuePair.Value.Remove(keyValuePair2.Key);
+									break;
 								}
 							}
-						}
-						finally
-						{
-							((IDisposable)enumerator3).Dispose();
 						}
 					}
 				}
@@ -3294,14 +3169,14 @@ namespace _3S.CoDeSys.DeviceObject
 			foreach (IMappedDevice item5 in (IEnumerable)val5.MappedDevices)
 			{
 				IMappedDevice val6 = item5;
-				if (!LogicalNames.TryGetValue(val6.MappedDevice, ref val7))
+				if (!LogicalNames.TryGetValue(val6.MappedDevice, out val7))
 				{
 					continue;
 				}
 				foreach (Guid item6 in val7)
 				{
 					Guid empty = Guid.Empty;
-					if (HostsForLogicalDevices.TryGetValue(item6, ref empty) && empty == hostStub.ObjectGuid && !CheckLogicalIoDisableSynchronization(e.MetaObject.ProjectHandle, item6))
+					if (HostsForLogicalDevices.TryGetValue(item6, out empty) && empty == hostStub.ObjectGuid && !CheckLogicalIoDisableSynchronization(e.MetaObject.ProjectHandle, item6))
 					{
 						_liLogicalDevicesToRemove.Add(item6);
 					}
@@ -3578,7 +3453,7 @@ namespace _3S.CoDeSys.DeviceObject
 						{
 							val4 = ((IObjectManager)APEnvironment.ObjectMgr).GetObjectToModify(e.ProjectHandle, guid3);
 							IObject object4 = val4.Object;
-							((ILogicalDevice)((object4 is ILogicalDevice) ? object4 : null)).MappedDevices.get_Item(val5.Index).MappedDevice=(e.NewName);
+							((ILogicalDevice)((object4 is ILogicalDevice) ? object4 : null)).MappedDevices[val5.Index].MappedDevice=(e.NewName);
 						}
 						catch
 						{
@@ -3806,7 +3681,7 @@ namespace _3S.CoDeSys.DeviceObject
 			}
 			int handle = primaryProject.Handle;
 			int num = default(int);
-			if (!((IObjectManager)APEnvironment.ObjectMgr).ExistsObject(handle, e.ApplicationGuid) || !((IObjectManager)APEnvironment.ObjectMgr).IsLoadProjectFinished(handle, ref num))
+			if (!((IObjectManager)APEnvironment.ObjectMgr).ExistsObject(handle, e.ApplicationGuid) || !((IObjectManager)APEnvironment.ObjectMgr).IsLoadProjectFinished(handle, out num))
 			{
 				return;
 			}
@@ -4287,7 +4162,7 @@ namespace _3S.CoDeSys.DeviceObject
 			try
 			{
 				IMetaObject val12 = null;
-				switch (context - 1)
+				switch ((int)context - 1)
 				{
 				case 0:
 				case 3:
@@ -4419,7 +4294,7 @@ namespace _3S.CoDeSys.DeviceObject
 			e.Effects=(DragDropEffects.None);
 			if (val2 != null && typeof(ISlotDeviceObject).IsAssignableFrom(val2.ObjectType))
 			{
-				switch (context - 1)
+				switch ((int)context - 1)
 				{
 				case 3:
 					if (string.IsNullOrEmpty(text))
@@ -4470,7 +4345,7 @@ namespace _3S.CoDeSys.DeviceObject
 			int projectHandle = e.ProjectHandle;
 			Guid guid = Guid.Empty;
 			int num = -1;
-			switch (context - 1)
+			switch ((int)context - 1)
 			{
 			case 0:
 				guid = e.DestinationGuid;
@@ -4603,29 +4478,6 @@ namespace _3S.CoDeSys.DeviceObject
 
 		private void OnSVNodesPastingInterception(object sender, SVNodesPastingEventArgs e)
 		{
-			//IL_0028: Unknown result type (might be due to invalid IL or missing references)
-			//IL_002f: Expected O, but got Unknown
-			//IL_00ad: Unknown result type (might be due to invalid IL or missing references)
-			//IL_00b4: Expected O, but got Unknown
-			//IL_01f0: Unknown result type (might be due to invalid IL or missing references)
-			//IL_01f7: Expected O, but got Unknown
-			//IL_02aa: Unknown result type (might be due to invalid IL or missing references)
-			//IL_02b1: Expected O, but got Unknown
-			//IL_03a9: Unknown result type (might be due to invalid IL or missing references)
-			//IL_03b0: Expected O, but got Unknown
-			//IL_03b2: Unknown result type (might be due to invalid IL or missing references)
-			//IL_03b8: Invalid comparison between Unknown and I4
-			//IL_03d4: Unknown result type (might be due to invalid IL or missing references)
-			//IL_03db: Expected O, but got Unknown
-			//IL_0495: Unknown result type (might be due to invalid IL or missing references)
-			//IL_049c: Expected O, but got Unknown
-			//IL_0769: Unknown result type (might be due to invalid IL or missing references)
-			//IL_078e: Unknown result type (might be due to invalid IL or missing references)
-			//IL_09ad: Unknown result type (might be due to invalid IL or missing references)
-			//IL_09b4: Expected O, but got Unknown
-			//IL_0a6c: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0af9: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0b00: Expected O, but got Unknown
 			try
 			{
 				LDictionary<Guid, IPastedObject> val = new LDictionary<Guid, IPastedObject>();
@@ -4634,8 +4486,8 @@ namespace _3S.CoDeSys.DeviceObject
 				foreach (IPastedObject item in e.ObjectsToPaste)
 				{
 					IPastedObject val4 = item;
-					val.set_Item(val4.ObjectGuid, val4);
-					val2.set_Item(val4.OldObjectGuid, val4);
+					val[val4.ObjectGuid]= val4;
+					val2[val4.OldObjectGuid]= val4;
 				}
 				LDictionary<Guid, IPastedObject> val5 = new LDictionary<Guid, IPastedObject>();
 				LList<IPastedObject> val6 = new LList<IPastedObject>();
@@ -4672,7 +4524,7 @@ namespace _3S.CoDeSys.DeviceObject
 							string text = CreateUniqueIdentifier(e.ProjectHandle, val7.Name, Guid.Empty, host, bCheckAll: false, flag);
 							if (flag)
 							{
-								val3.set_Item(val7.Name, text);
+								val3[val7.Name]= text;
 							}
 							((IPastedObject2)((val7 is IPastedObject2) ? val7 : null)).ChangeName(text);
 						}
@@ -4696,7 +4548,7 @@ namespace _3S.CoDeSys.DeviceObject
 					{
 						((ExplicitConnector)(object)val8.Object).PreparePaste();
 					}
-					if (val8.Object is ILogicalDevice && ((ILogicalDevice)/*isinst with value type is only supported in some contexts*/).IsPhysical)
+					if (val8.Object is ILogicalDevice && (val8.Object as ILogicalDevice).IsPhysical)
 					{
 						IObject @object = val8.Object;
 						ILogicalDevice val9 = (ILogicalDevice)(object)((@object is ILogicalDevice) ? @object : null);
@@ -4705,14 +4557,14 @@ namespace _3S.CoDeSys.DeviceObject
 							foreach (IMappedDevice item4 in (IEnumerable)val9.MappedDevices)
 							{
 								IMappedDevice val10 = item4;
-								if (val3.TryGetValue(val10.MappedDevice, ref mappedDevice))
+								if (val3.TryGetValue(val10.MappedDevice, out mappedDevice))
 								{
 									val10.MappedDevice=(mappedDevice);
 								}
 							}
 						}
 					}
-					val.TryGetValue(val8.ParentSVNodeGuid, ref val11);
+					val.TryGetValue(val8.ParentSVNodeGuid, out val11);
 					if (val11 == null)
 					{
 						if (val8.Object is SlotDeviceObject)
@@ -4814,7 +4666,7 @@ namespace _3S.CoDeSys.DeviceObject
 					IDriverInfo2 val15 = (IDriverInfo2)(object)((driverInfo is IDriverInfo2) ? driverInfo : null);
 					if (val15 != null && val15.IoApplication != Guid.Empty)
 					{
-						val2.TryGetValue(val15.IoApplication, ref val16);
+						val2.TryGetValue(val15.IoApplication, out val16);
 						if (val16 != null && val16.Object is IApplicationObject)
 						{
 							val15.IoApplication=(val16.ObjectGuid);
@@ -4918,7 +4770,7 @@ namespace _3S.CoDeSys.DeviceObject
 							properties = item8.Properties;
 							foreach (IObjectProperty val21 in properties)
 							{
-								_003F val22 = val17;
+								IMetaObject val22 = val17;
 								object obj2 = ((ICloneable)val21).Clone();
 								((IMetaObject)val22).AddProperty((IObjectProperty)((obj2 is IObjectProperty) ? obj2 : null));
 							}
@@ -5223,53 +5075,33 @@ namespace _3S.CoDeSys.DeviceObject
 									deviceObject = ((!(@object is SlotDeviceObject)) ? (@object as DeviceObject) : (@object as SlotDeviceObject).GetDevice());
 									if (deviceObject != null && deviceObject.GlobalDataTypes.Count > 0)
 									{
-										Enumerator<string, LDictionary<IDataElement, Guid>> enumerator2 = deviceObject.GlobalDataTypes.GetEnumerator();
-										try
+										foreach (KeyValuePair<string, LDictionary<IDataElement, Guid>> keyValuePair in deviceObject.GlobalDataTypes)
 										{
-											while (enumerator2.MoveNext())
+											if (keyValuePair.Value.ContainsValue(objectGuid))
 											{
-												KeyValuePair<string, LDictionary<IDataElement, Guid>> current = enumerator2.Current;
-												if (!current.Value.ContainsValue(objectGuid))
+												LList<IDataElement> llist = new LList<IDataElement>();
+												foreach (KeyValuePair<IDataElement, Guid> keyValuePair2 in keyValuePair.Value)
 												{
-													continue;
-												}
-												LList<IDataElement> val2 = new LList<IDataElement>();
-												Enumerator<IDataElement, Guid> enumerator3 = current.Value.GetEnumerator();
-												try
-												{
-													while (enumerator3.MoveNext())
+													if (keyValuePair2.Value == objectGuid)
 													{
-														KeyValuePair<IDataElement, Guid> current2 = enumerator3.Current;
-														if (current2.Value == objectGuid)
-														{
-															val2.Add(current2.Key);
-														}
+														llist.Add(keyValuePair2.Key);
 													}
 												}
-												finally
+												if (llist.Count > 0)
 												{
-													((IDisposable)enumerator3).Dispose();
-												}
-												if (val2.Count <= 0)
-												{
-													continue;
-												}
-												try
-												{
-													((ILanguageModelManager)APEnvironment.LanguageModelMgr).RemoveLanguageModelOfObject(nProjectHandle, (val2[0] as DataElementStructType).LmStructType);
-												}
-												catch
-												{
-												}
-												foreach (IDataElement item2 in val2)
-												{
-													current.Value.Remove(item2);
+													try
+													{
+														APEnvironment.LanguageModelMgr.RemoveLanguageModelOfObject(nProjectHandle, (llist[0] as DataElementStructType).LmStructType);
+													}
+													catch
+													{
+													}
+													foreach (IDataElement key3 in llist)
+													{
+														keyValuePair.Value.Remove(key3);
+													}
 												}
 											}
-										}
-										finally
-										{
-											((IDisposable)enumerator2).Dispose();
 										}
 									}
 								}
@@ -5324,21 +5156,12 @@ namespace _3S.CoDeSys.DeviceObject
 			bool flag = false;
 			for (int i = 0; i < 2; i++)
 			{
-				Enumerator<string, LanguageModelData> enumerator = _dictLanguageModelValues.Values.GetEnumerator();
-				try
+				foreach (LanguageModelData languageModelData in DeviceObjectHelper._dictLanguageModelValues.Values)
 				{
-					while (enumerator.MoveNext())
+					if (languageModelData.IsPlc == flag)
 					{
-						LanguageModelData current = enumerator.Current;
-						if (current.IsPlc == flag)
-						{
-							val.Add(current);
-						}
+						val.Add(languageModelData);
 					}
-				}
-				finally
-				{
-					((IDisposable)enumerator).Dispose();
 				}
 				flag = true;
 			}
@@ -5417,7 +5240,7 @@ namespace _3S.CoDeSys.DeviceObject
 					}
 					if (objectToRead.Object is ITaskConfigObject)
 					{
-						_003F val2 = APEnvironment.LanguageModelMgr;
+						ILanguageModelManager val2 = APEnvironment.LanguageModelMgr;
 						IObject @object = objectToRead.Object;
 						((ILanguageModelManager)val2).PutLanguageModel((ILanguageModelProvider)(object)((@object is ILanguageModelProvider) ? @object : null), true);
 					}
@@ -5533,7 +5356,7 @@ namespace _3S.CoDeSys.DeviceObject
 		internal static IAddressAssignmentStrategy GetStrategy(Guid hostGuid)
 		{
 			IAddressAssignmentStrategy result = null;
-			_liStrategies.TryGetValue(hostGuid, ref result);
+			_liStrategies.TryGetValue(hostGuid, out result);
 			return result;
 		}
 
@@ -5784,13 +5607,6 @@ namespace _3S.CoDeSys.DeviceObject
 
 		internal static void FillIecAddresstable(IIoProvider ioProvider)
 		{
-			//IL_0081: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0090: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0096: Invalid comparison between Unknown and I4
-			//IL_00fe: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0104: Invalid comparison between Unknown and I4
-			//IL_0108: Unknown result type (might be due to invalid IL or missing references)
-			//IL_010e: Invalid comparison between Unknown and I4
 			bool flag = false;
 			if (ioProvider == null)
 			{
@@ -5799,7 +5615,7 @@ namespace _3S.CoDeSys.DeviceObject
 			if (GenerateCodeForLogicalDevices && GetMappedIoProvider(ioProvider, bCheckForLogical: false).Count > 0)
 			{
 				IMetaObject metaObject = ioProvider.GetMetaObject();
-				if (!(metaObject.Object is ILogicalDevice2) || !((ILogicalDevice2)/*isinst with value type is only supported in some contexts*/).MappingPossible)
+				if (!(metaObject.Object is ILogicalDevice2) || !(metaObject.Object as ILogicalDevice2).MappingPossible)
 				{
 					flag = true;
 				}
@@ -6030,7 +5846,7 @@ namespace _3S.CoDeSys.DeviceObject
 		internal static void CheckNameIdentifier(ILanguageModelBuilder3 lmBuilder3, ISequenceStatement seq, DataElementBase elem)
 		{
 			IToken val = default(IToken);
-			if (elem == null || ((ILanguageModelManager)APEnvironment.LanguageModelMgr).CreateScanner(elem.Identifier, false, false, false, false).Match((TokenType)13, true, ref val) > 0)
+			if (elem == null || ((ILanguageModelManager)APEnvironment.LanguageModelMgr).CreateScanner(elem.Identifier, false, false, false, false).Match((TokenType)13, true, out val) > 0)
 			{
 				return;
 			}

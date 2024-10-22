@@ -10,12 +10,22 @@ namespace _3S.CoDeSys.DeviceObject
 	[StorageVersion("3.4.1.0")]
 	public class LogicalDeviceList : GenericObject2, IMappedDeviceList, ICollection, IEnumerable
 	{
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		[DefaultSerialization("InnerList")]
 		[StorageVersion("3.4.1.0")]
 		private ArrayList _alLogicalDevices = new ArrayList();
 
-		public ILogicalDevice this[int nIndex] => (ILogicalDevice)_alLogicalDevices[nIndex];
+		IMappedDevice IMappedDeviceList.this[int nIndex]
+		{
+			get
+			{
+				if (nIndex >= 0 && nIndex < this._alLogicalDevices.Count)
+				{
+					return (IMappedDevice)this._alLogicalDevices[nIndex];
+				}
+				return null;
+			}
+		}
 
 		public int Count => _alLogicalDevices.Count;
 
@@ -23,22 +33,9 @@ namespace _3S.CoDeSys.DeviceObject
 
 		public object SyncRoot => _alLogicalDevices.SyncRoot;
 
-		IMappedDevice Item
-		{
-			get
-			{
-				//IL_001e: Unknown result type (might be due to invalid IL or missing references)
-				//IL_0024: Expected O, but got Unknown
-				if (nIndex >= 0 && nIndex < _alLogicalDevices.Count)
-				{
-					return (IMappedDevice)_alLogicalDevices[nIndex];
-				}
-				return null;
-			}
-		}
 
 		public LogicalDeviceList()
-			: this()
+			: base()
 		{
 		}
 

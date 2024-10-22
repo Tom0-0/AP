@@ -24,13 +24,13 @@ namespace _3S.CoDeSys.DeviceObject
 			{
 				if (OptionKey.HasValue(ADD_DEVICE_WINDOW_LOCATION, typeof(string)))
 				{
-					return (Point)POINT_CONVERTER.ConvertFromInvariantString((string)OptionKey.get_Item(ADD_DEVICE_WINDOW_LOCATION));
+					return (Point)POINT_CONVERTER.ConvertFromInvariantString((string)OptionKey[ADD_DEVICE_WINDOW_LOCATION]);
 				}
 				return Point.Empty;
 			}
 			set
 			{
-				OptionKey.set_Item(ADD_DEVICE_WINDOW_LOCATION, (object)POINT_CONVERTER.ConvertToInvariantString(value));
+				OptionKey[ADD_DEVICE_WINDOW_LOCATION]= (object)POINT_CONVERTER.ConvertToInvariantString(value);
 			}
 		}
 
@@ -40,13 +40,13 @@ namespace _3S.CoDeSys.DeviceObject
 			{
 				if (OptionKey.HasValue(ADD_DEVICE_WINDOW_SIZE, typeof(string)))
 				{
-					return (Size)SIZE_CONVERTER.ConvertFromInvariantString((string)OptionKey.get_Item(ADD_DEVICE_WINDOW_SIZE));
+					return (Size)SIZE_CONVERTER.ConvertFromInvariantString((string)OptionKey[ADD_DEVICE_WINDOW_SIZE]);
 				}
 				return new Size(627, 600);
 			}
 			set
 			{
-				OptionKey.set_Item(ADD_DEVICE_WINDOW_SIZE, (object)SIZE_CONVERTER.ConvertToInvariantString(value));
+				OptionKey[ADD_DEVICE_WINDOW_SIZE]= (object)SIZE_CONVERTER.ConvertToInvariantString(value);
 			}
 		}
 
@@ -56,13 +56,13 @@ namespace _3S.CoDeSys.DeviceObject
 			{
 				if (OptionKey.HasValue(ADD_DEVICE_WINDOW_CONTAINER_HEIGHT, typeof(int)))
 				{
-					return (int)OptionKey.get_Item(ADD_DEVICE_WINDOW_CONTAINER_HEIGHT);
+					return (int)OptionKey[ADD_DEVICE_WINDOW_CONTAINER_HEIGHT];
 				}
 				return 0;
 			}
 			set
 			{
-				OptionKey.set_Item(ADD_DEVICE_WINDOW_CONTAINER_HEIGHT, (object)value);
+				OptionKey[ADD_DEVICE_WINDOW_CONTAINER_HEIGHT]= (object)value;
 			}
 		}
 

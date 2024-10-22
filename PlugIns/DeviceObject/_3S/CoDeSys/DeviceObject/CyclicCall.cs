@@ -17,17 +17,17 @@ namespace _3S.CoDeSys.DeviceObject
 
 		[DefaultSerialization("MethodName")]
 		[StorageVersion("3.3.0.0")]
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		private string _stMethodName = "";
 
 		[DefaultSerialization("WhenToCall")]
 		[StorageVersion("3.3.0.0")]
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		private string _stWhenToCall = "";
 
 		[DefaultSerialization("Task")]
 		[StorageVersion("3.3.0.0")]
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		private string _stTask = "#eachtask";
 
 		public string MethodName
@@ -67,7 +67,7 @@ namespace _3S.CoDeSys.DeviceObject
 		}
 
 		public CyclicCall()
-			: this()
+			: base()
 		{
 		}
 

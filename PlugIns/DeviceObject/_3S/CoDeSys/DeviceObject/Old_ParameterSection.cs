@@ -8,17 +8,17 @@ namespace _3S.CoDeSys.DeviceObject
 	[StorageVersion("3.3.0.0")]
 	public class Old_ParameterSection : GenericObject2
 	{
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		[DefaultSerialization("Name")]
 		[StorageVersion("3.3.0.0")]
 		private StringRef _name = new StringRef();
 
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		[DefaultSerialization("Description")]
 		[StorageVersion("3.3.0.0")]
 		private StringRef _description = new StringRef();
 
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		[DefaultSerialization("Section")]
 		[StorageVersion("3.3.0.0")]
 		private IParameterSection _section;
@@ -26,7 +26,6 @@ namespace _3S.CoDeSys.DeviceObject
 		internal IParameterSection Section => _section;
 
 		public Old_ParameterSection()
-			: this()
 		{
 		}
 	}

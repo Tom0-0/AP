@@ -14,69 +14,69 @@ namespace _3S.CoDeSys.DeviceObject
 	{
 		[DefaultSerialization("GatewayGuid")]
 		[StorageVersion("3.3.0.0")]
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		private Guid _guidGateway;
 
 		[DefaultSerialization("Address")]
 		[StorageVersion("3.3.0.0")]
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		private IDeviceAddress _address;
 
 		[DefaultSerialization("PromptAtLogin")]
 		[StorageVersion("3.3.0.0")]
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		private bool _bPromptAtLogin;
 
 		[DefaultSerialization("SimulationMode")]
 		[StorageVersion("3.3.0.0")]
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		private bool _bSimulationMode;
 
 		[DefaultSerialization("SecureOnlineMode")]
 		[StorageVersion("3.3.0.0")]
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		private bool _bSecureOnlineMode;
 
 		[DefaultSerialization("SecureOnlineModeExplicitelySet")]
 		[StorageVersion("3.3.0.0")]
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		private bool _bSecureOnlineModeExplicitelySet;
 
 		[DefaultSerialization("Name")]
 		[StorageVersion("3.3.0.0")]
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		private string _stName = string.Empty;
 
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		private CommSettingFilterEnum _commSettingFilter = (CommSettingFilterEnum)1;
 
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		private CommSettingSortingEnum _commSettingSorting;
 
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		[StorageDefaultValue(200)]
 		[DefaultSerialization("MonitoringIntervalMsec")]
 		[StorageVersion("3.5.3.0")]
 		private int _nMonitoringIntervalMsec = 200;
 
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		[StorageDefaultValue(null)]
 		[DefaultSerialization("ScanInformation")]
 		[StorageVersion("3.5.4.0")]
 		private IScanInformation _ScanInformation;
 
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		private DeviceTrackingMode _trackingMode = (DeviceTrackingMode)5;
 
 		[DefaultSerialization("IsCommunicationEncrypted")]
 		[StorageVersion("3.5.10.0")]
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		[StorageDefaultValue(false)]
 		private bool _bIsCommunicationEncrypted;
 
 		[DefaultSerialization("IsDefaultNameTrackingFromScanActive")]
 		[StorageVersion("3.5.16.0")]
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		[StorageDefaultValue(false)]
 		private bool _isDefaultNameTrackingFromScanActive;
 
@@ -84,7 +84,7 @@ namespace _3S.CoDeSys.DeviceObject
 
 		[DefaultSerialization("CommunicationSettingFilter")]
 		[StorageVersion("3.4.1.0")]
-		[StorageDefaultValue(/*Could not decode attribute arguments.*/)]
+		[StorageDefaultValue(CommSettingFilterEnum.TargetID)]
 		protected int CommunicationSettingFilterSerialization
 		{
 			get
@@ -102,7 +102,7 @@ namespace _3S.CoDeSys.DeviceObject
 
 		[DefaultSerialization("CommunicationSettingSorting")]
 		[StorageVersion("3.4.1.0")]
-		[StorageDefaultValue(/*Could not decode attribute arguments.*/)]
+		[StorageDefaultValue(CommSettingSortingEnum.Name)]
 		protected int CommunicationSettingSortingSerialization
 		{
 			get
@@ -306,7 +306,7 @@ namespace _3S.CoDeSys.DeviceObject
 		}
 
 		public CommunicationSettingsBase()
-			: this()
+			: base()
 		{
 			//IL_000d: Unknown result type (might be due to invalid IL or missing references)
 			//IL_001f: Unknown result type (might be due to invalid IL or missing references)

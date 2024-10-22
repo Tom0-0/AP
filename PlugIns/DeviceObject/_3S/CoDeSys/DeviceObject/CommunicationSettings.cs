@@ -32,7 +32,7 @@ namespace _3S.CoDeSys.DeviceObject
 			get
 			{
 				ArrayList arrayList = new ArrayList();
-				arrayList.AddRange(((GenericObject)this).SerializableValueNames);
+				arrayList.AddRange(base.SerializableValueNames);
 				arrayList.AddRange(((GenericObject)_projectSettings).SerializableValueNames);
 				string[] array = new string[arrayList.Count];
 				arrayList.CopyTo(array);
@@ -446,7 +446,7 @@ namespace _3S.CoDeSys.DeviceObject
 		public override string[] GetSerializableValueNames(IArchiveVersionInfo info, IArchiveReporter reporter)
 		{
 			ArrayList arrayList = new ArrayList();
-			arrayList.AddRange(((GenericObject2)this).GetSerializableValueNames(info, reporter));
+			arrayList.AddRange(base.GetSerializableValueNames(info, reporter));
 			arrayList.AddRange(((GenericObject2)_projectSettings).GetSerializableValueNames(info, reporter));
 			string[] array = new string[arrayList.Count];
 			arrayList.CopyTo(array);
@@ -455,7 +455,7 @@ namespace _3S.CoDeSys.DeviceObject
 
 		public override void SetSerializableValue(string stValueName, object value)
 		{
-			((GenericObject2)this).SetSerializableValue(stValueName, value, (IArchiveReporter)null);
+			base.SetSerializableValue(stValueName, value, (IArchiveReporter)null);
 		}
 
 		public override void SetSerializableValue(string stValueName, object value, IArchiveReporter reporter)

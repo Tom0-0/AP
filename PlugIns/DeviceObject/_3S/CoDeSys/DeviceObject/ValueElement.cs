@@ -12,19 +12,19 @@ namespace _3S.CoDeSys.DeviceObject
 	{
 		[DefaultSerialization("SubElements")]
 		[StorageVersion("3.5.6.0")]
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		[StorageDefaultValue(null)]
 		private ArrayList _alSubElements;
 
 		[DefaultSerialization("Value")]
 		[StorageVersion("3.5.6.0")]
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		[StorageDefaultValue("")]
 		private string _stValue = "";
 
 		[DefaultSerialization("Name")]
 		[StorageVersion("3.5.6.0")]
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		[StorageDefaultValue("")]
 		private string _stName = "";
 
@@ -121,7 +121,7 @@ namespace _3S.CoDeSys.DeviceObject
 		public ValueElement Parent => _parent;
 
 		public ValueElement()
-			: this()
+			: base()
 		{
 		}//IL_0018: Unknown result type (might be due to invalid IL or missing references)
 		//IL_001f: Unknown result type (might be due to invalid IL or missing references)

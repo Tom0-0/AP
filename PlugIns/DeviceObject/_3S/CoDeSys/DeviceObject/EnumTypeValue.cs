@@ -11,25 +11,25 @@ namespace _3S.CoDeSys.DeviceObject
 	{
 		[DefaultSerialization("Value")]
 		[StorageVersion("3.5.6.0")]
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		[StorageDefaultValue("")]
 		private string _stValue = "";
 
 		[DefaultSerialization("Identifier")]
 		[StorageVersion("3.5.6.0")]
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		[StorageDefaultValue("")]
 		private string _stIdentifier = "";
 
 		[DefaultSerialization("Name")]
 		[StorageVersion("3.5.6.0")]
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		[StorageDefaultValue(null)]
 		private IStringRef _name;
 
 		[DefaultSerialization("Description")]
 		[StorageVersion("3.5.6.0")]
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		[StorageDefaultValue(null)]
 		private IStringRef _description;
 
@@ -61,7 +61,7 @@ namespace _3S.CoDeSys.DeviceObject
 
 		internal StringRef Description => _description as StringRef;
 
-		IStringRef Name
+		IStringRef ITypeEnumComponent.Name
 		{
 			get
 			{
@@ -73,7 +73,7 @@ namespace _3S.CoDeSys.DeviceObject
 			}
 		}
 
-		IStringRef Description
+		IStringRef ITypeEnumComponent.Description
 		{
 			get
 			{
@@ -86,7 +86,7 @@ namespace _3S.CoDeSys.DeviceObject
 		}
 
 		public EnumTypeValue()
-			: this()
+			: base()
 		{
 		}
 

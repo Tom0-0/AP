@@ -12,12 +12,12 @@ namespace _3S.CoDeSys.DeviceObject
 	[StorageVersion("3.3.0.0")]
 	public class StructureGuidsXX : GenericObject2
 	{
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		[DefaultSerialization("Guids")]
 		[StorageVersion("3.3.0.0")]
 		private Hashtable _htGuids = new Hashtable();
 
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		[DefaultSerialization("DeviceGuid")]
 		[StorageVersion("3.3.0.0")]
 		private Guid _guidDevice;
@@ -39,7 +39,6 @@ namespace _3S.CoDeSys.DeviceObject
 		public Guid DeviceGuid => _guidDevice;
 
 		public StructureGuidsXX()
-			: this()
 		{
 		}
 

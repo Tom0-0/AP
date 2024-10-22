@@ -10,7 +10,7 @@ namespace _3S.CoDeSys.DeviceObject
 	[StorageVersion("3.4.1.0")]
 	public class MatchingLogicalDeviceList : GenericObject2
 	{
-		[DefaultDuplication(/*Could not decode attribute arguments.*/)]
+		[DefaultDuplication(DuplicationMethod.Deep)]
 		[DefaultSerialization("InnerList")]
 		[StorageVersion("3.4.1.0")]
 		private ArrayList _alMatchingLogicalDevices = new ArrayList();
@@ -24,7 +24,6 @@ namespace _3S.CoDeSys.DeviceObject
 		public object SyncRoot => _alMatchingLogicalDevices.SyncRoot;
 
 		public MatchingLogicalDeviceList()
-			: this()
 		{
 		}
 
